@@ -1,0 +1,54 @@
+
+
+.전체{
+    width: 460px;
+    height: 75vh;
+    border: solid 1px gray;
+    margin: 0 auto;
+}
+
+
+
+.사진{
+    
+    width: 460px; 
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: solid 1px gray;
+       
+}
+
+.아래창{
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+.제품명{
+    font-size:20px ;
+    font-weight: bold;
+    padding: 20px 10px 15px  ;
+}
+
+.가격{
+    font-size:17px ;
+    font-weight: bold;
+    padding: 20px 10px;
+}
+
+.상품소개{
+    font-size: 17px;
+    padding: 20px 10px;
+
+}
+.리뷰평점{
+    font-size: 17px;
+    padding: 20px 10px;
+}
+.노란색{
+    font-size: 17px;
+    color: rgb(255, 165, 0);
+    padding: 20px 10px;
+}
+.윤곽{
+    border: solid 2px gray;
+}

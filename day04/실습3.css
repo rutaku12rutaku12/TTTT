@@ -1,0 +1,47 @@
+/* 확인용 : 완성 후 삭제 
+*{
+    border: solid 1px red;
+    padding: 3px;
+} */
+
+.화면{
+    width: 300px; /* 가로 세로 사이즈*/
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 3px 3px 5px pink;
+    border-radius: 15px; /* 둥근모서리 */
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    
+    
+}
+
+.입력창{
+    width: 150px; height: 25px;
+    padding: 0px 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    margin: 7px auto;
+    text-align: left;
+   
+
+}
+.로그인버튼{
+    width: 80px; height: 30px;
+    border: 1px solid rgb(3, 3, 12);
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.맨밑글자크기{
+    font-size: 15px;
+}
+
+#{
+    text-decoration: none; /* 밑줄 제거 */
+}

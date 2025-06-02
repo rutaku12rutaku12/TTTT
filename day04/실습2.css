@@ -1,0 +1,28 @@
+.구역1{ width: 300px;}
+
+.구역2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 15px 2px;
+
+}
+
+
+.구역3{
+    color: white;
+    padding: 20px;
+    background-color: darkcyan;
+    padding: 25px 20px;
+    line-height: 100%;
+    width: 500px;
+
+
+}
+.구역4{
+    color: orange;
+    font-size: 35px;
+    
+}
+.구역5{
+    color: orange;
+}
