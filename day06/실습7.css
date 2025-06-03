@@ -19,7 +19,7 @@ li{list-style-type: none; /* 글머리제거 */}
     margin: 15px auto;
 }
 
-#header>.top-menu{ /* class를 선택할때는 .class명 */
+#header>.header-menu>.top-menu{ /* class를 선택할때는 .class명 */
     display: flex; justify-content: flex-end;
 }
 .main-menu{
@@ -76,7 +76,7 @@ li{list-style-type: none; /* 글머리제거 */}
     margin-top: 30px;
     font-size: 18px;
 }
-.sidebar>.sub-menu> li{ padding: 5px 10px;}
+.sidebar>.sub-menu> li{ padding: 10px 10px;}
 
 .top{
     display: flex;
