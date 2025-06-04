@@ -1,0 +1,23 @@
+#header{
+    width:700px;height:450px;
+    background-color: red;
+    margin: 0 auto;
+    position: relative;}
+    
+
+.box{
+    width: 100px; height: 70px;
+    background-color: yellow;
+    border-radius: 15px;
+    display: flex;
+    position: absolute;
+    justify-content: center; /* 텍스트 가로정렬 */
+    align-items: center;     /* 텍스트 세로정렬 */
+}
+
+.box1{top: 50px; left: 300px;}
+.box2{top: 150px; left: 500px;}
+.box3{top: 150px; left: 100px;}
+.box4{top: 250px; left: 100px;}
+.box5{top: 250px; left: 500px;}
+.box6{top: 350px; left: 300px;}
