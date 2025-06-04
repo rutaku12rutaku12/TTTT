@@ -1,0 +1,84 @@
+/* ===============공통 CSS ============== */
+*{
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+li{list-style-type: none;}
+a{color: black; text-decoration: none;}
+
+/* =============== 레이아웃 CSS ==================== */
+#wrap{}
+#header{
+    width: 100%;
+    display: contents;
+}
+#content{width: 1920px; margin:0 auto}
+#footer{width: 100%;}
+
+/* =============== 상단메뉴 CSS ================= */
+#topMenu{
+    display: flex; justify-content:center;
+    align-items: center;
+    width: 1200px; height: 85px;
+    padding:29px 0px 0px 0px;
+    margin: 0px auto;
+}
+#topMenu>li>a>#logo{        
+    display: flex;
+    width: 155px; height: 60px;
+}
+#topMenu>li>#border{
+    border-bottom: 1px solid gray;
+    display: inline-block;
+    padding-right: 63px;        /* 공백 밑줄 */
+    font-size: 15px;
+    color: black;
+    padding-top: 10px;
+}
+#topMenu>li>#topRmenu{
+    display: flex;
+}
+#topMenu>li>#topRmenu>li{
+    padding:15px 0px 0px 20px;
+    font-size: 14px;
+}
+#topMenu>li>#topRmenu>li>div>#languageBox{
+    width: 60px; height: 27px;
+    border: 1px solid #c0bfbf;
+    border-radius: 13.5px;
+    color: #9b9999;
+    line-height: 27px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* =============== 본메뉴 리스트 CSS ================= */
+#mainMenu{
+    display: flex;
+    justify-content:center;
+    font-size: 18px;
+    padding: 14px 0px;
+}
+#mainMenu> li{
+    padding:14px 65px;
+}
+
+
+
+
+
+
+
+
+/* =============== 푸터 CSS ================= */
+.footer-order{display: flex;
+justify-content: space-between;}
+
+.footer-order>img{width: 123px; height: 50px;
+}
+#number_size{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 13px;}
+.select-type language{
+}
