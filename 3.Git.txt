@@ -24,7 +24,7 @@
         [git user.name 확인] git config --global user.name
         [git user.name 설정] git config --global user.name git닉네임
         [git user.email 확인] git config --global user.email
-        [git user.email 설정] git config --global user.email git아이디@이메일포함
+        [git user.email 설정] git config --global user.email git이메일
     10.소스제어 클릭
         1. 상단에 메세지(코드를 업로드 할 때 기록할 메모)작성
         2. [커밋]버튼 오른쪽 [v] 클릭하여 [ 커밋 및 무시 ] 클릭 *현재 PC에 git 완료
@@ -33,7 +33,7 @@
     ================(pc마다 한번, 자리 변경시 )============================= 
     
     [주요 용어]
-        1.repository: *저장소 코드들을 저장하는 하나의 저장소* 주로 프로젝트 단위
-        2.commit : 코드 수정 ( 로컬) 완료 * 로컬pc에만완료되고 온라인(웹깃허브) 에는 반영이 안된다.
-        3.push : 현제 로컬 코드를 깃허브(웹서비스)에 반영
+        1.repository 리포지토리 : *저장소 코드들을 저장하는 하나의 저장소* 주로 프로젝트 단위
+        2.commit 커밋 : 코드 수정 ( 로컬) 완료 * 로컬pc에만완료되고 온라인(웹깃허브) 에는 반영이 안된다.
+        3.push 푸쉬 : 현제 로컬 코드를 깃허브(웹서비스)에 반영
     
