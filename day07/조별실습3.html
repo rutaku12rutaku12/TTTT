@@ -13,62 +13,62 @@
     <div id="wrap">                                          <!-- 전체 레이아웃 -->
 
         <div id="header">                                    <!--  헤더  -->
-
-            <ul id="topMenu">                                <!--  상단 메뉴  -->
-                                                             <!-- 상단 왼쪽 메뉴 -->
-                <li><a href="#" ><img id="logo" src="../day07/domino_logo.png"/></a></li> 
-                                                             <!-- 상단 중앙 메뉴 -->
-                <li><a id="border" href="#"><img src="../day07/plane_logo.png"/><span class="qwe">주변 매장의 프로모션을 확인해보세요!</span></a></li>
-                <li>
-                    <ul id="topRmenu">                           <!-- 상단 오른쪽 메뉴 -->
-                        <li> <a href="#">로그인</a></li>
-                        <li> <a href="#">회원가입</a></li>
-                        <li>
-                            <div>
-                            <select id="languageBox"> 
-                                <option> KOR </option>
-                                <option> ENG </option> 
-                            </select>
-                            </div>
-                        </li>
+            <div class="headerbox">
+                <ul id="topMenu">                                <!--  상단 메뉴  -->
+                                                                <!-- 상단 왼쪽 메뉴 -->
+                    <li><a href="#" ><div id="logo"></div></a></li> 
+                                                                <!-- 상단 중앙 메뉴 -->
+                    <li><a href="#" id="centerWrite"><div id="logo2"></div><span>주변 매장의 프로모션을 확인해보세요!</span></a></li>
+                    <li>
+                        <ul id="topRmenu">                           <!-- 상단 오른쪽 메뉴 -->
+                            <li> <a href="#">로그인</a></li>
+                            <li> <a href="#">회원가입</a></li>
+                            <li>
+                                <div>
+                                <select id="languageBox"> 
+                                    <option> KOR </option>
+                                    <option> ENG </option> 
+                                </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>    
+                <div id="mainMenu">                               <!-- 본메뉴 -->
+                    <a href="#"><span>메뉴</span></a>
+                    <a href="#"><span>e-쿠폰</span></a>
+                    <a href="#"><span>상품권 선물</span></a>
+                    <a href="#"><span>이벤트·제휴</span></a>
+                    <a href="#"><span>매장검색</span></a>
+                    <a href="#"><span>가맹점 모집</span></a>
+                    <div id="moreBox">더보기<div id="more"></div></div>
+                                                                <!-- 서브메뉴 -->
+                    <div class="subMenu">
+                    <ul>
+                        <li><ul> 도미노 서비스 
+                            <li>매니아 혜택</li>
+                            <li>도미노 모멘트</li>
+                            <li>퀵오더</li>
+                            <li>단체주문 서비스</li>
+                        </li></ul>
+                        <li><ul> 고객센터 
+                            <li>자주하는 질문</li>
+                            <li>문의/칭찬하기</li>
+                            <li>문의 내역/답변</li>
+                        </li></ul>
+                        <li><ul> 회사소개 
+                            <li>한국도미노피자</li>
+                            <li>광고갤러리</li>
+                            <li>사회공헌활동</li>
+                            <li>가맹점 모집</li>
+                            <li>인재채용</li>
+                        </li></ul>
+                        
+                        <li id="subMenu_right"> 공지사항</li>
                     </ul>
-                </li>
-            </ul>    
-            <ui id="mainMenu">                               <!-- 본메뉴 -->
-                <li><a href="#">메뉴</a></li>
-                <li><a href="#">e-쿠폰</a></li>
-                <li><a href="#">상품권 선물</a></li>
-                <li><a href="#">이벤트·제휴</a></li>
-                <li><a href="#">매장검색</a></li>
-                <li><a href="#">가맹점 모집</a></li>
-                <li id="more">더보기<img src="../day07/down_arrow.png"/></li>
-                                                            <!-- 서브메뉴 -->
-                <div class="subMenu">
-                <ul>
-                    <li><ul> 도미노 서비스 
-                        <li>매니아 혜택</li>
-                        <li>도미노 모멘트</li>
-                        <li>퀵오더</li>
-                        <li>단체주문 서비스</li>
-                    </li></ul>
-                    <li><ul> 고객센터 
-                        <li>자주하는 질문</li>
-                        <li>문의/칭찬하기</li>
-                        <li>문의 내역/답변</li>
-                    </li></ul>
-                    <li><ul> 회사소개 
-                        <li>한국도미노피자</li>
-                        <li>광고갤러리</li>
-                        <li>사회공헌활동</li>
-                        <li>가맹점 모집</li>
-                        <li>인재채용</li>
-                    </li></ul>
-                    
-                    <li id="subMenu_right"> 공지사항</li>
-                </ul>
-            </div>
-            </ui> 
-
+                </div>
+                </div>
+            </div>    
             
 
         </div>

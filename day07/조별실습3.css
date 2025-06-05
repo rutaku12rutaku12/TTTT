@@ -1,6 +1,6 @@
 /* ===============공통 CSS ============== */
 *{
-    padding: 0px; margin: 0px;
+    padding: 0px; margin: 0 0;
     box-sizing: border-box;
 }
 li{list-style-type: none;}
@@ -8,33 +8,51 @@ a{color: black; text-decoration: none;}
 
 /* =============== 레이아웃 CSS ==================== */
 #wrap{}
-#header{
-    width: 1200px; height: 85px;
-    display: contents;
-}
+#header{width: 100%;}
 #content{width: 1920px; margin:0 auto}
 #footer{width: 100%;}
 
 /* =============== 상단메뉴 CSS ================= */
+.headerbox{
+    width: 1200px; height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
 #topMenu{
     width: 100%;
-    display: flex; justify-content:space-around;
+    display: flex; justify-content:space-between;
     align-items: center;
-    padding:29px 0px 0px 0px;
+    padding:18px 0px 0px 0px;
     margin: 0px auto;
 }
+
 #topMenu>li>a>#logo{        
-    display: flex;
-    width: 155px; height: 60px;
+    width: 155px; height: 34px;
+    background-image: url("../day07/domino_logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 35%;
 }
-#topMenu>li>#border{
-    border-bottom: 1px solid gray;
-    line-height: 30px;
-    display: inline-block;
-    padding-right: 63px;        /* 공백 밑줄 */
+#topMenu>li>a{
+    display: flex;
     font-size: 15px;
-    color: black;
-    padding-top: 10px;
+    font-weight: bold;
+}
+#topMenu>li>a>#logo2{
+    width: 18px; height: 18px;
+    background-image: url("../day07/plane_logo.png");
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: 70% 150%;
+    padding-top: 21.5px;
+    margin-right: 5px;
+}
+#centerWrite{
+    border-bottom: 1px solid gray;
+    padding-right: 84px;
+    padding-bottom: 5px;
+    margin-top: 10px;
 }
 #topMenu>li>#topRmenu{
     display: flex;
@@ -51,48 +69,34 @@ a{color: black; text-decoration: none;}
     line-height: 27px;
     text-align: center;
     font-size: 12px;
+    outline: none;
 }
 
 /* =============== 본메뉴 리스트 CSS ================= */
 #mainMenu{
     width: 100%;
     display: flex;
-    justify-content:center;
+    margin: 0 auto;
     font-size: 18px;
     padding: 14px 0px;
 }
-#mainMenu> li{
-    padding:14px 65px;
+                /* 더보기 V 나란히 만들기 */
+#moreBox{
+    display: flex;
 }
-
-
-
+                /* (더보기) V 백그라운드이미지 */
+#more{
+    width: 21px; height: 21px;
+    background-image: url("../day07/down_arrow.png");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position:200% 100%;
+}
 
 .subMenu>ul{
     display: flex;
     display: none;
-    
 }
-#more{
-    position: relative;
-}
-
-#mainMenu .subMenu{
-    position: absolute;
-    top: 50px; left: 0px; /* 본메뉴 바로 50px 아래 */
-    background-color: red;
-    padding: 10px;
-
-    display: none; /* 화면에 표시하지 않는다. */
-
-}
-
-/* 만약에 해당 메뉴를 hover했을때 서브메뉴(드롭다운) 열기 
-    .menu를 hover 했을때 .submenu에 CSS 적용
-*/
-#mainMenu> #more:hover .subMenu{ display: block;}
-
-
 
 /* =============== 푸터 CSS ================= */
 .footer-order{display: flex;
@@ -104,6 +108,5 @@ justify-content: space-between;}
     font-size: 30px;
     font-weight: bold;
     margin-left: 13px;}
-.select-type language{
-}
+
 

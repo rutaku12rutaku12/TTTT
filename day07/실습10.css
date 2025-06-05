@@ -53,14 +53,24 @@ a{text-decoration: none;}
 .contents>#main-right>ul>li>a{
     text-decoration: none;
 }
+
+.iconbox{
+    width: 20px; height: 20px;
+    background-image: url(../day07/instafacebook.jpg);
+    background-repeat: no-repeat;
+    background-position: -6px -3px;
+    margin-right: 7px;
+}
 .contents>#main-right>ul>#link1>a{
     color:#3579ea ;
+    display: flex;
 }
 .contents>#main-right>ul>#link2>a{
     color: #00376b;
 }
 .contents>#main-right>ul>#link3 a{
     color: #0095f6;
+    padding: 5px;
 }
 
 
