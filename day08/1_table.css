@@ -1,0 +1,82 @@
+/* 
+
+        선택자
+        
+
+        형제 선택자 : 자식 선택자가 다수일때
+            -부모선택자 자식선택자명:nth-child(순번)
+        속성 선택자 : 선택자가 지정된 HTML 속성명을 가질때
+            -선택자 HTML 속성명
+            :nth-of-type(odd): 형제들 중에 홀수
+            :nth-of-type(even): 형제들 중에 짝수
+
+
+*/
+
+
+
+
+
+/* 테이블 꾸미기1 */
+.basictable{
+    width: 500px;   /* 테이블가로사이즈 */
+    border: 1px solid red;
+    border-collapse: collapse; /* 이중테두리 없애기 */
+}
+.basictable th , .basictable td{
+    border: 1px solid red;
+    padding: 5px;
+}
+/* 형제선택자 */
+.basictable td:nth-child(1){background-color: aquamarine;}
+
+.basictable td:nth-child(2),
+.basictable td:nth-child(3),
+.basictable td:nth-child(4),
+.basictable td:nth-child(5),
+.basictable td:nth-child(6){text-align: right;}
+
+/* 속성 선택자 */
+.basictable td[colspan]{
+    text-align: center;
+}
+
+.basictable tr:nth-child(5)>td[colspan]{
+    background-color: beige;
+}
+
+
+/* 테이블 꾸미기2 */
+
+.styleTable{
+    width: 700px;
+    border: 1px solid red;
+    border-collapse: collapse; /* 이중테두리 없애기 */
+}
+.styleTable > thead > tr > th{
+    background-color: blue;
+    color: wheat; font-weight: bold ;
+}
+
+        /* :nth-of-type(odd) : 형제들 중에 홀수 */
+        /* :nth-of-type(even): 형제들 중에 짝수 */
+
+.styleTable > tbody tr:nth-of-type(odd){
+    background-color: beige;
+}
+
+.styleTable> tbody tr:hover{
+    background-color: gray;
+
+}
+
+.styleTable td , .styleTable th {padding: 10px;}
+
+
+
+
+
+
+
+
+

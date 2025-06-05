@@ -2,9 +2,122 @@
     box-sizing: border-box;
     margin: 0; padding: 0;
 }
+li{list-style-type: none;}
 a{text-decoration: none;}
-color: rgb(0 55 107);
 
-color: rgb(0 55 107);
+#wrap{}
+        /* 본문 CSS */
+.contents{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 100px;
+}
+/* 메인 왼쪽 */
+.contents>#main-left{
+    width: 935px; height: 450px;
+}
+.contents>#main-left>img{
+    width: 552px; height: 450px;       
+}
 
-color: rgb(0 55 107);
+/* 메인 오른쪽 */
+.contents>#main-right{
+    width: 350px; height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 좌우가운데정렬 */
+    font-size: 14px;
+}
+.contents>#main-right>img{
+    width: 175px; height: 51px;
+    margin: 40px;
+}
+.contents>#main-right>.idpw{
+    width: 270px; height: 38px;
+    border: 1px solid rgba(216, 216, 216, 0.664);
+    border-radius: 3px;
+    background-color: rgba(216, 216, 216, 0.048);
+    padding-left: 10px;
+    margin: 3px;
+}
+.contents>#main-right>#btn{
+    width: 270px; height: 32px;
+    margin: 5px;
+    border: 1px solid #4cb5f9;
+    border-radius: 10px;
+    background-color: #4cb5f9;
+    color: white;
+}
+.contents>#main-right>ul>li>a{
+    text-decoration: none;
+}
+.contents>#main-right>ul>#link1{
+    color:#3579ea ;
+}
+.contents>#main-right>ul>#link2{
+    color: #00376b;
+}
+.contents>#main-right>ul>#link3>a{
+    color: #0095f6;
+}
+
+
+/* 가상요소 밑줄 */
+.virtual::before{
+    content: "____________";
+    margin: 0 10px 40px 10px;
+    color: rgba(216, 216, 216, 0.8);
+}
+.virtual::after{
+    content: "____________";
+    margin: 0 10px 40px 10px;
+    color: rgba(216, 216, 216, 0.8);
+}
+#main-right #link1, #link2{
+    margin: 20px;
+}
+#main-right #link3{
+    margin-top: 60px;
+}
+
+/* 푸터 CSS */
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.footer>.ft-top{
+    display: flex;
+    justify-content: center;
+}
+.footer>.ft-top>ul{
+    display: flex;
+    flex-direction: row;
+}
+.footer>.ft-top>ul>li{
+margin: 10px;}
+.footer>.ft-top>ul>li>a{
+    font-size: 11px;
+    color: gray;
+}
+
+.footer>.ft-bot{
+    display: flex;
+    justify-content: center;
+}
+.footer>.ft-bot>ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    color: gray;
+}
+.footer>.ft-bot>ul>li{
+margin: 10px;
+}
+.footer>.ft-bot>ul>li>select{
+    border: 1px solid white;
+    font-size: 11px;
+    color: gray;
+}

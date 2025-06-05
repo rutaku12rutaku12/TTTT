@@ -9,7 +9,7 @@ a{color: black; text-decoration: none;}
 /* =============== 레이아웃 CSS ==================== */
 #wrap{}
 #header{
-    width: 100%;
+    width: 1200px; height: 85px;
     display: contents;
 }
 #content{width: 1920px; margin:0 auto}
@@ -17,9 +17,9 @@ a{color: black; text-decoration: none;}
 
 /* =============== 상단메뉴 CSS ================= */
 #topMenu{
-    display: flex; justify-content:center;
+    width: 100%;
+    display: flex; justify-content:space-around;
     align-items: center;
-    width: 1200px; height: 85px;
     padding:29px 0px 0px 0px;
     margin: 0px auto;
 }
@@ -54,6 +54,7 @@ a{color: black; text-decoration: none;}
 
 /* =============== 본메뉴 리스트 CSS ================= */
 #mainMenu{
+    width: 100%;
     display: flex;
     justify-content:center;
     font-size: 18px;
@@ -66,7 +67,29 @@ a{color: black; text-decoration: none;}
 
 
 
+.subMenu>ul{
+    display: flex;
+    display: none;
+    
+}
+#more{
+    position: relative;
+}
 
+#mainMenu .subMenu{
+    position: absolute;
+    top: 50px; left: 0px; /* 본메뉴 바로 50px 아래 */
+    background-color: red;
+    padding: 10px;
+
+    display: none; /* 화면에 표시하지 않는다. */
+
+}
+
+/* 만약에 해당 메뉴를 hover했을때 서브메뉴(드롭다운) 열기 
+    .menu를 hover 했을때 .submenu에 CSS 적용
+*/
+#mainMenu> #more:hover .subMenu{ display: block;}
 
 
 
@@ -82,3 +105,4 @@ justify-content: space-between;}
     margin-left: 13px;}
 .select-type language{
 }
+

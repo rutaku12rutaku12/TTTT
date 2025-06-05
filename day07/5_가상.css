@@ -2,7 +2,7 @@
 
 .division{
     display: flex;
-    align-items: center; /* 수직 앙앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
     width: 400px;
 }
 
