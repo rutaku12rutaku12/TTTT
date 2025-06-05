@@ -16,7 +16,7 @@ a{text-decoration: none;}
 }
 /* 메인 왼쪽 */
 .contents>#main-left{
-    width: 935px; height: 450px;
+    width: 600px; height: 450px;
 }
 .contents>#main-left>img{
     width: 552px; height: 450px;       
@@ -53,13 +53,13 @@ a{text-decoration: none;}
 .contents>#main-right>ul>li>a{
     text-decoration: none;
 }
-.contents>#main-right>ul>#link1{
+.contents>#main-right>ul>#link1>a{
     color:#3579ea ;
 }
-.contents>#main-right>ul>#link2{
+.contents>#main-right>ul>#link2>a{
     color: #00376b;
 }
-.contents>#main-right>ul>#link3>a{
+.contents>#main-right>ul>#link3 a{
     color: #0095f6;
 }
 
