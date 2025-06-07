@@ -20,10 +20,10 @@
                                                                 <!-- 상단 중앙 메뉴 -->
                     <li><a href="#" id="centerWrite"><div id="logo2"></div><span>주변 매장의 프로모션을 확인해보세요!</span></a></li>
                     <li>
-                        <ul id="topRmenu">                           <!-- 상단 오른쪽 메뉴 -->
+                        <ul id="Rtopmenu">                           <!-- 상단 오른쪽 메뉴 -->
                             <li> <a href="#">로그인</a></li>
                             <li> <a href="#">회원가입</a></li>
-                            <li>
+                            <li id="pad10">
                                 <div>
                                 <select id="languageBox"> 
                                     <option> KOR </option>
@@ -41,32 +41,51 @@
                     <a href="#"><span>이벤트·제휴</span></a>
                     <a href="#"><span>매장검색</span></a>
                     <a href="#"><span>가맹점 모집</span></a>
-                    <div id="moreBox">더보기<div id="more"></div></div>
+                    <div id="moreBoxWrap">
+                        <div id="moreBox">더보기<div id="moreimg"></div></div>
                                                                 <!-- 서브메뉴 -->
-                    <div class="subMenu">
-                    <ul>
-                        <li><ul> 도미노 서비스 
-                            <li>매니아 혜택</li>
-                            <li>도미노 모멘트</li>
-                            <li>퀵오더</li>
-                            <li>단체주문 서비스</li>
-                        </li></ul>
-                        <li><ul> 고객센터 
-                            <li>자주하는 질문</li>
-                            <li>문의/칭찬하기</li>
-                            <li>문의 내역/답변</li>
-                        </li></ul>
-                        <li><ul> 회사소개 
-                            <li>한국도미노피자</li>
-                            <li>광고갤러리</li>
-                            <li>사회공헌활동</li>
-                            <li>가맹점 모집</li>
-                            <li>인재채용</li>
-                        </li></ul>
-                        
-                        <li id="subMenu_right"> 공지사항</li>
-                    </ul>
-                </div>
+                        <div class="subMenu">
+                            <ul class="inner-box">
+                                <li id="subMenu_left">
+                                    <ul>
+                                        <li>
+                                            <div>도미노 서비스
+                                                <ul>  
+                                                    <li>매니아 혜택</li>
+                                                    <li>도미노 모멘트</li>
+                                                    <li>퀵오더</li>
+                                                    <li>단체주문 서비스</li>
+                                                </ul>    
+                                            </div>
+                                            <div>고객센터   
+                                                <ul> 
+                                                    <li>자주하는 질문</li>
+                                                    <li>문의/칭찬하기</li>
+                                                    <li>문의 내역/답변</li>
+                                                </ul>
+                                            </div> 
+                                            <div>회사소개
+                                                <ul>
+                                                    <li>한국도미노피자</li>
+                                                    <li>광고갤러리</li>
+                                                    <li>사회공헌활동</li>
+                                                    <li>가맹점 모집</li>
+                                                    <li>인재채용</li>
+                                                </ul>
+                                            </div>    
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="subMenu_right">
+                                    <div>공지사항</div>
+                                    <ul>
+                                        <li>-도미노뉴스</li>
+                                        <li>-보도자료</li>
+                                    </ul>    
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>    
             
@@ -74,8 +93,9 @@
         </div>
 
         <div id="content">                                  <!-- 본문 -->
-                    본문 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div>
+                <div id="Hcontentimg"></div>
+            </div>
         </div>
 
 
@@ -154,7 +174,8 @@
         </div>                                              <!-- 푸터 end  -->
 
         <div id="popup">                                    <!-- 광고 픽스 구역 -->
-            <img src="../day07/ad_fixed.png"/>
+            <img src="../day07/ad_fixed.png" />
+            <input type="button" value="X" />
         </div>
     </div>                                                  <!-- 전체 레이아웃 end -->
     
