@@ -1,0 +1,12 @@
+*{border: 1px red solid;}
+
+#header{
+    width: 100%; height: 139px;
+}
+
+.headerbox1{
+    width: 100%; height: 85px;
+}
+.headerbox2{
+    width: 100%; height: 54px;
+}
