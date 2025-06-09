@@ -27,7 +27,7 @@ padding:29px 0 0 0;}
 
 #topMenu>li>a>#logo{        
     width: 155px; height: 34px;
-    background-image: url("../day07/domino_logo.png");
+    background-image: url("../day07/dominoImg/domino_logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50% 35%;
@@ -39,7 +39,7 @@ padding:29px 0 0 0;}
 }
 #topMenu>li>a>#logo2{
     width: 18px; height: 18px;
-    background-image: url("../day07/plane_logo.png");
+    background-image: url("../day07/dominoImg/plane_logo.png");
     background-repeat: no-repeat;
     background-size: 160%;
     background-position: 70% 150%;
@@ -111,7 +111,7 @@ position: relative;}
                 /* (더보기) V 백그라운드이미지 */
 #moreimg{
     width: 21px; height: 21px;
-    background-image: url("../day07/down_arrow.png");
+    background-image: url("../day07/dominoImg/down_arrow.png");
     background-repeat: no-repeat;
     background-size: 110%;
     background-position:200% 100%;
@@ -193,7 +193,7 @@ padding: 10px 0;
 #content{}
 #H_content1{
     width: 1920px; height: 495px;
-    background-image: url(../day07/Hcontent.png);
+    background-image: url(../day07/dominoImg/Hcontent.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -212,7 +212,7 @@ padding: 10px 0;
     padding-left: 70px;
 }
 #H_oder1{
-    background-image:url(../day07/배달주문.png);
+    background-image:url(../day07/dominoImg/배달주문.png);
     background-repeat: no-repeat;
     width: 52x; height: 38px;
 }
@@ -221,7 +221,7 @@ padding: 10px 0;
     color: #ff143c;
 }
 #H_arrowRed{
-    background-image: url(../day07/화살표1.png);
+    background-image: url(../day07/dominoImg/화살표1.png);
     background-repeat: no-repeat;
     width: 30px; height: 30px;
     background-size: contain;
@@ -229,7 +229,7 @@ padding: 10px 0;
     margin-left: 9px;
 }
 #H_oder2{
-    background-image:url(../day07/포장주문.png);
+    background-image:url(../day07/dominoImg/포장주문.png);
     background-repeat: no-repeat;
     width: 52px; height: 40px;
 }
@@ -238,7 +238,7 @@ padding: 10px 0;
     color: #1382ff;
 }
 #H_arrowBlue{
-    background-image: url(../day07/화살표2.png);
+    background-image: url(../day07/dominoImg/화살표2.png);
     background-repeat: no-repeat;
     width: 30px; height: 30px;
     background-size: contain;
@@ -246,7 +246,7 @@ padding: 10px 0;
     margin-left: 9px;
 }
 #H_oder3{
-    background-image:url(../day07/퀵오더.png);
+    background-image:url(../day07/dominoImg/퀵오더.png);
     background-repeat: no-repeat;
     width: 52px; height: 40px;
 }
@@ -255,7 +255,7 @@ padding: 10px 0;
     color: black;
 }
 #H_arrowBlack{
-    background-image: url(../day07/화살표3.png);
+    background-image: url(../day07/dominoImg/화살표3.png);
     background-repeat: no-repeat;
     width: 32px; height: 32px;
     background-size: contain;
@@ -317,17 +317,17 @@ padding: 10px 0;
 #H_Rbox1{
     width: 210px; height: 210px;
     margin-right: 6px;
-    background-image: url(../day07/박스1.png);
+    background-image: url(../day07/dominoImg/박스1.png);
 }
 #H_Rbox2{
     width: 210px; height: 210px;
     margin-right: 6px;
-    background-image: url(../day07/박스2.png);
+    background-image: url(../day07/dominoImg/박스2.png);
 }
 #H_Rbox3{
     width: 210px; height: 210px;
     margin-right: 6px;
-    background-image: url(../day07/박스3.png);
+    background-image: url(../day07/dominoImg/박스3.png);
 }
 
 
@@ -344,7 +344,7 @@ padding: 10px 0;
 }
 #H_C4_inner>a>#H_C4_box1{
     width: 324px; height: 401px;
-    background-image: url(../day07/con4박스1.png);
+    background-image: url(../day07/dominoImg/con4박스1.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 15px;
@@ -353,14 +353,14 @@ padding: 10px 0;
 }
 #H_C4_inner>a>#H_C4_box2{
     width: 324px; height: 401px;
-    background-image: url(../day07/con4박스2.png);
+    background-image: url(../day07/dominoImg/con4박스2.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 15px;
     border: 1px solid #dcdcdc;}
 #H_C4_inner>a>#H_C4_box3{
     width: 324px; height: 401px;
-    background-image: url(../day07/con4박스3.png);
+    background-image: url(../day07/dominoImg/con4박스3.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 15px;
@@ -402,7 +402,7 @@ padding: 10px 0;
 }
 .footerlogo{
     width: 123px; height: 26px;
-    background-image: url(../day07/domino_logo.png);
+    background-image: url(../day07/dominoImg/domino_logo.png);
     background-size:100%;
     background-position: 50% 35%;
     background-repeat: no-repeat;
@@ -463,14 +463,14 @@ padding: 10px 0;
     font-size: 13px;
 }
 #ftapple{
-    background-image: url(../day07/apple_logo.png);
+    background-image: url(../day07/dominoImg/apple_logo.png);
     width: 20px; height: 26px;
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: 10px;
 }
 #ftstore{
-    background-image: url(../day07/playstore_logo.png);
+    background-image: url(../day07/dominoImg/playstore_logo.png);
     width: 22px; height: 23px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -482,7 +482,7 @@ padding: 10px 0;
     align-items: end;
 }
 #ftblog{
-    background-image: url(../day07/blog_icon.png);
+    background-image: url(../day07/dominoImg/blog_icon.png);
     width: 13px; height: 20px;
     background-repeat: no-repeat;
     background-size: 230%;
@@ -490,7 +490,7 @@ padding: 10px 0;
     margin-left: 10px;
 }
 #ftinsta{
-    background-image: url(../day07/insta_icon.png);
+    background-image: url(../day07/dominoImg/insta_icon.png);
     width: 21px; height: 21px;
     background-repeat: no-repeat;
     background-size: 150%;
@@ -498,7 +498,7 @@ padding: 10px 0;
     margin-left: 15px;
 }
 #ftface{
-    background-image: url(../day07/facebook_icon.png);
+    background-image: url(../day07/dominoImg/facebook_icon.png);
     width: 11px; height: 22px;
     background-repeat: no-repeat;
     background-size: 260%;
@@ -506,7 +506,7 @@ padding: 10px 0;
     margin-left: 15px;
 }
 #ftyoutube{
-    background-image: url(../day07/youtube_icon.png);
+    background-image: url(../day07/dominoImg/youtube_icon.png);
     width: 25px; height: 19px;
     background-repeat: no-repeat;
     background-size: 150%;
@@ -514,7 +514,7 @@ padding: 10px 0;
     margin-left: 15px;
 }
 #ftX{
-    background-image: url(../day07/X_icon.png);
+    background-image: url(../day07/dominoImg/X_icon.png);
     width: 23px; height: 19px;
     background-repeat: no-repeat;
     background-size: 115%;
