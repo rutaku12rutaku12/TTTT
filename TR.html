@@ -10,36 +10,221 @@
 </head>
 <body>
     
-   <div id="wrap">
-        
-            <div class="headerbox1">
+    <div id="wrap">                                          <!-- 전체 레이아웃 -->
+
+        <div id="header">                                    <!--  헤더  -->
+            <div class="headerbox">
+                <ul id="topMenu">                                <!--  상단 메뉴  -->
+                                                                <!-- 상단 왼쪽 메뉴 -->
+                    <li><a href="#" ><div id="logo"></div></a></li> 
+                                                                <!-- 상단 중앙 메뉴 -->
+                    <li><a href="#" id="centerWrite"><div id="logo2"></div><span>주변 매장의 프로모션을 확인해보세요!</span></a></li>
+                    <li>
+                        <ul id="Rtopmenu">                           <!-- 상단 오른쪽 메뉴 -->
+                            <li> <a href="#">로그인</a></li>
+                            <li> <a href="#">회원가입</a></li>
+                            <li id="pad10">
+                                <div>
+                                <select id="languageBox"> 
+                                    <option> KOR </option>
+                                    <option> ENG </option> 
+                                </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>    
+                <div class="mainMenu">                                              <!-- 메인 메뉴 -->
+                     <div class="mainMenuInner">                                     <!-- 메인 메뉴 이너 -->
+                        <ul>
+                           <li><a class="mainMenuInner1" href="#"><span class="mainMenuInner1-1">메뉴       </span></a></li>
+                           <li><a class="mainMenuInner2" href="#"><span class="mainMenuInner2-1">e-쿠폰     </span></a></li>
+                           <li><a class="mainMenuInner2" href="#"><span class="mainMenuInner2-1">상품권 선물</span></a></li>
+                           <li><a class="mainMenuInner2" href="#"><span class="mainMenuInner2-1">이벤트·제휴</span></a></li>
+                           <li><a class="mainMenuInner2" href="#"><span class="mainMenuInner2-1">매장검색   </span></a></li>
+                           <li><a class="mainMenuInner2" href="#"><span class="mainMenuInner2-1">가맹점 모집</span></a></li>
+                        </ul>
+                        <div id="hoverBox">                                         <!-- hover 박스 시작 -->
+                           <a class="mainMenuInner3" href="#">
+                                 <span>더보기</span>
+                           </a>
+                           <div class="moreBox">                                   <!-- 더보기 박스 -->
+                                 <div class="subMenuInner">                          <!-- 서브 메뉴 이너 -->
+                                    <div class="subMenuLeft">                       <!-- 서브 메뉴 좌측 -->
+                                       <div class="subMenuBox">
+                                             <a href="#">도미노 서비스</a>
+                                             <ul>
+                                                <li><a href="#">매니아 혜택</a></li>
+                                                <li><a href="#">도미노 모먼트</a></li>
+                                                <li><a href="#">퀵오더</a></li>
+                                                <li><a href="#">단체주문 서비스</a></li>
+                                             </ul>
+                                       </div>
+                                       <div class="subMenuBox">
+                                             <a href="#">고객센터</a>
+                                             <ul>
+                                                <li><a href="#">자주하는 질문</a></li>
+                                                <li><a href="#">문의/칭찬하기</a></li>
+                                                <li><a href="#">문의 내역/답변</a></li>
+                                             </ul>
+                                       </div>
+                                       <div class="subMenuBox">
+                                             <a href="#">회사소개</a>
+                                             <ul>
+                                                <li><a href="#">한국도미노피자</a></li>
+                                                <li><a href="#">광고갤러리</a></li>
+                                                <li><a href="#">사회공헌활동</a></li>
+                                                <li><a href="#">가맹점 모집</a></li>
+                                                <li><a href="#">인재채용</a></li>
+                                             </ul>
+                                       </div>
+                                    </div>                                          <!-- 서브 메뉴 좌측 끝 -->
+                                    <div class="subMenuRight">                      <!-- 서브 메뉴 우측-->
+                                       <a href="#">공지사항</a>
+                                       <ul>
+                                             <li><a href="#">도미노뉴스</a></li>
+                                             <li><a href="#">보도자료</a></li>
+                                       </ul>
+                                    </div>                                          <!-- 서브 메뉴 우측 끝 -->
+                                 </div>                                              <!-- 서브 메뉴 이너 끝 -->
+                           </div>                                                  <!-- 더보기 박스 끝 -->
+                        </div>                                                      <!-- hover 박스 끝 -->
+                     </div>                                                          <!-- 메인 메뉴 이너 끝 -->
+               </div>                                                              <!-- 메인 메뉴 끝 -->
+            </div>    
+            
+
+        </div>
+
+        <div id="content">                         <!-- 본문 -->
+                                                   <!-- 대문사진 -->
+            <div id="H_content1">
             </div>
-            <div class="headerbox2">
-               <div id="more"> 더보기
-                    <div id="sub">서브메뉴
-                        
+
+            <div id="H_content2">
+                <ul>
+                    <li><a id="H_font1" href="#"><div id="H_oder1"></div>배달 주문<span id="H_arrowRed"></span></a><br/><span class="H_gray">등급별 최대 30%</span></li>
+                    <li><a id="H_font2" href="#"><div id="H_oder2"></div>포장 주문<span id="H_arrowBlue"></span></a><br/><span class="H_gray">등급별 최대 40%</span></li>
+                    <li><a id="H_font3" href="#"><div id="H_oder3"></div>퀵오더<span id="H_arrowBlack"></span></a><br/><span class="H_gray">자주 이용하는 메뉴를<br/> 더 빠르게 주문해보세요!</span></li>
+                </ul>   
+            </div>
+
+            <div id="H_content3">
+                <div id="H_innerL">
+                    <div id="H_Ltop">
+                        <div>도미노피자의<br/>
+                        <span id="H_blue">특별한 매니아 혜택</span><br/>
+                        누려보세요!</div>
                     </div>
-               </div>
-                
+                    <div id="H_Lbot">
+                        <a href="#">로그인</a>
+                    </div>
+                    
+                </div>
+                <div id="H_innerR">
+                    <a href="#"><div id="H_Rbox1"></div></a>
+                    <a href="#"><div id="H_Rbox2"></div></a>
+                    <a href="#"><div id="H_Rbox3"></div></a>
+                </div>
+
+            </div>    
+
+            <div id="H_content4">
+                <div id="H_C4_inner">
+                    <a href="#"><div id="H_C4_box1"></div></a>
+                    <a href="#"><div id="H_C4_box2"></div></a>
+                    <a href="#"><div id="H_C4_box3"></div></a>
+                </div>
             </div>
 
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="footer">                                   <!-- 푸터 -->
+            <div class="footer1-area">                       <!-- 푸터1 구역 -->
+                <div class="Ft1inner-box">
+                    <div class="footer-left">
+                        <div class="footer-order">              <!-- 푸터 맨 윗 구역 -->
+                            <div class="footerlogo"></div><div id="numbersize">1577-3082</div>
+                        </div>
+                        <ul class="footer-contact">       <!-- 푸터 큰글씨 구역 -->
+                            <li><a href="#">이용약관</a></li>
+                            <li class="FCbold"><a href="#">개인정보 처리방침</a></li>
+                            <li class="FCbold"><a href="#">위치기반 서비스</a></li>
+                            <li><a href="#">청소년 보호방침</a></li>
+                            <li><a href="#">영상정보처리기기 운영관리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">가맹점모집</a></li>
+                            <li><a href="#">단체주문</a></li>
+                        </ul>     
+                            
+                        <div class="footer-info">               <!-- 푸터 작은글씨 구역 -->
+                            <p>06223 서울특별시 강남구 역삼로25길 35(역삼동, 청오큐브타워) 청오디피케이㈜｜대표이사 : 오광현,김영훈</p>
+                            <P>사업자 등록번호: 220-81-03371｜통신판매업신고: 강남 5064호｜개인정보 보호책임자 : 윤여진｜민원 책임자 : 임영길</P>   
+                            <P>문의 : webmaster@dominos.co.kr</P>   
+                            <P>Copyright ⓒ Domino’s Pizza. All rights reserved.</P>   
+                            <P class="notice">청오디피케이㈜의 사전 서면동의 없이 도미노피자 사이트(PC, 모바일, 앱)의 일체의 정보, 콘텐츠 및 UI 등을 상업적 목적으로 전재, 전송, 스크래핑 등 무단 사용할 수 없습니다.</P>   
+                            <P>도미노피자에서 판매되는 모든 상품은 청오디피케이㈜에서 책임지고 있습니다.</P>
     
-   </div>
+                        </div>
+                    </div>    
+                    <div class="footer-right">
+                        <div class="language-box">  <!-- 언어선택 구역 -->
+                            <div id="choicebox"><select id="Korbox">
+                                <option>KOR</option>
+                                <option>ENG</option>
+                            </select></div>
+                        </div>
+                        <div class="app-box">                <!-- 애플,플레이스토어 로고 구역 -->
+                            <div>DOWNLOAD APP</div>
+                            <a href="#"><div id="ftapple"></div></a>
+                            <a href="#"><div id="ftstore"></div></a>
+                        </div>
+                        <div class="sns-box">               <!-- SNS 로고 구역 -->
+                            <a href="#"><div id="ftblog"></div></a>
+                            <a href="#"><div id="ftinsta"></div></a>
+                            <a href="#"><div id="ftface"></div></a>
+                            <a href="#"><div id="ftyoutube"></div></a>
+                            <a href="#"><div id="ftX"></div></a>
+                        </div>  
+                    </div>    
+                </div>
+            </div>    
 
 
 
+            <div class="footer2-area">                       <!-- 푸터2 구역 -->
+                <div class="Ft2inner-box">
+                    <ul>
+                        <li><img id="FT2img1" src="../day07/dominoImg/list_awards.png"/><P>식품안전<br/>경영시스템 인증</P></li>
+                        <li><img id="FT2img2" src="../day07/dominoImg/list_awards2.png"/><P>지식경제부<br/>우수디자인 선정</P></li>
+                        <li><img id="FT2img3" src="../day07/dominoImg/list_awards3.png"/><P> 2022년 고객이 가장 추천하는 기업<br/>피자전문점 부문 10년 연속 1위</P></li>
+                        <li><img id="FT2img4" src="../day07/dominoImg/list_awards4.png"/><P> 2024년 한국산업 고객만족도<br/>피자전문점 부문 10년 연속 1위</P></li>
+                        <li><img id="FT2img5" src="../day07/dominoImg/list_awards5.png"/><P>2024 프리미엄브랜드지수<br/>피자전문점 부문 9년 연속 1위 수상</P></li>
+                        <li><img id="FT2img6" src="../day07/dominoImg/list_awards6.png"/><P>대학생 1000명이 선택한<br/>2019 올해의 핫 브랜드 캠퍼스 잡앤조이 선정</P></li>
+                    </ul>
+                </div>
+            </div>                                          <!-- 푸터 2 end -->
+        </div>                                              <!-- 전체 푸터 end  -->
+
+        <div id="popup">                                    <!-- 광고 픽스 구역 -->
+            <img src="../day07/dominoImg/ad_fixed.png" />
+            <input type="button" value="X" />
+        </div>
+    </div>                                                  <!-- 전체 레이아웃 end -->
+    
 
 </body>
 </html>

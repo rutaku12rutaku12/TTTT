@@ -1,84 +1,77 @@
-/* ===============공통 CSS ============== */
-*{
-    padding: 0px; margin: 0 0;
+
+/*
+inner - width 1200px
+img - width 276px, height 276px
+*/
+
+/*==============================공통 CSS==============================*/
+*{  
+    padding: 0px; margin: 0px;
     box-sizing: border-box;
-
 }
-li{list-style-type: none;}
-a{color: black; text-decoration: none;}
-
-/* =============== 레이아웃 CSS ==================== */
-#wrap{width: 100%;}
-#header{width: 100%; height: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0px auto;
+li{ list-style: none; }
+a{  
+    text-decoration: none;
+    color: black;
 }
-#content{width: 100%;}
-#footer{width: 100%;}
-
-/* =============== 상단메뉴 CSS ================= */
-.headerbox{width: 100%;
-display: flex;
-flex-direction: column;
-position: relative;
-z-index: 2;}
-#topMenu{display: flex;
-    justify-content:space-between;
-    width: 1200px;    
+.headerTop, .mainMenuInner, .footerTopInner, .footerBotInner{
+    width: 1200px;
     margin: 0 auto;
-padding:29px 0 0 0;}
-
-#topMenu>li>a>#logo{        
-    width: 155px; height: 34px;
-    background-image: url("../day07/dominoImg/domino_logo.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 35%;
 }
-#topMenu>li>a{
-    display: flex;
-    font-size: 15px;
-    font-weight: ;
-}
-#topMenu>li>a>#logo2{
-    width: 18px; height: 18px;
-    background-image: url("../day07/dominoImg/plane_logo.png");
-    background-repeat: no-repeat;
-    background-size: 160%;
-    background-position: 70% 150%;
-    padding-top: 21.5px;
-    margin-right: 5px;
-}
-#centerWrite{
-    border-bottom: 1px solid gray;
-    padding-right: 80px;
-    padding-bottom: 5px;
-    margin-top: 10px;
-}
-#topMenu>li>#Rtopmenu{display: flex;
-    align-items: center;
-
-}
-#topMenu>li>#Rtopmenu>li{
-    padding:10px;
-    font-size: 14px;
-}
-#topMenu>li>#Rtopmenu>#pad10{ /* 오른쪽 패딩x */
-    padding: 10px 0px 10px 10px;    
-}
-#topMenu>li>#Rtopmenu>li>div>#languageBox{
-    width: 60px; height: 27px;
-    border: 1px solid #c0bfbf;
-    border-radius: 13.5px;
-    color: #9b9999;
-    line-height: 27px;
-    text-align: center;
-    font-size: 12px;
+select:focus{
     outline: none;
 }
-
-/* =============== 본메뉴 리스트 CSS ================= */
+/*==============================헤더 CSS==============================*/
+/*==============================헤더 상단 CSS==============================*/
+.headerLogo{
+    background: url(../TTTT/day07/dominoImg/domino_logo.png);
+    width: 155px;
+    height: 34px;
+}
+.headerMap{
+    width: 345px;
+    height: 27px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.headerMap span{
+    height: 16px;
+}
+.headerMap::before{
+    content: "";
+    width: 18px;
+    height: 16px;
+    background: url(pizza_img/icons) -164px 0px no-repeat;
+    display: inline-block;
+    margin-right: 5px;
+}
+.headerTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+.headerTop > ul{
+    display: flex;
+    align-items: center;
+}
+.headerLogin li{
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+.language{
+    width: 60px;
+    height: 27px;
+    border-radius: 13px;
+    padding-left: 7px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    color: #888888;
+}
+/*==============================메인 메뉴 CSS==============================*/
 .mainMenu{
     padding-top: 16px;
     font-size: 18px;
@@ -86,12 +79,10 @@ padding:29px 0 0 0;}
     top: 0px;
     background-color: white;
     display: flex;
-    justify-content: center;
     border-bottom: 1px solid #ddd;
     z-index: 50;
 }
 .mainMenuInner{
-    width: 1200px;
     padding-bottom: 17px;
     display: flex;
     flex-wrap: wrap;
@@ -120,11 +111,22 @@ padding:29px 0 0 0;}
     border-width: 0px 0px 2px 2px;
     transform: rotate(-45deg);
 }
+/*==============================hover 메뉴 CSS==============================*/
+.mainMenuInner1:hover .mainMenuInner1-1{
+    border-bottom: 2px solid black;
+}
+.mainMenuInner2:hover .mainMenuInner2-1{
+    border-bottom: 2px solid black;
+}
+
+.subMenuBox a:hover .subMenuBox1-1{
+    border-bottom: 1px solid #555;
+}
 
 /*==============================더보기 박스 CSS==============================*/
 .moreBox {
     position: absolute;
-    top: 58px;
+    top: 42px;
     left: 0;
     right: 0;
     z-index: 2;
@@ -194,6 +196,9 @@ padding:29px 0 0 0;}
     text-overflow: ellipsis;
     width: 270px;
 }
+.subMenuRight>ul>li{
+    font-size: 15px;
+}
 #hoverBox:hover .moreBox{
     display: block;
 }
@@ -203,16 +208,6 @@ padding:29px 0 0 0;}
     
     display: flex;
     justify-content: flex-end;
-}
-
-/*==============================hover 메뉴 CSS==============================*/
-.mainMenuInner1:hover .mainMenuInner1-1{
-    border-bottom: 2px solid black;
-}
-.mainMenuInner2:hover .mainMenuInner2-1{
-    border-bottom: 2px solid black;
-    
-
 }
 
 
@@ -399,206 +394,146 @@ padding:29px 0 0 0;}
 }
 
 
-/* =============== 푸터 CSS ================= */
-/* =============== 푸터1 CSS ================= */
 
+/*==============================푸터 CSS==============================*/
 #footer{
-    height: 449px;
+    border-top: 1px solid #ddd;
 }
-.footer1-area{
-    height: 349px;
-    padding: 52px 0;
+/*==============================푸터 상단 CSS==============================*/
+.footerTopInner{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
-.footer2-area{
-    height: 100px;
-    padding: 30px 0;
-    background-color:#f5f5f5;;
+.footerTop{
+    padding: 52px 0px;
 }
-.Ft1inner-box{
-    width: 1200px; height: 244px;
+#footerLogo{
     display: flex;
-    
-    margin: 0 auto;
-
+    margin-bottom: 10px;
 }
-.footer-left{
-    width: 1026px;   
-}
-.footer-order{
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-}
-.footerlogo{
-    width: 123px; height: 26px;
-    background-image: url(../day07/dominoImg/domino_logo.png);
-    background-size:100%;
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-}
-#numbersize{
+#footerLogo span{
     font-size: 30px;
-    line-height: 0.7;
-    margin: 0 0 0 13px;
-    font-weight: 600;
-}
-.footer-contact{
-    height: 36px;
-    margin: 15px 0 0;
-    display: flex;
-}
-.footer-contact>li>a{
-    padding: 10px 10px 10px 0px;
-    font-size: 16px;
-    color: #888;
-}
-.FCbold{
-    color: #000000;
     font-weight: bold;
+    padding-left: 13px;
 }
-
-.footer-info{
-    height:138px;
-    margin: 25px 0 0;
+.footerLogo{
+    background: url(pizza_img/icons);
+    background-position: 0 -47px;
+    width: 123px;
+    height: 30px;
+    margin-top: 5px;
 }
-.footer-info>p{
+.footerTopLeft ul{
+    display: flex;
+    padding-bottom: 10px;
+}
+.footerTopLeft ul li a{
+    padding-right: 18px;
+    color: #888888;
+    font-size: 16px;
+}
+.footerTopLeft ul li .footerBlack{
+    color: black;
+}
+.footerTopLeft p{
+    color: #888888;
+    padding-top: 15px;
     font-size: 12px;
-    color: #888;
+    line-height: 160%;
 }
-.notice{
-    margin: 12px 0 0;
+.footerRight1 select{
+    width: 155px;
+    height: 20px;
+    border-top: white;
+    border-right: white;
+    border-left: white;
+    color: #888888;
 }
-.footer-right{
-    width: 174px; height: 240px;
-}
-.language-box{
-    position: relative;
-}
-#Korbox{
-    border: none;
-    border-bottom: 1px #888 solid;
-    outline: none;
-    padding-right: 128px;
-    color: #888;
-}
-
-.app-box{
-    width: 174px; height: 26px;
-    font-size: 14px;
-    margin: 22px 0 0;
+.footerRight2{
     display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 5px;
 }
-.app-box>div{
-    font-size: 13px;
-}
-#ftapple{
-    background-image: url(../day07/dominoImg/apple_logo.png);
-    width: 20px; height: 26px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: 10px;
-}
-#ftstore{
-    background-image: url(../day07/dominoImg/playstore_logo.png);
-    width: 22px; height: 23px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: 15px;
-}
-.sns-box{
-    height: 138px;
-    display: flex;
-    align-items: end;
-}
-#ftblog{
-    background-image: url(../day07/dominoImg/blog_icon.png);
-    width: 13px; height: 20px;
-    background-repeat: no-repeat;
-    background-size: 230%;
-    background-position: 75% 50%;
-    margin-left: 10px;
-}
-#ftinsta{
-    background-image: url(../day07/dominoImg/insta_icon.png);
-    width: 21px; height: 21px;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 55% 40%;
-    margin-left: 15px;
-}
-#ftface{
-    background-image: url(../day07/dominoImg/facebook_icon.png);
-    width: 11px; height: 22px;
-    background-repeat: no-repeat;
-    background-size: 260%;
-    background-position: 60% 60%;
-    margin-left: 15px;
-}
-#ftyoutube{
-    background-image: url(../day07/dominoImg/youtube_icon.png);
-    width: 25px; height: 19px;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 70% 65%;
-    margin-left: 15px;
-}
-#ftX{
-    background-image: url(../day07/dominoImg/X_icon.png);
-    width: 23px; height: 19px;
-    background-repeat: no-repeat;
-    background-size: 115%;
-    background-position: 50% 55%;
-    margin-left: 15px;
-}
-/* =============== 푸터2 CSS ================= */
-
-.Ft2inner-box>ul{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 1200px; height: 40px;
-
-} 
-.Ft2inner-box>ul>li{
-display: flex;
-    
-} 
-.Ft2inner-box>ul>li>img{
-    display: inline-block;
-}
-#FT2img1{
-    width: 37xp;height: 37px;
-} 
-#FT2img2{
-    width: 30xp;height: 40px;
-} 
-#FT2img3{
-    width: 41xp;height: 28px;
-} 
-#FT2img4{
-    width: 41xp;height: 28px;
-} 
-#FT2img5{
-    width: 45xp;height: 35px;
-} 
-#FT2img6{
-    width: 36xp;height: 38px;
-} 
-.Ft2inner-box>ul>li>p{
-        margin-right:15px;
-    padding-left: 7px;;
+.footerRight2 span{
     font-size: 11px;
-    color: #888;
+    margin-top: 4px;
 }
-
-
-
-
-
-
-
+.appleIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -447px 0px;
+    width: 20px;
+    height: 26px;
+}
+.androidIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -478px 0px;
+    width: 22px;
+    height: 23px;
+    margin-top: 2px;
+}
+.blogIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -509px 0px;
+    width: 13px;
+    height: 20px;
+}
+.instaIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -532px 0px;
+    width: 21px;
+    height: 21px;
+}
+.facebookIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -563px 0px;
+    width: 11px;
+    height: 22px;
+}
+.youtubeIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -584px 0px;
+    width: 25px;
+    height: 19px;
+}
+.twitterIcon{
+    background: url(pizza_img/icons) no-repeat;
+    background-position: -619px 0px;
+    width: 23px;
+    height: 19px;
+}
+.footerRight3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    opacity: 0.3;
+}
+/*==============================푸터 하단 CSS==============================*/
+.footerBot{
+    height: 100px;
+    background-color: #f5f5f5;
+    padding: 30px 0px;
+}
+.footerBotInner{
+    height: 40px;
+}
+.footerBotInner ul{
+    display: flex;
+    justify-content: space-between;
+}
+.footerBotInner ul li{
+    display: flex;
+    align-items: center;
+}
+.footerBotInner img{
+    width: auto;
+    height: auto;
+}
+.footerBotInner p{
+    font-size: 10px;
+    color: #888888;
+    padding-left: 10px;
+}
 
 
 /* 팝업 광고창 CSS */
