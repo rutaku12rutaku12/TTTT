@@ -23,11 +23,34 @@ select:focus{
 }
 /*==============================헤더 CSS==============================*/
 /*==============================헤더 상단 CSS==============================*/
-.headerLogo{
-    background: url(../TTTT/day07/dominoImg/domino_logo.png);
-    width: 155px;
-    height: 34px;
+.headerTop{
+    display: flex;
+    justify-content: space-between;
 }
+.headerLogo{
+    width: 155px; height: 34px;
+    background-image: url("../day07/dominoImg/domino_logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 35%;
+}
+.headerWrite{
+    border-bottom: 1px solid gray;
+    padding-right: 80px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+}
+.headerLogo2{
+    width: 18px; height: 18px;
+    background-image: url("../day07/dominoImg/plane_logo.png");
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: 70% 150%;
+    padding-top: 21.5px;
+    margin-right: 5px;
+}
+
 .headerMap{
     width: 345px;
     height: 27px;
