@@ -418,144 +418,198 @@ select:focus{
 
 
 
-/*==============================푸터 CSS==============================*/
+/* =============== 푸터 CSS ================= */
+/* =============== 푸터1 CSS ================= */
+
 #footer{
-    border-top: 1px solid #ddd;
+    height: 449px;
 }
-/*==============================푸터 상단 CSS==============================*/
-.footerTopInner{
+.footer1-area{
+    height: 349px;
+    padding: 52px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
-.footerTop{
-    padding: 52px 0px;
-}
-#footerLogo{
-    display: flex;
-    margin-bottom: 10px;
-}
-#footerLogo span{
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 13px;
-}
-.footerLogo{
-    background: url(pizza_img/icons);
-    background-position: 0 -47px;
-    width: 123px;
-    height: 30px;
-    margin-top: 5px;
-}
-.footerTopLeft ul{
-    display: flex;
-    padding-bottom: 10px;
-}
-.footerTopLeft ul li a{
-    padding-right: 18px;
-    color: #888888;
-    font-size: 16px;
-}
-.footerTopLeft ul li .footerBlack{
-    color: black;
-}
-.footerTopLeft p{
-    color: #888888;
-    padding-top: 15px;
-    font-size: 12px;
-    line-height: 160%;
-}
-.footerRight1 select{
-    width: 155px;
-    height: 20px;
-    border-top: white;
-    border-right: white;
-    border-left: white;
-    color: #888888;
-}
-.footerRight2{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-left: 5px;
-}
-.footerRight2 span{
-    font-size: 11px;
-    margin-top: 4px;
-}
-.appleIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -447px 0px;
-    width: 20px;
-    height: 26px;
-}
-.androidIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -478px 0px;
-    width: 22px;
-    height: 23px;
-    margin-top: 2px;
-}
-.blogIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -509px 0px;
-    width: 13px;
-    height: 20px;
-}
-.instaIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -532px 0px;
-    width: 21px;
-    height: 21px;
-}
-.facebookIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -563px 0px;
-    width: 11px;
-    height: 22px;
-}
-.youtubeIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -584px 0px;
-    width: 25px;
-    height: 19px;
-}
-.twitterIcon{
-    background: url(pizza_img/icons) no-repeat;
-    background-position: -619px 0px;
-    width: 23px;
-    height: 19px;
-}
-.footerRight3{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 130px;
-    opacity: 0.3;
-}
-/*==============================푸터 하단 CSS==============================*/
-.footerBot{
+.footer2-area{
     height: 100px;
-    background-color: #f5f5f5;
-    padding: 30px 0px;
+    padding: 30px 0;
+    background-color:#f5f5f5;;
 }
-.footerBotInner{
-    height: 40px;
-}
-.footerBotInner ul{
+.Ft1inner-box{
+    width: 1200px; height: 244px;
     display: flex;
-    justify-content: space-between;
+    
+    margin: 0 auto;
+
 }
-.footerBotInner ul li{
+.footer-left{
+    width: 1026px;   
+}
+.footer-order{
+    height: 30px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
 }
-.footerBotInner img{
-    width: auto;
-    height: auto;
+.footerlogo{
+    width: 123px; height: 26px;
+    background-image: url(../day07/dominoImg/domino_logo.png);
+    background-size:100%;
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
 }
-.footerBotInner p{
-    font-size: 10px;
-    color: #888888;
-    padding-left: 10px;
+#numbersize{
+    font-size: 30px;
+    line-height: 0.7;
+    margin: 0 0 0 13px;
+    font-weight: 600;
+}
+.footer-contact{
+    height: 36px;
+    margin: 15px 0 0;
+    display: flex;
+}
+.footer-contact>li>a{
+    padding: 10px 10px 10px 0px;
+    font-size: 16px;
+    color: #888;
+}
+.FCbold{
+    color: #000000;
+    font-weight: bold;
+}
+
+.footer-info{
+    height:138px;
+    margin: 25px 0 0;
+}
+.footer-info>p{
+    font-size: 12px;
+    color: #888;
+}
+.notice{
+    margin: 12px 0 0;
+}
+.footer-right{
+    width: 174px; height: 240px;
+}
+.language-box{
+    position: relative;
+}
+#Korbox{
+    border: none;
+    border-bottom: 1px #888 solid;
+    outline: none;
+    padding-right: 128px;
+    color: #888;
+}
+
+.app-box{
+    width: 174px; height: 26px;
+    font-size: 14px;
+    margin: 22px 0 0;
+    display: flex;
+}
+.app-box>div{
+    font-size: 13px;
+}
+#ftapple{
+    background-image: url(../day07/dominoImg/apple_logo.png);
+    width: 20px; height: 26px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 10px;
+}
+#ftstore{
+    background-image: url(../day07/dominoImg/playstore_logo.png);
+    width: 22px; height: 23px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 15px;
+}
+.sns-box{
+    height: 138px;
+    display: flex;
+    align-items: end;
+}
+#ftblog{
+    background-image: url(../day07/dominoImg/blog_icon.png);
+    width: 13px; height: 20px;
+    background-repeat: no-repeat;
+    background-size: 230%;
+    background-position: 75% 50%;
+    margin-left: 10px;
+}
+#ftinsta{
+    background-image: url(../day07/dominoImg/insta_icon.png);
+    width: 21px; height: 21px;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 55% 40%;
+    margin-left: 15px;
+}
+#ftface{
+    background-image: url(../day07/dominoImg/facebook_icon.png);
+    width: 11px; height: 22px;
+    background-repeat: no-repeat;
+    background-size: 260%;
+    background-position: 60% 60%;
+    margin-left: 15px;
+}
+#ftyoutube{
+    background-image: url(../day07/dominoImg/youtube_icon.png);
+    width: 25px; height: 19px;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 70% 65%;
+    margin-left: 15px;
+}
+#ftX{
+    background-image: url(../day07/dominoImg/X_icon.png);
+    width: 23px; height: 19px;
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position: 50% 55%;
+    margin-left: 15px;
+}
+/* =============== 푸터2 CSS ================= */
+
+.Ft2inner-box>ul{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1200px; height: 40px;
+
+} 
+.Ft2inner-box>ul>li{
+display: flex;
+    
+} 
+.Ft2inner-box>ul>li>img{
+    display: inline-block;
+}
+#FT2img1{
+    width: 37xp;height: 37px;
+} 
+#FT2img2{
+    width: 30xp;height: 40px;
+} 
+#FT2img3{
+    width: 41xp;height: 28px;
+} 
+#FT2img4{
+    width: 41xp;height: 28px;
+} 
+#FT2img5{
+    width: 45xp;height: 35px;
+} 
+#FT2img6{
+    width: 36xp;height: 38px;
+} 
+.Ft2inner-box>ul>li>p{
+        margin-right:15px;
+    padding-left: 7px;;
+    font-size: 11px;
+    color: #888;
 }
 
 
