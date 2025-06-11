@@ -56,17 +56,15 @@ console.log(결과); */
 /* 문제 6: 학점 변환기 (HTML 출력) 
 100점 만점의 점수를 prompt 함수로 입력받아, 점수에 따라 아래와 같이 등급을 부여하고 HTML 문서에 <h2> 태그로 출력하는 프로그램을 작성하시오.
 90점 이상: 'A'
-80점 이상 90점 미만: 'B'
+80점 이상 90점 미만: 'B'+
 70점 미만: 'C'
  */
 
-let 점수 = prompt(" 점수 : ");
-//let 결과 = 점수>=90 ? `${점수}'A'` : 점수>=80 && 점수 <90 ? `${점수}'B'` : 점수 < 70 ? `${점수}'C'`                               ???못풀겟다????????????????????????
-//let 결과 = 점수>=90 ? 'A' : 점수>=80 && 점수 <90 ? 'B' : 점수 < 70 ? 'C'
-
+/* let 점수 = (prompt(" 점수 : "));
+let 결과 = 점수>=90 ? 'A' : (점수>=80 && 점수 <90) ? 'B' : (점수 < 70) ? 'C' : '분류불가'
 
 console.log(결과);
-document.write(`<h3>${결과}</h3>`); 
+document.write(`<h2>${결과}</h2>`);  */
 
 /* 문제 7: 청년 할인 이벤트 대상 확인
 나이를 prompt로 입력받아, 20대 (20세 이상 그리고 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 그렇지 않으면 "이벤트 대상이 아닙니다."를 콘솔에 출력하는 프로그램을 작성하시오.
@@ -81,9 +79,9 @@ console.log(`${결과}`); */
 let likeCount = 3;
  */
 
-/* let LikeCount = 3;
-LikeCount ++
-console.log(`${LikeCount}"좋아요: ["LikeCount"]"`)-3                                                            ???뫃ㄹ라??????????????
+/* let likeCount = 3;
+likeCount ++;
+console.log(`좋아요:[${likeCount}]`);                                                           
  */
 
 /* 문제 9: 할 일 목록에 항목 추가하기
@@ -91,6 +89,14 @@ console.log(`${LikeCount}"좋아요: ["LikeCount"]"`)-3                         
 초기 배열: let todoList = ['장보기', '과제하기'];
 힌트: 배열에 요소를 추가할 때는 .push() 메소드를 사용합니다.
  */
+
+/* let todoList = ['장보기','과제하기'];
+let 새로운일 = prompt("새로운 할 일: ")
+todoList.push(새로운일)
+console.log(todoList)
+ */
+
+
 
 /* let todoList = ['장보기', '과제하기']; // 배열 : [] , 변수 : let todoList
 let todo = prompt("새로운 할일을 입력하세요.");    // 입력받기, 입력받고 입력받은 값으로 다음 행동(목록[배열]저장)이 필요하므로 저장(기억)
@@ -102,6 +108,7 @@ console.lig( todoList); // 배열 전체 요소 출력 */
 초기 배열: let waitingList = ['김민준', '이서연', '박도윤', '최지우'];
 힌트: 배열의 마지막 요소 인덱스는 배열.length - 1 입니다.  */
 
-/* let waitingList = [ '김민준' , '이서연' , '박도윤' , '최지우' ]
+/* let waitingList = [ '김민준' , '이서연' , '박도윤' , '최지우', '김지영' ];
+let findOut = waitingList[waitingList.length -1]
 
-console.log(indexOf(watingList)) */
+console.log(`마지막 대기자는 ${findOut}`); */
