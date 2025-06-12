@@ -80,10 +80,10 @@
 // 출력 예시: '2024년은 윤년입니다.' 또는 '2023년은 평년입니다.'
 
 // let year = prompt("연도를 입력하세요.: ")
-// if((( year % 4 == 0 )&&( year % 100 != 0))||(year % 400 == 0));{
+// if((( year % 4 == 0 )&&( year % 100 != 0))||(year % 400 == 0)){
 //     console.log(`${year}년은 윤년입니다.`);
 // }else{console.log(`${year}년은 평년입니다.`);}
-//                                                                                                     왜오류?
+                                                                                                 
 
 // 문제 7: 세 수 오름차순 정렬
 // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
@@ -174,11 +174,10 @@
 // let carArray = [ '250어7142', '142가7415', '888호8888' ];
 // let locationArray = [ 'A1', 'B3', 'C2' ];
 // let findout = prompt("차량 번호: ")
-// carArray[carArray.indexOf(findout)];
+// let index=carArray.indexOf(findout)
 
-// if( carArray[findout] == locationArray[findout] ){console.log(`${locationArray[carArray.indexOf(findout)]}`);}
+// if( index !== -1 ){console.log(`${locationArray[index]}`);}
 // else{console.log("차량이 존재하지 않습니다.");}
-
 
 // 문제 10: 수강 신청 목록에서 과목 제외하기
 // 현재 수강 신청한 과목 목록이 배열로 주어져 있습니다.
@@ -186,3 +185,8 @@
 // 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
 
 // let courseList = ['수학', '영어', '과학', '국어'];
+// let 과목 = prompt(' 제외할 과목: ')
+// let index = courseList.indexOf(과목)
+// let 제거 = courseList.splice(index,1)
+// if( index !== -1){제거;console.log(courseList);}
+// else {console.log('해당 과목은 신청 목록에 없습니다.')}
