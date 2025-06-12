@@ -81,7 +81,16 @@ if( pwdLen >= 12){ console.log("보안등급 : 강함");
 let seatList = [ 'O', 'X', 'O' ];
 사용자로부터 예약할 좌석의 인덱스 번호(0, 1, 2)를 입력받아, 해당 좌석이 예약 가능('X')하면 '예약 성공'을, 이미 예약된 좌석('O')이면 '예약 불가'를 출력하는 프로그램을 작성하시오. */
 
-let seatList()
+/* let seatList = [ 'O', 'X', 'O' ]; // (1) 배열이란? 여러개의 자료들을 하나의 자료로 [ ] 묶음
+let seat = prompt("좌석번호 선택(0~2) : ") // (2) 인덱스란? 배열에 저장된 자료들의 순서번호 *0번시작*
+// seat번호 == index번호
+if( seatList[seat] == 'O' ){// 만약에 좌석목록(seatList)에서 선택(입력받은)한(시트/인덱스)가 'O' 이면
+    console.log( '예약 불가' );
+// }else if( seatList[seat] == 'X'){ // 2번째 조건은 선택!! ( O 아니면 X 이므로 생략 가능하다. )
+}else{ // 그외
+    console.log( '예약 성공');
+    seatList[seat] = '0'; // 해당하는 좌석목록에 상태 변경 / 대입
+} */
 
 
 /* 문제 6: 점수에 따른 상품 지급
@@ -90,7 +99,16 @@ let seatList()
 700점 이상 900점 미만: 'B급 경품'
 500점 이상 700점 미만: 'C급 경품'
 500점 미만: '참가상' */
-/* 
+ 
+// 조건 : 점수>=900 , 점수 >=700 && 점수 < 900 , 점수 >=500 && 점수 <700 , 점수 < 500
+// let gamePoint = Number( prompt('게임점수 : '))
+// if ( gamePoint >= 900 ){console.log('A급 경품');
+// }   else if( gamePoint >= 700 /* && gamePoint < 900 */){console.log('B급 경품'); // && gamePoint < 900 생략가능 : 앞 조건에 이미 900점 이상
+// }   else if( gamePoint >= 500 /* && gamePoint < 700 */){console.log('B급 경품');
+// }   else {console.log('참가상');};
+
+
+/*
 문제 7: 사용자 역할에 따른 접근 권한 부여
 사용자 역할(role)을 문자열로 입력받습니다. 역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
 admin: '모든 기능에 접근할 수 있습니다.'
@@ -98,6 +116,17 @@ editor: '콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.'
 viewer: '콘텐츠 조회만 가능합니다.'
 그 외 역할: '정의되지 않은 역할입니다.'
  */
+
+// // ** 조건 (3)개: role == 'admin , role == 'editor , role == 'viewer .
+// let role = prompt('사용자 역할 : ')
+// if( role == 'admin' ){ console.log('모든 기능에 접근할 수 있습니다.');}
+// else if( role == 'editor'){ console.log('콘텐츠 수정 및 생성 기능에 접글할 수 있습니다.');}
+// else if( role == 'viewer'){ console.log('콘텐츠 조회만 가능합니다.');}
+// else{ console.log('정의되지 않은 역할입니다.');}
+// // else : 앞 조건에 따른 나머지 결과 도출 
+
+
+
 /* 문제 8: 나이에 따른 놀이공원 입장료 계산
 사용자의 나이를 정수로 입력받아, 아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
 8세 미만: '무료'
