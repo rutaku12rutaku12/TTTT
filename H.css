@@ -171,7 +171,7 @@ select:focus{
 }
 .subMenuBox a {
     display: block;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 17px;
     color: #111;
 }
@@ -391,6 +391,7 @@ select:focus{
     display: flex;
     justify-content: center;
 }
+
 #H_C4_inner>a>#H_C4_box1{
     width: 324px; height: 401px;
     background-image: url(../day07/dominoImg/con4박스1.png);
