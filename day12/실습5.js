@@ -3,7 +3,14 @@
 // 문제 1: 과일 목록 관리
 // 다음 과일 목록 배열이 주어져 있습니다.
 // let fruitList = [ '사과', '바나나' ];
-// 사용자로부터 새로운 과일 이름을 입력받아, fruitList에 이미 존재하는 과일이면 '이미 존재하는 과일입니다.'를 출력하세요. 존재하지 않는 과일이면 배열에 추가한 뒤, 변경된 배열 전체를 출력하는 프로그램을 작성하시오.
+// 사용자로부터 새로운 과일 이름을 입력받아, fruitList에 이미 존재하는 과일이면 '이미 존재하는 과일입니다.'를 출력하세요.
+// 존재하지 않는 과일이면 배열에 추가한 뒤, 변경된 배열 전체를 출력하는 프로그램을 작성하시오.
+
+// let fruitList = [ '사과', '바나나' ];
+// let fruit = prompt("새로운 과일: ")
+// if( fruitList.indexOf(fruit) == -1 ){fruitList.push(fruit); console.log(fruitList)}
+//     else{console.log('이미 존재하는 과일입니다.')}
+
 
 //조건 : 배열찾기함수( .indexOf() ) , furitList.indexOf( 새로운과일명 ) == -1
 // let fruitList = [ '사과', '바나나' ];
@@ -13,14 +20,16 @@
 //     console.log( fruitList);
 // }else{console.log('이미 존재하는 과일입니다.');} // (그외) 존재한다.
 
-// let fruitList = [ '사과', '바나나' ];
-// let write = prompt('새로운 과일적기: ')
-// if( write == (fruitList[0])|| write == (fruitList [1])){console.log('이미 존재하는 과일입니다.');}
-// else{(fruitList.push(write)), console.log(fruitList)}
 
 
 // 문제 2: 성별에 따른 색상 지정
-// 주민등록번호 13자리를 문자열로 입력받습니다. 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를, '2' 또는 '4'이면 'red'를 출력하는 프로그램을 작성하시오.
+// 주민등록번호 13자리를 문자열로 입력받습니다. 성별을 나타내는 7번째 숫자가 '1' 또는 '3'이면 'blue'를,
+// '2' 또는 '4'이면 'red'를 출력하는 프로그램을 작성하시오.
+
+// let num = prompt("주민등록번호 13자리를 입력하세요.: ")
+// if(num[6] == 1 || num[6] == 3 ){console.log('blue');
+// }    else{console.log('red');
+// }
 
 // 조건 : 주민등록번호[6] == '1' || , 주민등록번호[6] == '3' ,
 //  (1) 문자열도 배열자료 기반 이므로 인덱스가 존재한다.
@@ -29,12 +38,16 @@
 // if( ssn[6] =='1' || ssn[6] == '3'){ console.log('blue');}
 // else{ console.log('red');}
 
+
+
 // 문제 3: 구매 금액에 따른 할인율 적용
 // 사용자로부터 총 구매 금액을 입력받습니다. 구매 금액에 따라 아래와 같이 할인율을 적용하여 최종 결제 금액을 출력하는 프로그램을 작성하시오.
 // 50,000원 이상: 10% 할인
 // 30,000원 이상 50,000원 미만: 5% 할인
 // 10,000원 이상 30,000원 미만: 1% 할인
 // 10,000원 미만: 할인 없음
+
+
 
 // let count = prompt("구매한 금액 : ");
 // if(count >=50000){console.log(`${count*0.9}원입니다.`)}
@@ -51,10 +64,11 @@
 // 만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
 // let season = ['1','2','3','4','5','6','7','8','9','10','11','12'];
 // let def = prompt("(1~12)월 숫자를 입력해주세요. : ")
-// if(def== 3 || def == 4 || def ==5){console.log("봄");}
-// else if(def== 6 || def == 7 || def ==8){console.log("여름");}
-// else if(def== 9 || def == 10 || def ==11){console.log("가을");}
-// else if(def== 12 || def == 1 || def ==2){console.log("겨울");}
+// if (def <= 0 || def >=13){console.log("잘못된 월입니다.");}
+// else if(def <= 2 || def >= 12){console.log("겨울");}
+// else if(def >= 3 && def <= 5){console.log("봄");}
+// else if(def >= 6 && def <= 8){console.log("여름");}
+// else if(def >= 9 && def <= 11){console.log("가을");}
 // else {console.log("잘못된 월입니다.");}
 
 
@@ -88,6 +102,15 @@
 // 문제 7: 세 수 오름차순 정렬
 // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
 // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
+
+
+let num1 = prompt("정수1: ")
+let num2 = prompt("정수2: ")
+let num3 = prompt("정수3: ")
+let numList = [num1,num2,num3]
+if( num1>num2 && num2>num3 && num1>num3)
+
+
 
 
 // // (1) 3개의 정수를 입력받는다.
