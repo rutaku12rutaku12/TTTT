@@ -104,13 +104,40 @@
 // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
 
 
-let num1 = prompt("정수1: ")
-let num2 = prompt("정수2: ")
-let num3 = prompt("정수3: ")
-let numList = [num1,num2,num3]
-if( num1>num2 && num2>num3 && num1>num3)
+// let num1 = Number(prompt("정수1: "))
+// let num2 = Number(prompt("정수2: "))
+// let num3 = Number(prompt("정수3: "))
+// let numList = [num1,num2,num3] 
+// if( num1>num2 && num1>num3 && num2>num3 ){console.log(num3,num2,num1)}
+//     else if( num1>num2 && num1>num3 && num3>num2){console.log(num2,num3,num1)}
+//     else if( num1<num2 && num1>num3 && num2>num3){console.log(num3,num1,num2)}
+//     else if( num1<num2 && num1<num3 && num2>num3){console.log(num1,num3,num2)}
+//     else if( num1>num2 && num1<num3 && num2<num3){console.log(num2,num1,num3)}
+//     else if( num1<num2 && num1<num3 && num2<num3){console.log(num1,num2,num3)}
+//     else{console.log("숫자가 서로 같거나 숫자가 아닙니다.")}
 
 
+
+// let num1 = Number(prompt("정수1: "))
+// let num2 = Number(prompt("정수2: "))
+// let num3 = Number(prompt("정수3: "))
+// let numList = [num1,num2,num3] 
+
+// let temp; // 임시변수 만들기
+// if(numList[0]==numList[1] || numList[0]==numList[2]||numList[1]==numList[2]){console.log("서로 다른 숫자를 넣어주세요.")}
+// else{if( numList[0]>numList[1]){
+//         temp = numList[0];                       
+//         numList[0] = numList[1];
+//         numList[1] = temp;
+//     }if( numList[0]>numList[2]){
+//         temp = numList[0];
+//         numList[0] = numList[2]
+//         numList[2] = temp;
+//     }if( numList[1]>numList[2]){
+//         temp = numList[1];
+//         numList[1] = numList[2]
+//         numList[2] = temp;
+//     }console.log(numList)}
 
 
 // // (1) 3개의 정수를 입력받는다.
@@ -160,6 +187,23 @@ if( num1>num2 && num2>num3 && num1>num3)
 // 플레이어 1이 이기면 '플레이어1 승리'를 출력합니다.
 // 플레이어 2가 이기면 '플레이어2 승리'를 출력합니다.
 // 두 플레이어가 같은 것을 내면 '무승부'를 출력합니다.
+
+// let player1 = Number(prompt("0(가위), 1(바위), 2(보) 중 하나의 숫자를 입력합니다"))
+// let player2 = Number(prompt("0(가위), 1(바위), 2(보) 중 하나의 숫자를 입력합니다"))
+
+
+// let player1 = Number(prompt("0(가위), 1(바위), 2(보) 중 하나의 숫자를 입력합니다"))
+// let player2 = Number(prompt("0(가위), 1(바위), 2(보) 중 하나의 숫자를 입력합니다"))
+
+// let result=[player1,player2];
+// if (result[0]==result[1]){console.log('무승부')}
+//     else if(result[0]==0 && result[1]==2
+//     || result[0]==1 && result[1]==0
+//     || result[0]==2 && result[1]==1
+//     ){console.log('플레이어1 승리')}
+//     else{console.log('플레이어2 승리')}
+
+
 // 조건 : 플레이어가 이기는 경우의수(3) 지는수(3) , 비기는수(3) => 경우의수 9개
 
 /*  (방법1: 모든 경우의수 판단 ) 
@@ -192,7 +236,18 @@ if( num1>num2 && num2>num3 && num1>num3)
 // 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다. 두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
 // 차량 번호 목록: let carArray = [ '250어7142', '142가7415', '888호8888' ];
 // 주차 위치 목록: let locationArray = [ 'A1', 'B3', 'C2' ];
-// 사용자로부터 차량 번호를 입력받아, carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+// 사용자로부터 차량 번호를 입력받아, carArray에서 해당 차량을 찾은 뒤 locationArray에 있는 그 차량의 주차 위치를 찾아 출력하는 프로그램을 작성하시오. 
+// 만약 해당하는 차량 번호가 없다면 '차량이 존재하지 않습니다.'를 출력하시오.
+
+
+// let carArray = [ '250어7142', '142가7415', '888호8888' ];
+// let locationArray = [ 'A1', 'B3', 'C2' ];
+
+// let findout = prompt("차량번호: ")
+// if(carArray.indexOf(findout)==-1){console.log('차량이 존재하지 않습니다.')}
+// else if(carArray.indexOf(findout)==0){console.log('A1')}
+// else if(carArray.indexOf(findout)==1){console.log('B3')}
+// else if(carArray.indexOf(findout)==2){console.log('C2')}
 
 // let carArray = [ '250어7142', '142가7415', '888호8888' ];
 // let locationArray = [ 'A1', 'B3', 'C2' ];
@@ -205,7 +260,18 @@ if( num1>num2 && num2>num3 && num1>num3)
 // 문제 10: 수강 신청 목록에서 과목 제외하기
 // 현재 수강 신청한 과목 목록이 배열로 주어져 있습니다.
 // let courseList = ['수학', '영어', '과학', '국어'];
-// 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요. 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
+// 사용자로부터 제외하고 싶은 과목명을 입력받아, courseList에 해당 과목이 존재하면 목록에서 삭제한 뒤 변경된 배열 전체를 출력하세요.
+// 만약 존재하지 않는 과목이면 '해당 과목은 신청 목록에 없습니다.'를 출력하는 프로그램을 작성하시오.
+
+
+// let courseList = ['수학', '영어', '과학', '국어'];
+
+// let ex = prompt("제외하고 싶은 과목: ");
+// let index = courseList.indexOf(ex);
+// if(courseList[index] == ex){(courseList.splice(index,1),
+//      console.log(courseList));}
+// else{console.log('해당 과목은 신청 목록에 없습니다.')}
+
 
 // let courseList = ['수학', '영어', '과학', '국어'];
 // let 과목 = prompt(' 제외할 과목: ')
