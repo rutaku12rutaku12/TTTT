@@ -195,26 +195,22 @@
 // document.write(output)
 
 
-let nameArray = ['유재석', '강호동', '신동엽'];
-let scores = [92, 86, 72];
+// let nameArray = ['유재석', '강호동', '신동엽'];
+// let scores = [92, 86, 72];
 
-let output = "";
+// let output = "";
 
-for( let i = 0; i<=nameArray.length-1; i++){
-    {output+= `<div> ${nameArray[i]}`;
-    }
-    let black = parseInt(scores[i]/10);
-    for (let j=1; j<=black;j++){
-        if(j<=black){output+='<span>●</span>'}
-        else{output+=`<span>○</span>`}
-    }output+= `</div>`
-}
-document.write(output)
-
-
-
-
-
+// for(let i=0;i<=nameArray.length-1;i++){
+//     {output+=`<div>${nameArray[i]}`}
+//     let black=scores[i]/10
+//     for(let j=1; j<=10;j++){
+//         if(j<=black){output+=`<span>●</span>`}
+//         else{output+=`<span>○</span>`
+    
+//              }
+//         }output+=`</div>`
+// }
+// document.write(output)
 
 
 

@@ -3,6 +3,12 @@
 // 주어진 숫자 배열에서 가장 큰 값을 찾아 콘솔에 출력하는 프로그램을 작성하시오. (단, Math.max() 함수 사용 금지)
 // let numbers = [23, 5, 67, 12, 88, 34];
 
+// let numbers = [23, 5, 67, 12, 88, 34];
+// let max= 0;
+// for(let i=0;i<=numbers.length-1;i++){
+//     if(max<numbers[i]){max=numbers[i]}
+// }console.log(max)
+
 // 메모(기억=변수) : 가장 큰 값
 // let max = numbers[0];   // 첫번째 점수를 가장 큰수로 기억/저장
 // // 만약에 max(기록) 보다 더 큰 수가 존재하면 더큰수를 max(기록) 대입한다.
@@ -36,6 +42,18 @@
 // ***
 // **
 // *
+
+// let output="";
+
+
+// for(let i=0;i<=4;i++){
+//     for(let j=0;j<=4-i;j++){output+=`*`}
+//     {output+=`\n`}
+   
+// }console.log(output)    
+
+
+
 /* 
                     line(행)         star(열)
             *****       1           1 2 3 4 5      1 ~ (전체줄수 - 현재 줄수) 4+1
@@ -71,6 +89,21 @@
 // let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
 // 힌트: 문자열의 .indexOf() 메소드를 사용하세요.
 
+// let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
+
+// for(let i=0;i<=userNames.length-1;i++){
+//     if(userNames[i].indexOf('솔')!=-1){console.log(userNames[i])
+//         break;
+//     }
+// }
+
+
+
+
+
+
+
+
 // 배열내 -> 하나의 요소/값/문자열 -> 솔이 포함. // 김하준(문자열)은 배열의 기반으로 만들어진 자료이다.
 // (1) 모든 배열의 이름들을 *하나씩: 0 ~ 마지막까지 1씩* 꺼낸다. <배열 순회>
 // let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
@@ -89,6 +122,22 @@
 // 문제 4: 2차원 배열의 모든 요소 출력하기
 // 다음과 같은 2차원 배열(좌석표)이 있습니다. 중첩 for 반복문을 사용하여 모든 좌석의 값을 순서대로 출력하시오.
 // let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
+
+
+
+// let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
+
+// for(let i=0;i<=2;i++){
+//     let seat=seatLayout[i]
+//     for(let j=0;j<=2;j++){
+//         console.log(seat[j])
+//     }
+// }
+
+
+
+
+
 
 // let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
 
@@ -132,23 +181,16 @@
 // 힌트: 새로운 배열을 만들고, for 반복문으로 기존 배열을 순회하며 
 // 새로운 배열에 해당 요소가 없을( .indexOf() == -1 ) 때만 추가(push())합니다.
 
-
 // let numbers = [1, 5, 2, 3, 5, 1, 4, 2];
-// numList = []; 내가풀다 실패
+// let new1 = [];
+// for(let i=0;i<=numbers.length-1;i++){
+//     if(new1.indexOf(numbers[i])==-1){new1.push(numbers[i])}
+   
+       
+// }console.log(new1)
 
-// console.log(numbers[0])  //  1
-// console.log(numbers[1])  //  5
-// console.log(numbers[2])  //  2
-// console.log(numbers[3])  //  3
-// console.log(numbers[4])  //  5
-// console.log(numbers[5])  //  1
-// console.log(numbers[6])  //  4
-// console.log(numbers[7])  //  2
 
-// for( j= 0 ; j<= numList.length-1; j++){
-//     if( numList.indexOf(numbers[0]) == -1){numList.push(numbers[0])}
-//     else{ numList.splice()}
-    
+        
 
 
 
@@ -157,6 +199,17 @@
 // let numbers = [5, 3, 4, 1, 2];
 // 힌트: 중첩 for 반복문을 사용하며, 이웃한 두 요소를 비교하 위치를 바꿉니다.
 
+let numbers = [5, 3, 4, 1, 2];
+
+for(let i=0;i<=numbers.length-1;i++){
+    for(let j=0;j<=numbers.length-1;j++){
+        if(numbers[i]<numbers[j]){
+    let empt= numbers[i];
+    numbers[i]=numbers[j];
+    numbers[j]=empt;
+    }}
+    
+}console.log(numbers)
 
 
 // 문제 7: 재고 관리 시스템
