@@ -179,14 +179,48 @@
 // 강호동 ●●●●●●●●○○
 // 신동엽 ●●●●●●●○○○
 
+// let nameArray = ['유재석', '강호동', '신동엽'];
+// let scores = [92, 86, 72];
+
+// let output = "";
+// for ( let i = 0 ; i <= nameArray.length-1; i++){
+//     {output += `<div> ${nameArray[i]}`; 
+//     }
+//     let black = parseInt(scores[i]/10);
+//     for( let circle = 1; circle<=10; circle++){
+//         if ( circle<=black){output += `<span>●</sapn>`}
+//         else {output += `<span>○</span>`}
+//     }output+=`</div>`
+// }
+// document.write(output)
+
+
 let nameArray = ['유재석', '강호동', '신동엽'];
 let scores = [92, 86, 72];
 
-for ( let index = 0 ; index <= nameArray.length-1; index++){
-    if(nameArray[i])
-    
+let output = "";
+
+for( let i = 0; i<=nameArray.length-1; i++){
+    {output+= `<div> ${nameArray[i]}`;
+    }
+    let black = parseInt(scores[i]/10);
+    for (let j=1; j<=black;j++){
+        if(j<=black){output+='<span>●</span>'}
+        else{output+=`<span>○</span>`}
+    }output+= `</div>`
 }
-......
+document.write(output)
+
+
+
+
+
+
+
+
+
+
+
 // let nameArray = ['유재석', '강호동', '신동엽'];
 // let scores = [92, 86, 72];
 
