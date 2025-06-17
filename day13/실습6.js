@@ -306,9 +306,6 @@
 // }document.write(output)
 
 
-
-
-
 // 문제 9: 좌석 예약 상태 표시하기
 // 총 6개의 좌석 상태 정보가 담긴 배열을 이용하여, 좌석 배치도와 상태를 HTML에 출력하는 프로그램을 작성하시오.
 // (1). 초기 데이터
@@ -326,12 +323,19 @@
 // 예약석 빈좌석
 // 예약석 빈좌석
 
-let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+// let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
 
-for( let i=0; i<=seatStatus.length-1;i++){
-        let seat= seatStatus[i];
+// let output="";
+// for( let i=0; i<=seatStatus.length-1;i++){
+//         let seat= seatStatus[i];
+          
+//         if(seat=='빈좌석'){
+//             output+=`<span style="color:blue;">빈좌석</span>`}
+//         else{output+=`<span style="color:red;">예약석</span>`}   
         
-}
+//         if(i% 2 == 1) 
+//             {output+=`<br>`}
+// }document.write(output)
 
 
 
@@ -383,3 +387,13 @@ for( let i=0; i<=seatStatus.length-1;i++){
 // 계산 예시:65분 주차 시 parseInt( (65 - 30) / 10 )는 parseInt(3.5)가 되어 결과는 3이 됩니다. 따라서 추가 요금은 3 * 500원으로 계산됩니다.
 
 
+// let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
+// let usageMinutes = [65, 30, 140, 420];
+
+// for(let i=0; i<=carNumbers.length-1;i++){
+//     let car=carNumbers[i];
+//     let use=usageMinutes[i];
+//     let money= 1000+parseInt((use-30)/10)*500;
+//     if(money>20000){money=20000;}
+//     document.write(`${car}: ${use}분 주차, 최종 요금:${money}원<br>`)
+// } 
