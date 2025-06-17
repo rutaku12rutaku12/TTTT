@@ -199,17 +199,17 @@
 // let numbers = [5, 3, 4, 1, 2];
 // 힌트: 중첩 for 반복문을 사용하며, 이웃한 두 요소를 비교하 위치를 바꿉니다.
 
-let numbers = [5, 3, 4, 1, 2];
+// let numbers = [5, 3, 4, 1, 2];
 
-for(let i=0;i<=numbers.length-1;i++){
-    for(let j=0;j<=numbers.length-1;j++){
-        if(numbers[i]<numbers[j]){
-    let empt= numbers[i];
-    numbers[i]=numbers[j];
-    numbers[j]=empt;
-    }}
+// for(let i=0;i<=numbers.length-1;i++){
+//     for(let j=0;j<=numbers.length-1;j++){
+//         if(numbers[i]<numbers[j]){
+//     let empt= numbers[i];
+//     numbers[i]=numbers[j];
+//     numbers[j]=empt;
+//     }}
     
-}console.log(numbers)
+// }console.log(numbers)
 
 
 // 문제 7: 재고 관리 시스템
@@ -218,7 +218,23 @@ for(let i=0;i<=numbers.length-1;i++){
 // let products = ['볼펜', '노트', '지우개'];
 // let stock = [10, 5, 20];
 
-//(1번째)풀이
+
+// let products = ['볼펜', '노트', '지우개'];
+// let stock = [10, 5, 20];
+
+// let 상품= prompt("구매할 상품명: ");
+// let 수량= prompt("구매할 수량: ");
+// for(let i=0;i<=products.length-1;i++){
+//     if(products[i]==상품){
+//         if(stock[i]-수량<0){console.log("재고가 부족합니다.")}
+//         else{stock[i]-수량;console.log("구매 완료!") }
+
+//     }
+// }
+// // 상품명/수량 입력-> 입력시 재고차감
+
+
+// // (1번째)풀이
 // let products = ['볼펜', '노트', '지우개'];
 // let stock = [10, 5, 20];
 // let 상품명 = prompt(' 상품명 입력: ');  //(1) 사용자로부터 구매할 상품명 입력받아,
@@ -274,6 +290,23 @@ for(let i=0;i<=numbers.length-1;i++){
 // 위키드          ★★★★☆☆☆☆☆☆
 // 글래디에이터2   ★★★★★★★☆☆☆
 // 청설            ★★★★★★☆☆☆☆
+
+
+let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
+let movieRatings = [8, 4, 7, 6];
+
+let output="";
+
+for( let i=0; i<=movieNames.length-1;i++){
+    {output+=`<div>${movieNames}`}
+    for(let j=1; j<=10; j++){
+        
+        if (j<=movieRatings[j]){output+=`<span>"★"</span>`}
+        else{output+=`<span>"☆"</span>`}
+    }output+=`</div>`
+}document.write(output)
+
+
 
 
 

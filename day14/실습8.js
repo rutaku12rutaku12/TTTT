@@ -21,18 +21,56 @@
 //   { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
 
-let 아이디= prompt('아이디: ');
-let 비밀번호= prompt('비밀번호: ');
-let 이름= prompt('이름: ');
 
 
-const member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
-if(mebers.push(member) == (member in members)){console.log("존재하는 아이디입니다.") 
+// let 아이디= prompt('아이디: ');
+// let 비밀번호= prompt('비밀번호: ');
+// let 이름= prompt('이름: ');
 
-const mebers = [
-  { id: 'user1', password: 'pass1', name: '사용자1' },
-  { id: 'user2', password: 'pass2', name: '사용자2' },
-]};console.log(members)
+
+// const member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
+// if(mebers.push(member) == (member in members)){console.log("존재하는 아이디입니다.") 
+
+// const mebers = [
+//   { id: 'user1', password: 'pass1', name: '사용자1' },
+//   { id: 'user2', password: 'pass2', name: '사용자2' },
+// ]};console.log(members)
+
+// const members = [
+//   { id: 'user1', password: 'pass1', name: '사용자1' },
+//   { id: 'user2', password: 'pass2', name: '사용자2' },
+// ];
+// // 1. prompt 세번 사용 : 아이디 비밀번호 이름 순서대로 입력
+// let 아이디= prompt('아이디: ');
+// let 비밀번호= prompt('비밀번호: ');
+// let 이름= prompt('이름: ');
+// // 2. 입력받은 정보(여러변수)로 하나의 member 객체
+// let member = { id : id , pwd : pwd , name : name }  // (1) 객체 생성 , 객체내 속성 추가 해야 하므로 *변수에 저장*
+//   // (2) 객체내 새로운 속성명 에 입력받은 값 대입
+
+//  // vs let member = { id : id , pwd : pwd , name : name }
+// // let member = []; member.push(id)
+//   // * 입력받은 아이디가 이미 배열에 존재여부
+//   // 1. 배열내 모든 객체를 하나씩 (조회)꺼낸다.
+// let idCheck = false;
+// for( let index = 0; index <=members.length-1;index++){
+//   let member = members[index]; // index번째의 member 객체 꺼내기(조회)
+//     // 2.  객체내 id 속성 값이 입력받은 값과 비교 
+//   if( member.id == id){// index번째의 member객체내 id속성값이 입력받은 id와 같으면
+//       idCheck = true; // 중복 체크!!!
+//       break; // 반복문 종료
+//   } 
+//    // * 아직 모두 조회된 상태가 아니므로 for문 안에서 배열에 저장 하지 않는다.
+// } // for end
+
+// // 3. member 객체, members 배열에 저장 // 4. members 배열을 콘솔에 출력
+// if( idCheck == false ){
+//     memebers.push( member);
+//     console.log( `등록 성공` );
+// }
+// else{
+//     console.log( `등록 실패` );
+// }
 
 
 // 문제 3: 객체 배열의 속성 값 평균 구하기
@@ -43,6 +81,45 @@ const mebers = [
 //   { name: 'C', math: 76, science: 78 }
 // ];
 
+// 반복문 없이 // 
+// let 학생객체1 = scores[0]
+// let 학생객체2 = scores[1]
+// let 학생객체3 = scores[2]
+// let 학생1수학점수 = 학생객체1.math; //80
+// let 학생2수학점수 = 학생객체2.math; //95
+// let 학생3수학점수 = 학생객체3.math; //76
+// let 합계 = 학생1수학점수+학생2수학점수+학생3수학점수 ; 
+// let 인원수 = scores.length // 3
+// let 평균 = 합계 / 인원수 ;
+
+// 반복문풀이 //
+// let sum = 0 ;
+// for (let index= 0; index<=scores.length-1;index++){
+//     let 학생객체 = scores[index]; // index번째 학생객체 호출
+//     sum += 학생객체.math; // index번째 학생객체의 수학점수 속성값 호출
+// } // for end
+// console.log( sum / scores.length );    // 합계 / 3(배열길이=객체개수=인원수)
+
+//
+
+
+// const scores = [
+//   { name: 'A', math: 80, science: 92 },
+//   { name: 'B', math: 95, science: 88 },
+//   { name: 'C', math: 76, science: 78 }
+// ];
+
+// let sum= 0;
+
+// for (let index= 0; index<=scores.length-1;index++){
+//     let 학생객체 = scores[index];
+//     sum += 학생객체.math;
+// }console.log(sum/scores.length);
+
+
+
+
+
 // 문제 4: 특정 조건을 만족하는 객체 찾기
 // products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
 // const products = [
@@ -51,6 +128,28 @@ const mebers = [
 //   { id: 3, name: '포도' },
 //   { id: 4, name: '딸기' }
 // ];
+
+// const products = [
+//   { id: 1, name: '사과' },
+//   { id: 2, name: '바나나' },
+//   { id: 3, name: '포도' },
+//   { id: 4, name: '딸기' }
+// ];
+
+// let idCheck = false; // id가 3인 찾았다(true)/못찾았다.(false)
+// for (let index= 0; index<=products.length-1;index++){
+//     let product= products[index];
+//     if(product.id==3)
+//        idCheck = true;
+//        console.log( product); // 찾았다. 목표 이뤘다. 굳이 뒤에 인덱스 확인해야할까?
+//        break; // 반복문 종료 
+//        // 모두 조회(for모두 실행)를 하고 나서 찾았다/못찾았다. 판단!!!!
+// }// for end
+// if( idCheck==false){ console.log("상품을 찾을 수 없습니다.");}
+
+
+
+
 
 // 문제 5: 객체 배열 필터링하기
 // users 배열에서 isActive가 true인 사용자들만으로 구성된 새로운 배열 activeUsers를 만들고, 이 배열을 콘솔에 출력하시오.
@@ -61,6 +160,26 @@ const mebers = [
 //   { id: 4, name: '유저4', isActive: false }
 // ];
 
+
+// const users = [
+//   { id: 1, name: '유저1', isActive: true },
+//   { id: 2, name: '유저2', isActive: false },
+//   { id: 3, name: '유저3', isActive: true },
+//   { id: 4, name: '유저4', isActive: false }
+// ];
+
+// let activeUsers = [] ;
+
+// for (let index= 0; index<=users.length-1;index++){
+//     let user= users[index];
+//     if(user.isActive==true){activeUsers.push(user)}
+// }console.log(activeUsers);
+
+
+
+
+
+
 // 문제 6: 객체 배열 데이터 변환하기
 // movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
 // const movies = [
@@ -68,6 +187,20 @@ const mebers = [
 //   { title: '기생충', director: '봉준호' },
 //   { title: '매트릭스', director: '워쇼스키 자매' }
 // ];
+
+// const movies = [
+//   { title: '인셉션', director: '크리스토퍼 놀란' },
+//   { title: '기생충', director: '봉준호' },
+//   { title: '매트릭스', director: '워쇼스키 자매' }
+// ];
+
+// let movieTitles = [];
+// for (let index= 0; index<=movies.length-1;index++){
+//     let movie=movies[index];
+//     movieTitles.push(movie.title)
+// }console.log(movieTitles)
+
+
 
 
 // 문제 7: 데이터 그룹화하기
@@ -83,6 +216,53 @@ const mebers = [
 // //   '개발팀': ['철수', '민수'],
 // //   '기획팀': ['영희', '지혜']
 // // }
+
+// (방법1)
+const team = [
+  { name: '철수', department: '개발팀' },
+  { name: '영희', department: '기획팀' },
+  { name: '민수', department: '개발팀' },
+  { name: '지혜', department: '기획팀' }
+];
+// let result = { '개발팀' : [] , '기획팀' : [] }; // 빈 배열( 부서 ) 2개 를 갖는 객체 생성
+
+// for (let index= 0; index<=team.length-1;index++){
+//     let t = team[index];
+//     if( t.department == '개발팀'){result.개발팀.push(t.name);}
+//     else if( t.department =='기획팀'){
+//       result.기획팀.push(t.name)
+//     }
+// }console.log(result)
+// (방법2)
+let result2 = {}; // 미리 부서명 작성하지 않은 상태.
+for (let index= 0; index<=team.length-1;index++){
+     let t =teamp[index];
+     if (result2[t.department]){  // result에 index번째의 부서명이 존재하면
+        result2[ t.department].push(t.name); // 부서명 배열에 index번째 이름 넣어준다. 
+     }else { // 존재하지 않으면
+        result2[ t.department ] = [t.name] };
+}
+
+
+
+
+
+// const team = [
+//   { name: '철수', department: '개발팀' },
+//   { name: '영희', department: '기획팀' },
+//   { name: '민수', department: '개발팀' },
+//   { name: '지혜', department: '기획팀' }
+// ];
+
+// let result={}
+// let 개발 = [];
+// let 기획 = [];
+// for (let index= 0; index<=team.length-1;index++){
+//     let teams = team[index]
+//     if(teams.department=='개발팀'){개발.push(teams)}
+//     else{기획.push(teams)}
+// }console.log(`'개발팀': ${개발} , '기획팀':${기획}`)
+
 
 // 문제 8: 장바구니 총액 계산하기
 // 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
