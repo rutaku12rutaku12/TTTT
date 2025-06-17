@@ -292,19 +292,18 @@
 // 청설            ★★★★★★☆☆☆☆
 
 
-let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
-let movieRatings = [8, 4, 7, 6];
+// let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
+// let movieRatings = [8, 4, 7, 6];
 
-let output="";
+// let output="";
 
-for( let i=0; i<=movieNames.length-1;i++){
-    {output+=`<div>${movieNames}`}
-    for(let j=1; j<=10; j++){
-        
-        if (j<=movieRatings[j]){output+=`<span>"★"</span>`}
-        else{output+=`<span>"☆"</span>`}
-    }output+=`</div>`
-}document.write(output)
+// for( let i=0; i<=movieNames.length-1;i++){
+//     {output+=`<div>${movieNames[i]}`}
+//     for(let j=1; j<=10; j++){
+//         if (j<=movieRatings[i]){output+=`<span>★</span>`}
+//         else{output+=`<span>☆</span>`}
+//     }output+=`</div>`
+// }document.write(output)
 
 
 
@@ -326,6 +325,25 @@ for( let i=0; i<=movieNames.length-1;i++){
 // 빈좌석 예약석   
 // 예약석 빈좌석
 // 예약석 빈좌석
+
+let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
+
+for( let i=0; i<=seatStatus.length-1;i++){
+        let seat= seatStatus[i];
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석'];
 // for( let index = 0 ; index <= seatStatus.length-1 ; index++){
