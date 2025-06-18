@@ -21,20 +21,18 @@
 //   { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
 
+const mebers = [
+  { id: 'user1', password: 'pass1', name: '사용자1' },
+  { id: 'user2', password: 'pass2', name: '사용자2' },
+];
+
+let 아이디= prompt('아이디: ');
+let 비밀번호= prompt('비밀번호: ');
+let 이름= prompt('이름: ');
+
+const member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
 
 
-// let 아이디= prompt('아이디: ');
-// let 비밀번호= prompt('비밀번호: ');
-// let 이름= prompt('이름: ');
-
-
-// const member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
-// if(mebers.push(member) == (member in members)){console.log("존재하는 아이디입니다.") 
-
-// const mebers = [
-//   { id: 'user1', password: 'pass1', name: '사용자1' },
-//   { id: 'user2', password: 'pass2', name: '사용자2' },
-// ]};console.log(members)
 
 // const members = [
 //   { id: 'user1', password: 'pass1', name: '사용자1' },
