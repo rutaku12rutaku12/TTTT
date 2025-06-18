@@ -93,14 +93,14 @@ printNumbers(1);
 // (1)매개변수      :      name
 // (2)반환값        :      
 // (3)처리할명령어  :      매개변수(name)를 배열에 .push
-let userList = []; // 전역변수에 빈 배열 선언
-function  addUser(name){    // 함수 정의
-    userList.push(name);    // 매개변수를 배열에 저장
-}
-// 함수 호출
-let 이름 = prompt( '이름 : ') // 사용자로부터 이름 입력받아
-addUser(이름);  // 입력받은 이름을 addUser 함수의 매개변수로 전달
-console.log( userList ); // [확인]
+// let userList = []; // 전역변수에 빈 배열 선언
+// function  addUser(name){    // 함수 정의
+//     userList.push(name);    // 매개변수를 배열에 저장
+// }
+// // 함수 호출
+// let 이름 = prompt( '이름 : ') // 사용자로부터 이름 입력받아
+// addUser(이름);  // 입력받은 이름을 addUser 함수의 매개변수로 전달
+// console.log( userList ); // [확인]
 
 
 
@@ -118,11 +118,51 @@ console.log( userList ); // [확인]
 // 예제 7: 배열을 매개변수로 전달
 // 임의의 이름 들이 담긴 배열을 매개변수로 받아, for 반복문을 사용하여 배열의 모든 요소를 콘솔에 하나씩 출력하는 printFruits 함수를 정의하시오.
 
+// (1)매개변수      :  함수() 안으로 들어오는 자료를 저장하는 변수               , array(아무거나)
+// (2)리턴값        :  함수()가 종료되면서 *함수호출*했던곳으로 변환 하는 자료    , [x]
+// (3)처리할명령어  :  함수()가 실행되면서 실행할 코드를                         , for 반복문을 사용해여 배열의 모든 요소 콘솔에 하나씩 출력
+function printFruits(array){ // 함수정의
+    for(let i=0;i<=array.length-1;i++){
+        console.log(array[i]);
+    }
+}
+let names = [ '유재석' , '강호동' , '신동엽'];
+printFruits(names);   // [확인차 정의한 함수 호출]
+
+
 
 // 예제 8: Boolean 값 반환하기
 // 임의의 숫자 하나를 매개변수로 받아, 그 숫자가 0보다 크면 true를, 그렇지 않으면 false를 반환하는 isPositive 함수를 만들어 보세요.
-
+// 1. 매개변수 : num
+// 2. 리턴값 : true 또는 false
+// 3. 처리할명령어 : num매개변수가 0보다 큰지 작은지 비교
+function isPositive (num){ //함수정의
+    if(num>0){return true;}
+    else{ return false;}
+}
+isPositive(3); // [확인차 정의한 함수 호출 / 반환값 변수에 저장x] , 함수를 실행하고 반환(return)값
+let result = isPositive(-1); // [확인차 정의한 함수 호출 / 반환값 변수에 저장o]
+console.log(result);
 
 // 예제 9: 전역 변수와 지역 변수
 // let globalText = '전역'; 변수를 선언하세요. printLocal 함수 안에서는 let localText = '지역'; 변수를 선언하고, 
 // 두 변수를 모두 콘솔에 출력해 보세요. 함수 바깥에서는 globalText만 출력되는 것을 확인하세요.
+
+// 1. 매개변수 : x
+// 2. 반환값 : x
+// 3. 처리할명령어 : localText 변수를 선언하고 , localText,globalText를 콘솔 출력
+let globalText = '전역';
+function printLocal() { // 함수 선언
+    let localText = '지역';
+    console.log( globalText );  // ok
+    console.log( localText );   // ok 
+    return localText; // 지역변수가 갖는 자료를 함수 밖으로 빼는법 == 반환값
+} // func end
+// [ 확인 ]
+console.log(globalText);        // ok
+console.log(localText);         // fail : 함수 안에서 선언된 지역번수라서 오류발생
+printLocal(); // 함수 호출
+
+
+
+

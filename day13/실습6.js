@@ -199,17 +199,17 @@
 // let numbers = [5, 3, 4, 1, 2];
 // 힌트: 중첩 for 반복문을 사용하며, 이웃한 두 요소를 비교하 위치를 바꿉니다.
 
-// let numbers = [5, 3, 4, 1, 2];
+let numbers = [5, 3, 4, 1, 2];
 
-// for(let i=0;i<=numbers.length-1;i++){
-//     for(let j=0;j<=numbers.length-1;j++){
-//         if(numbers[i]<numbers[j]){
-//     let empt= numbers[i];
-//     numbers[i]=numbers[j];
-//     numbers[j]=empt;
-//     }}
+for(let i=0;i<=numbers.length-1;i++){
+    for(let j=0;j<=numbers.length-1;j++){
+        if(numbers[i]<numbers[j]){
+    let empt= numbers[i];
+    numbers[i]=numbers[j];
+    numbers[j]=empt;
+    }}
     
-// }console.log(numbers)
+}console.log(numbers)
 
 
 // 문제 7: 재고 관리 시스템

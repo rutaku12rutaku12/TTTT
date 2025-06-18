@@ -21,54 +21,74 @@
 //   { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
 
-const mebers = [
-  { id: 'user1', password: 'pass1', name: '사용자1' },
-  { id: 'user2', password: 'pass2', name: '사용자2' },
-];
-
-let 아이디= prompt('아이디: ');
-let 비밀번호= prompt('비밀번호: ');
-let 이름= prompt('이름: ');
-
-const member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
-
-
-
 // const members = [
 //   { id: 'user1', password: 'pass1', name: '사용자1' },
 //   { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
-// // 1. prompt 세번 사용 : 아이디 비밀번호 이름 순서대로 입력
+
 // let 아이디= prompt('아이디: ');
 // let 비밀번호= prompt('비밀번호: ');
 // let 이름= prompt('이름: ');
-// // 2. 입력받은 정보(여러변수)로 하나의 member 객체
-// let member = { id : id , pwd : pwd , name : name }  // (1) 객체 생성 , 객체내 속성 추가 해야 하므로 *변수에 저장*
-//   // (2) 객체내 새로운 속성명 에 입력받은 값 대입
 
-//  // vs let member = { id : id , pwd : pwd , name : name }
-// // let member = []; member.push(id)
-//   // * 입력받은 아이디가 이미 배열에 존재여부
-//   // 1. 배열내 모든 객체를 하나씩 (조회)꺼낸다.
-// let idCheck = false;
-// for( let index = 0; index <=members.length-1;index++){
-//   let member = members[index]; // index번째의 member 객체 꺼내기(조회)
-//     // 2.  객체내 id 속성 값이 입력받은 값과 비교 
-//   if( member.id == id){// index번째의 member객체내 id속성값이 입력받은 id와 같으면
-//       idCheck = true; // 중복 체크!!!
-//       break; // 반복문 종료
-//   } 
-//    // * 아직 모두 조회된 상태가 아니므로 for문 안에서 배열에 저장 하지 않는다.
-// } // for end
+// let member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
 
-// // 3. member 객체, members 배열에 저장 // 4. members 배열을 콘솔에 출력
-// if( idCheck == false ){
-//     memebers.push( member);
-//     console.log( `등록 성공` );
+// for(let i=0; i<=member.length-1; i++){
+//     let 
+   
 // }
-// else{
-//     console.log( `등록 실패` );
+
+
+
+
+// const members = [ 
+//     { id: 'user1', password: 'pass1', name: '사용자1' },
+//     { id: 'user2', password: 'pass2', name: '사용자2' },
+// ];
+// let id = prompt('아이디 : ');
+// let pwd = prompt('비밀번호 : ');
+// let name = prompt('이름 : ');
+// let member = { id : id , pwd : pwd , name : name } // 2. 입력받은 정보(여러변수)로 하나의 member 객체
+// let idCheck = false; // 중복이 있다(true)/없다(false) 기억하기 위한 변수 
+// for( let index = 0 ; index <= members.length -1 ; index++ ){
+//     let member = members[index]; // index번째의 member 객체 꺼내기(조회)
+//     if( member.id == id ){ // index번째의 member객체내 id속성값이 입력받은 id 와 같으면
+//         idCheck = true; // 중복 체크!!! 
+//         break; // 반복문 종료 
+//     }  // ******** 아직 모두 조회된 상태가 아니므로 for문 안에서 배열에 저장 하지 않는다. ***********
+// } // for end 
+// if( idCheck == false ){ 
+//     members.push(member);  
+//     console.log( '등록 성공');
+// } else{  
+//     console.log( '등록 실패'); 
 // }
+
+
+ const members = [ 
+    { id: 'user1', password: 'pass1', name: '사용자1' },
+    { id: 'user2', password: 'pass2', name: '사용자2' },
+];
+
+let id = prompt('아이디 : ');
+let pwd = prompt('비밀번호 : ');
+let name = prompt('이름 : ');
+let member = {id : id , pwd : pwd , name : name }
+let idCheck = false;
+for( let index=0; index <=members.length-1; index++){
+   let member = members[index];
+   if( member.id == id){
+      idCheck = true;
+      break;
+   }
+}
+if(idCheck==false){
+   members.push(member);
+   console.log('등록성공');
+}else{
+   console.log('등록실패')
+
+}
+
 
 
 // 문제 3: 객체 배열의 속성 값 평균 구하기
@@ -234,7 +254,7 @@ const team = [
 // (방법2)
 let result2 = {}; // 미리 부서명 작성하지 않은 상태.
 for (let index= 0; index<=team.length-1;index++){
-     let t =teamp[index];
+     let t =team[index];
      if (result2[t.department]){  // result에 index번째의 부서명이 존재하면
         result2[ t.department].push(t.name); // 부서명 배열에 index번째 이름 넣어준다. 
      }else { // 존재하지 않으면
