@@ -21,21 +21,22 @@
 //   { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
 
-// const members = [
-//   { id: 'user1', password: 'pass1', name: '사용자1' },
-//   { id: 'user2', password: 'pass2', name: '사용자2' },
+//  const members = [ 
+//     { id: 'user1', password: 'pass1', name: '사용자1' },
+//     { id: 'user2', password: 'pass2', name: '사용자2' },
 // ];
 
-// let 아이디= prompt('아이디: ');
-// let 비밀번호= prompt('비밀번호: ');
-// let 이름= prompt('이름: ');
+// let 아이디 = prompt("아이디: ")
+// let 비밀번호 = prompt("비밀번호: ")
+// let 이름 = prompt("이름: ")
+// let member={ id:아이디 , password:비밀번호 , name: 이름 }
 
-// let member = {아이디:아이디, 비밀번호:비밀번호, 이름:이름};
-
-// for(let i=0; i<=member.length-1; i++){
-//     let 
-   
+// let idCheck=false;
+// for(let i=0; i<=members.length-1;i++){
+//    if( members[i].id==아이디) {idCheck=true;}
 // }
+// if (idCheck==true){console.log('존재하는 아이디 입니다')}
+// else{members.push(member), console.log(member)}
 
 
 
@@ -64,31 +65,6 @@
 // }
 
 
- const members = [ 
-    { id: 'user1', password: 'pass1', name: '사용자1' },
-    { id: 'user2', password: 'pass2', name: '사용자2' },
-];
-
-let id = prompt('아이디 : ');
-let pwd = prompt('비밀번호 : ');
-let name = prompt('이름 : ');
-let member = {id : id , pwd : pwd , name : name }
-let idCheck = false;
-for( let index=0; index <=members.length-1; index++){
-   let member = members[index];
-   if( member.id == id){
-      idCheck = true;
-      break;
-   }
-}
-if(idCheck==false){
-   members.push(member);
-   console.log('등록성공');
-}else{
-   console.log('등록실패')
-
-}
-
 
 
 // 문제 3: 객체 배열의 속성 값 평균 구하기
@@ -98,6 +74,23 @@ if(idCheck==false){
 //   { name: 'B', math: 95, science: 88 },
 //   { name: 'C', math: 76, science: 78 }
 // ];
+
+// const scores = [
+//   { name: 'A', math: 80, science: 92 },
+//   { name: 'B', math: 95, science: 88 },
+//   { name: 'C', math: 76, science: 78 }
+// ];
+// let sum= 0;
+// for(let i=0; i<=scores.length-1; i++){
+//    let score=scores[i];
+//     sum+= score.math;
+   
+// }console.log(sum/scores.length)
+
+
+
+
+
 
 // 반복문 없이 // 
 // let 학생객체1 = scores[0]
@@ -153,6 +146,27 @@ if(idCheck==false){
 //   { id: 3, name: '포도' },
 //   { id: 4, name: '딸기' }
 // ];
+// let idCheck=false;
+
+// for(let i=0; i<=products.length-1; i++){
+//    let product=products[i];
+//    if(product.id==3){idCheck=true;
+//     console.log(product);break;}
+      
+// }if(idCheck==false){console.log("상품을 찾을 수 없습니다.")}
+
+
+
+
+
+
+
+// const products = [
+//   { id: 1, name: '사과' },
+//   { id: 2, name: '바나나' },
+//   { id: 3, name: '포도' },
+//   { id: 4, name: '딸기' }
+// ];
 
 // let idCheck = false; // id가 3인 찾았다(true)/못찾았다.(false)
 // for (let index= 0; index<=products.length-1;index++){
@@ -177,6 +191,11 @@ if(idCheck==false){
 //   { id: 3, name: '유저3', isActive: true },
 //   { id: 4, name: '유저4', isActive: false }
 // ];
+
+a
+
+
+
 
 
 // const users = [
