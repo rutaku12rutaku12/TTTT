@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>실습13</title>
+
+   
+</head>
+<body>
+    
+    <h1> 실습13 : 미니 전화번호부 </h1>
+    <div>
+        <h3> 연락처 등록 영역 </h3>
+        이름입력 : <input id="nameInput" type="name" /> <br/>
+        전화번호입력 : <input id="numberInput" type="text" /> <br/>
+        메모입력 : <input id="memoInput" type="text" /> <br/>
+        <button onclick="등록함수()"> 등록버튼 </button>
+
+    </div>
+
+    <div>
+        <h3> 연락처 목록 영역 </h3>
+        <table border="10" >
+            <thead>
+                <tr>
+                    <th> 이름 </th> <th> 전화번호 </th> <th> 메모</th>
+                </tr>
+            </thead>
+            <tbody id="contentBody">
+                <tr>
+                    <th> 유재석 </th> <th> 010-1111-1111 </th> <th> 유퀴즈 </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+     <script src='실습13.js'></script>
+</body>
+</html>

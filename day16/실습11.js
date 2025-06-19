@@ -147,21 +147,49 @@
 //   { name: '박민준', score: 78 }
 // ];
 
-const students = [
-  { name: '김철수', score: 85 },
-  { name: '이영희', score: 92 },
-  { name: '박민준', score: 78 }
-];
+// [ findTopStudent ] 최고 점수 학생 찾기 함수
+// 1. 매개변수 : x
+// 2. 리턴값 : 가장높은점수 의 이름
+// 3. 로직(명령코드들) : students 배열내 가장 높은 점수(score)를 가진 학생의 이름을 찾는 행동/로직/코드
+// * 전역변수
 
-function findTopStudent(){
-    for( i=0; i<= students.length-1;i++){
-    let stu = student.score[i];
+// const students = [
+//   { name: '김철수', score: 85 },
+//   { name: '이영희', score: 92 },
+//   { name: '박민준', score: 78 }
+// ];
+
+// function findTopStudent (){
+//         let maxObj = { name : '' , score : 0}
+//         for( let index=0; index<=students.length-1; index++){
+//                 const student=students[index]; //const let 상관없음
+//                 if( student.score > maxObj.score){
+//                         maxObj = student;
+//                 }
+//         } // for end
+//         return maxObj.name; // 가장높은점수의이름
+// } // f end
+// // 확인차
+// let result = findTopStudent();
+// console.log( result );
+
+
+//내가 풀던거 다시하기!..
+// const students = [
+//   { name: '김철수', score: 85 },
+//   { name: '이영희', score: 92 },
+//   { name: '박민준', score: 78 }
+// ];
+
+// function findTopStudent(){
+//     for( i=0; i<= students.length-1;i++){
+//     let stu = student.score[i];
         
-    }   if(student>students.score[i])
-        return student
-}
-let result = findTopStudent(student)
-console.log(result)
+//     }   if(student>students.score[i])
+//         return student
+// }
+// let result = findTopStudent(student)
+// console.log(result)
 
 
 // 실습 6: 상품 목록 페이지 만들기 (참고: 예제 6, 7, 8, 12)

@@ -192,7 +192,18 @@
 //   { id: 4, name: '유저4', isActive: false }
 // ];
 
-a
+// const users = [
+//   { id: 1, name: '유저1', isActive: true },
+//   { id: 2, name: '유저2', isActive: false },
+//   { id: 3, name: '유저3', isActive: true },
+//   { id: 4, name: '유저4', isActive: false }
+// ];
+// let activeUsers = [];
+// for (let i=0; i<=users.length-1; i++){
+//    let user = users[i];
+//    if(user.isActive==true){activeUsers.push(user)}
+   
+// }console.log(activeUsers)
 
 
 
@@ -230,6 +241,25 @@ a
 //   { title: '기생충', director: '봉준호' },
 //   { title: '매트릭스', director: '워쇼스키 자매' }
 // ];
+// let movieTitles = [];
+
+// for(let i=0; i<=movies.length-1; i++){
+//    let movie = movies[i];
+//    movieTitles.push(movie.title)
+// }
+// console.log(movieTitles)
+
+
+
+
+
+
+
+// const movies = [
+//   { title: '인셉션', director: '크리스토퍼 놀란' },
+//   { title: '기생충', director: '봉준호' },
+//   { title: '매트릭스', director: '워쇼스키 자매' }
+// ];
 
 // let movieTitles = [];
 // for (let index= 0; index<=movies.length-1;index++){
@@ -254,31 +284,59 @@ a
 // //   '기획팀': ['영희', '지혜']
 // // }
 
-// (방법1)
+function cl(x){console.log(x)};
+
+
+
 const team = [
   { name: '철수', department: '개발팀' },
   { name: '영희', department: '기획팀' },
   { name: '민수', department: '개발팀' },
   { name: '지혜', department: '기획팀' }
 ];
-// let result = { '개발팀' : [] , '기획팀' : [] }; // 빈 배열( 부서 ) 2개 를 갖는 객체 생성
 
+let result = {};
+
+for( let i=0; i<=team.length-1; i++){
+   let member=team[i];
+   if ( result [member.department] ){
+      result[member.department].push(member.name);
+   }else {
+      result[member.department] = [member.name];
+   }
+}cl(result)
+
+
+
+
+
+
+// // (방법1)
+// const team = [
+//   { name: '철수', department: '개발팀' },
+//   { name: '영희', department: '기획팀' },
+//   { name: '민수', department: '개발팀' },
+//   { name: '지혜', department: '기획팀' }
+// ];
+// // let result = { '개발팀' : [] , '기획팀' : [] }; // 빈 배열( 부서 ) 2개 를 갖는 객체 생성
+
+// // for (let index= 0; index<=team.length-1;index++){
+// //     let t = team[index];
+// //     if( t.department == '개발팀'){result.개발팀.push(t.name);}
+// //     else if( t.department =='기획팀'){
+// //       result.기획팀.push(t.name)
+// //     }
+// // }console.log(result)
+
+// // (방법2)
+// let result2 = {}; // 미리 부서명 작성하지 않은 상태.
 // for (let index= 0; index<=team.length-1;index++){
-//     let t = team[index];
-//     if( t.department == '개발팀'){result.개발팀.push(t.name);}
-//     else if( t.department =='기획팀'){
-//       result.기획팀.push(t.name)
-//     }
-// }console.log(result)
-// (방법2)
-let result2 = {}; // 미리 부서명 작성하지 않은 상태.
-for (let index= 0; index<=team.length-1;index++){
-     let t =team[index];
-     if (result2[t.department]){  // result에 index번째의 부서명이 존재하면
-        result2[ t.department].push(t.name); // 부서명 배열에 index번째 이름 넣어준다. 
-     }else { // 존재하지 않으면
-        result2[ t.department ] = [t.name] };
-}
+//      let t =team[index];
+//      if (result2[t.department]){  // result에 index번째의 부서명이 존재하면
+//         result2[ t.department].push(t.name); // 부서명 배열에 index번째 이름 넣어준다. 
+//      }else { // 존재하지 않으면
+//         result2[ t.department ] = [t.name] };
+// }
 
 
 
