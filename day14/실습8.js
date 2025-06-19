@@ -1,4 +1,6 @@
 
+function cl(x){console.log(x)};
+
 // [실습8]
 // 문제 1: prompt로 제품 정보 객체 만들기
 // prompt를 세 번 사용하여 사용자로부터 '제품명', '가격', '제조사'을 순서대로 입력받습니다. 
@@ -284,28 +286,24 @@
 // //   '기획팀': ['영희', '지혜']
 // // }
 
-function cl(x){console.log(x)};
 
 
 
-const team = [
-  { name: '철수', department: '개발팀' },
-  { name: '영희', department: '기획팀' },
-  { name: '민수', department: '개발팀' },
-  { name: '지혜', department: '기획팀' }
-];
+// const team = [
+//   { name: '철수', department: '개발팀' },
+//   { name: '영희', department: '기획팀' },
+//   { name: '민수', department: '개발팀' },
+//   { name: '지혜', department: '기획팀' }
+// ];
 
-let result = {};
+// let result = {'개발팀':[],'기획팀':[]};
 
-for( let i=0; i<=team.length-1; i++){
-   let member=team[i];
-   if ( result [member.department] ){
-      result[member.department].push(member.name);
-   }else {
-      result[member.department] = [member.name];
-   }
-}cl(result)
-
+// for(let i=0; i<=team.length-1; i++){
+//    let t= team[i];
+//    if(t.department == '개발팀'){result.개발팀.push(t.name)
+//    }else{result.기획팀.push(t.name)}
+// }
+// cl(result)
 
 
 
@@ -342,21 +340,6 @@ for( let i=0; i<=team.length-1; i++){
 
 
 
-// const team = [
-//   { name: '철수', department: '개발팀' },
-//   { name: '영희', department: '기획팀' },
-//   { name: '민수', department: '개발팀' },
-//   { name: '지혜', department: '기획팀' }
-// ];
-
-// let result={}
-// let 개발 = [];
-// let 기획 = [];
-// for (let index= 0; index<=team.length-1;index++){
-//     let teams = team[index]
-//     if(teams.department=='개발팀'){개발.push(teams)}
-//     else{기획.push(teams)}
-// }console.log(`'개발팀': ${개발} , '기획팀':${기획}`)
 
 
 // 문제 8: 장바구니 총액 계산하기
@@ -371,10 +354,47 @@ for( let i=0; i<=team.length-1; i++){
 //   { id: 3, price: 2500 }
 // ];
 
+// const cart = [ { id: 1, quantity: 2 },
+//                { id: 3, quantity: 1 }];
+
+// const productsInfo = [
+//   { id: 1, price: 1000 },
+//   { id: 2, price: 5000 }, // 장바구니에 없는 상품
+//   { id: 3, price: 2500 }
+// ];
+
+// for(let i=0; i<=cart.length-1; i++){
+//    let car= cart[i];
+//    for(let j=0; j<=productsInfo.length-1; j++){
+//    let product= productsInfo[j];
+//    if(car.id==product.id){console.log(car.quantity*product.price);}}
+// }
+
+
+
+
+
+
 // 문제 9: 투표 결과 집계하기
 // 다음 votes 배열은 투표 결과를 나타냅니다. 각 후보가 몇 표를 받았는지 집계하여, 후보의 이름이 키이고 득표수가 값인 객체를 만들어 콘솔에 출력하시오.
 // const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
 // // 출력 예시: { A: 3, B: 3, C: 1 }
+
+
+// const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
+
+// let output={};
+// for(let i=0; i<= votes.length-1;i++){
+//    let vote=votes[i];
+//    if(output[vote]){
+//       output[vote]+=1
+//    }else{output[vote] = 1;}
+   
+// }cl(output)
+
+
+
+
 
 // 문제 10: 웹툰 평점 시각화하기
 // webtoons 배열의 데이터를 이용하여, 각 웹툰의 평점을 별(★, ☆)로 시각화하여 HTML에 출력하시오.
@@ -391,6 +411,8 @@ for( let i=0; i<=team.length-1; i++){
 //    유미의 세포들 ★★★★★★★★★☆
 //    전지적 독자 시점 ★★★★★★★★★☆
 // */
+
+
 
 // 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기
 // [구현 조건]
