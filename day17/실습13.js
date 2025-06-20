@@ -94,8 +94,9 @@ function 전체조회함수(){ console.log('--- 전체조회함수 exe ---');
                     <td> ${obj.이름}</td>        
                     <td> ${obj.전화번호}</td>        
                     <td> ${obj.메모}</td>        
-                </tr>` 
+                </tr>` // 백틱 주의
     } // for end
+    // 5. 출력
     contentBody.innerHTML = html; 
 }// func end
 

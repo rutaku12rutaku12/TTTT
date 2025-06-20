@@ -395,7 +395,6 @@ function cl(x){console.log(x)};
 
 
 
-
 // 문제 10: 웹툰 평점 시각화하기
 // webtoons 배열의 데이터를 이용하여, 각 웹툰의 평점을 별(★, ☆)로 시각화하여 HTML에 출력하시오.
 // 조건 1: 평점(rating)은 10점 만점입니다.
@@ -411,6 +410,15 @@ function cl(x){console.log(x)};
 //    유미의 세포들 ★★★★★★★★★☆
 //    전지적 독자 시점 ★★★★★★★★★☆
 // */
+
+const webtoons = [
+  { title: '나 혼자만 레벨업', rating: 9.8 },
+  { title: '유미의 세포들', rating: 9.9 },
+  { title: '전지적 독자 시점', rating: 9.7 }
+];
+
+
+
 
 
 
