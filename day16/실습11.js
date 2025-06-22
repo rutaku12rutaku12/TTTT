@@ -13,7 +13,8 @@
 
 
 // 실습 1: 성인 인증 함수
-// 나이(age)를 매개변수로 받아, 20세 이상이면 true를, 미만이면 false를 반환하는 isAdult 함수를 만드세요. isAdult(25)와 isAdult(17)의 결과를 각각 콘솔에 출력해 보세요.
+// 나이(age)를 매개변수로 받아, 20세 이상이면 true를, 미만이면 false를 반환하는 isAdult 함수를 만드세요.
+// isAdult(25)와 isAdult(17)의 결과를 각각 콘솔에 출력해 보세요.
 
 // 1. 매개변수  : age
 // 2. 반환값    :  true / false
@@ -32,23 +33,35 @@
 
 
 
-// let age = "";
-// function isAdult (age){ // 함수선언
-//     if(age>=20){console.log("true")}
-//     else{console.log("false")}
-  
-// };
-// isAdult(25)
-// isAdult(17)
-
-
+// function isAdult(age){
+//         if(age>=20){return true;}
+//         else{return false;}
+// }
+// console.log(isAdult(25)) 
+// console.log(isAdult(17)) 
 
 
 
 
 // 실습 2: 배열의 총합 구하기
-// 숫자로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 모든 요소의 합계를 구하여 반환하는 sumArray 함수를 만드세요. 아래 numbers 배열로 테스트해 보세요.
+// 숫자로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 모든 요소의 합계를 구하여 반환하는 sumArray 함수를 만드세요. 
+// 아래 numbers 배열로 테스트해 보세요.
 // const numbers = [10, 20, 30, 40, 50];
+
+
+// const numbers = [10, 20, 30, 40, 50];
+
+// function sumArray(array){
+//         let sum = 0;
+//         for(let i=0; i<=array.length-1;i++){
+//                 sum+=array[i]
+//         }
+//         return sum ;
+// }
+// sumArray(numbers);
+// let sum = sumArray(numbers);
+
+
 
 // const numbers = [10, 20, 30, 40, 50];
 // // 매개변수 : array
@@ -83,12 +96,31 @@
 
 
 // 실습 3: 가장 긴 단어 찾기
-// 문자열로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 가장 긴 단어를 찾아 반환하는 findLongestWord 함수를 만드세요. 아래 words 배열로 테스트해 보세요.
+// 문자열로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 가장 긴 단어를 찾아 
+// 반환하는 findLongestWord 함수를 만드세요. 아래 words 배열로 테스트해 보세요.
 // const words = ['apple', 'banana', 'kiwi', 'strawberry'];
 
 // 1. 매개변수 : array *매개변수명은 아무거나.
 // 2. 반환값 : 배열내가장긴단어
 // 3. 로직 : 매개변수배열내 가장 긴 단어 찾기 <for>
+
+
+// const words = ['apple', 'banana', 'kiwi', 'strawberry'];
+
+// function findLongestWord(array){
+//         let findout=[];
+//         for(let i=0; i<=array.length-1; i++){
+//                 let long=array[i];
+//                 if(long.length>findout.length){findout=long}
+//         }return findout;
+// }
+// let result=findLongestWord(words)
+// console.log(result)
+
+
+
+
+
 
 // const words = ['apple', 'banana', 'kiwi', 'strawberry'];
 // function findLongestWord(array){
@@ -119,6 +151,22 @@
 // let userScore = 0; 전역 변수를 만드세요. gainScore() 함수는 userScore를 10 증가시키고, loseScore() 함수는 5 감소시킵니다.
 // gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 콘솔에 출력하세요.
 
+// let userScore = 0;
+// function gainScore(){return userScore+=10;} 
+// function loseScore(){return userScore-=5;} 
+
+// gainScore()
+// gainScore()
+// gainScore()
+// loseScore()
+// console.log(userScore)
+
+
+
+
+
+
+
 // // 1. (gainScore) 매개변수 : x
 // // 2. (gainScore) 리턴값 : x
 // // 3. (gainScore) 로직 : 전역변수(userScore)를 1증가..
@@ -147,6 +195,23 @@
 //   { name: '박민준', score: 78 }
 // ];
 
+// const students = [
+//   { name: '김철수', score: 85 },
+//   { name: '이영희', score: 92 },
+//   { name: '박민준', score: 78 }
+// ];
+// function findTopStudent(){
+//         let output={ name :'',score:0}
+//         for(let i=0; i<=students.length-1;i++)
+//                 {let student=students[i];
+//                 if(student.score>output.score){output=student}
+//         }
+//         return output.name
+                
+// }let result= findTopStudent()
+// console.log(result)
+
+
 // [ findTopStudent ] 최고 점수 학생 찾기 함수
 // 1. 매개변수 : x
 // 2. 리턴값 : 가장높은점수 의 이름
@@ -174,26 +239,12 @@
 // console.log( result );
 
 
-//내가 풀던거 다시하기!..
-// const students = [
-//   { name: '김철수', score: 85 },
-//   { name: '이영희', score: 92 },
-//   { name: '박민준', score: 78 }
-// ];
 
-// function findTopStudent(){
-//     for( i=0; i<= students.length-1;i++){
-//     let stu = student.score[i];
-        
-//     }   if(student>students.score[i])
-//         return student
-// }
-// let result = findTopStudent(student)
-// console.log(result)
 
 
 // 실습 6: 상품 목록 페이지 만들기 (참고: 예제 6, 7, 8, 12)
-// 전역변수 products 배열 데이터를 이용하여, 각 상품을 소개하는 HTML 요소를 동적으로 만들어 페이지에 표시하는 renderProducts 함수를 만드세요.
+// 전역변수 products 배열 데이터를 이용하여, 각 상품을 소개하는 HTML 요소를 동적으로 만들어 페이지에 
+// 표시하는 renderProducts 함수를 만드세요.
 // 각 상품은 이름(<h4>), 가격(<p>), 재고(<p>)를 포함한 div로 묶여야 합니다.
 // const products = [
 //   { name: '노트북', price: 1200000, stock: 5 },
@@ -201,10 +252,25 @@
 //   { name: '키보드', price: 80000, stock: 25 }
 // ];
 
+// const products = [
+//   { name: '노트북', price: 1200000, stock: 5 },
+//   { name: '모니터', price: 350000, stock: 12 },
+//   { name: '키보드', price: 80000, stock: 25 }
+// ];
+// function renderProducts(){
+//         let html="";
+//         for(let i=0; i<=products.length-1;i++){
+//                 let product=products[i];
+//                 html+=`<div><h4>이름:${product.name}</h4><p>가격:${product.price}</p><p>재고:${product.stock}</p></div>`
+//         }return html
+// }
+// document.write(renderProducts())
+
+
 // 실습 7: 간단한 계산기
 // num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
 // operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)
-
+ddd
 
 // 실습 8: HTML 리스트(ul, li) 동적 생성
 // todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
