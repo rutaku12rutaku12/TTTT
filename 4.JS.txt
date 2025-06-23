@@ -321,29 +321,27 @@ JS : 자바 스크립트 : 웹문서 동적                   *프로그래밍 �
             (마크업객체).classList.toggle('클래스명')       : 지정 마크업에 클래스 추가 혹은 (존재하면)삭제
             (마크업객체).classList.contains('클래스명')     : 지정 마크업에 클래스 존재 여부 TRUE/FALSE 반환
 
-*연산식 또는 변수호출식 길어졌을때는 중간 결과를 변수에 담아서 확인
-    let 변수명A = document.querySelector('선택자')
-    let 변수명B = 변수명A.value
-        ========== vs ===========
-    let 변수명B = document.querySelector('선택자').value
+    *연산식 또는 변수호출식 길어졌을때는 중간 결과를 변수에 담아서 확인
+        let 변수명A = document.querySelector('선택자')
+        let 변수명B = 변수명A.value
+            ========== vs ===========
+        let 변수명B = document.querySelector('선택자').value
 
-    let 변수명A = 3+2
-    let 변수명B = 변수명A * 4
-      ======== vs =========
-    let 변수명B =(3+2) * 4
+        let 변수명A = 3+2
+        let 변수명B = 변수명A * 4
+        ======== vs =========
+        let 변수명B =(3+2) * 4
+    (9) (마크업객체).files[0]                     : 지정 마크업의 업로드된 파일객체 반환
+        사용가능마크업 : <input type="file" />
+        ( + 파일객체 를 임의의 URL 주소 생성 하여 반환하는 함수 )
+            -URL.createObjectURL( 파일객체 )
+            - 반환값 : http://127.0.0.~~
+            - 사용처 : 백엔드에 업로드 하기전 *미리보기 기능*
 
-
-
-
-
-
-
-
-
-
-
-** 내가만든 함수 : 
-
-function cl(x){console.log(x)}; // console.log(x) 입력대신 cl(x)
-
-
+[ 날짜/시간 객체 ]            
+    - new Date() : 현재 시스템(PC)의 날짜와 시간을 갖는 객체 반환
+    1. let now = new Date() : 날짜/시간 객체
+    2. now.getFullYear()    : 현재 연도 반환 함수
+    3. now.getmonth()          : 현재 월 반환 함수 * 1월은 0부터 시작하므로 +1
+    4. now.getday()            : 현재 요일 반환 함수 * 일요일은 0반환 , 월요일 1반환 ~~ 토요일 6반환
+    5. now.getDate()           : 현재 월의 일 반환 함수 

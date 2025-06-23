@@ -14,6 +14,8 @@
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
             margin: 50px auto;
+            display: flex;
+            
         }
         
         /* 등록 영역 */
@@ -50,6 +52,10 @@
             max-height: 800px;
             overflow-y: auto;
         }
+        #snameInput{
+            width: 150px;
+        }
+
         /* 테이블 전체 */
         #main table {
             width: 100%;
@@ -123,7 +129,7 @@
         <div id="leftBar">  <!-- 왼쪽 -->
             <div id="departmentInput">  <!-- 부서 등록구역 -->
                 <h3> 부서 관리 </h3>
-                <input id="dnameInput" type="text" placeholder="신규 부서명 입력" /> <br/>
+                <input id="dnameInput" type="text" placeholder="신규 부서명 입력" /> 
                 <button onclick="departmentAdd()" class="btnAdd"> 추가 </button>
             </div>
             <div id="departmentOutput"> <!-- 부서 출력구역 -->
@@ -157,6 +163,7 @@
                 <button onclick="staffAdd()" class="btnAdd"> 등록 </button>
             </div>
             <div id="staffOutput"> <!-- 사원 출력구역 -->
+                <h3>사원 전체 목록</h3>
                 <table>
                     <thead>
                         <tr>
@@ -177,6 +184,27 @@
         </div>
 
         <div id="rightBar"> <!-- 오른쪽 -->
+            <h3>사원 휴가 신청</h3>
+            신청 사원   <select>
+                            <option>휴가 신청 사원을 선택하세요</option>
+                            <option></option>
+                        </select>                                                   <br/>
+            휴가 시작일 <input type="date" /> 휴가 종료일 <input type="date" /> <br/>
+            휴가사유<input type="text" placeholder="예: 여름휴가" />            <br/>
+            <button>신청</button>
+
+            <h3>휴가 신청 전체 목록</h3>
+            <div> 
+                <h4>김민준<button>신청취소</button></h4>
+                2025-08-04 ~ 2025-08-04     <br/>
+                사유:병원진료               <br/>
+            </div>
+            <div> 
+                <h4>이서연<button>신청취소</button></h4> 
+                2025-07-21 ~ 2025-07-25     <br/>
+                사유:여름 휴가              <br/>
+            </div>
+
 
         </div>
     </div>

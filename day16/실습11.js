@@ -270,13 +270,43 @@
 // 실습 7: 간단한 계산기
 // num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
 // operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)
-ddd
+
+// let num1="";
+// let num2="";
+// let operator="";
+// function calculator(num1,operator,num2){
+//         if(operator== "+"){return Number(num1)+Number(num2)}
+//         else if(operator== "-"){return Number(num1)-Number(num2)}
+//         else {return "올바른 연산자(+,-)가 아닙니다."}
+        
+// }console.log(calculator(11111,"-",222232))
+
 
 // 실습 8: HTML 리스트(ul, li) 동적 생성
 // todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
-// renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
+// renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며
+// <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
 // 최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
 // let todoList = ['장보기', '운동하기']
+
+// let todoList = ['장보기', '운동하기'];
+
+// function renderList(){
+//                 let html="";
+//         for(let i=0;i<=todoList.length-1;i++){
+//                 let todo=todoList[i];
+//                 html+=`<li>${todo}</li>`
+//         }
+//         return html;
+// }    
+// document.querySelector('#todoList').innerHTML = renderList()
+
+
+
+
+
+
+
 
 // 실습 9: 입장료 계산 함수
 // 임의의 나이(age)를 매개변수로 받아 입장료를 반환하는 getTicketPrice 함수를 만드시오.
@@ -284,3 +314,10 @@ ddd
 // 8세 이상 19세 이하: "5,000원"
 // 20세 이상: "10,000원"
 // 계산된 가격 문자열을 반환(return)하시오.
+
+// function getTicketPrice(age){
+//         if(age<8){return "무료"}
+//         else if (8<=age && age<=19){return "5,000원"}
+//         else{ return "10,000원"}        
+// }
+// console.log(getTicketPrice(0))
