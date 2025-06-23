@@ -62,7 +62,7 @@ let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
 
 let cureentdnno= 3;
-// 1.추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
+// 1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
     // (1). 입력 마크업객체 가져오기
     const dnameInput = document.querySelector('#dnameInput'); console.log(dnameInput);
@@ -80,7 +80,7 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     departmentPrint()
 }// func end  
 
-// 2. 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
+// 2. 부서 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
 departmentPrint()
 function departmentPrint(){console.log('departmentPrint() exe')
     //(1)어디에
@@ -98,7 +98,7 @@ function departmentPrint(){console.log('departmentPrint() exe')
         tbody.innerHTML = html;
 }// func end // 출력함수 끝
 
-// 3. 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다.  < 매개변수 : 부서이름코드 > 
+// 3. 부서 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다.  < 매개변수 : 부서이름코드 > 
 // 실행조건 : [수정버튼] onclick 했을때
 function departmentEdit(dnno){console.log( 'departmentEdit() exe '); console.log( dnno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 수정할 번호의 객체를 찾는다 for
@@ -113,7 +113,7 @@ function departmentEdit(dnno){console.log( 'departmentEdit() exe '); console.log
 }   // func end
 
 
-// 4. 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice   < 매개변수 : 부서이름코드 >
+// 4. 부사 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice   < 매개변수 : 부서이름코드 >
 // 실행조건 : [삭제버튼] onclick 했을때
 function departmentDelete(dnno){console.log( 'departmentDelete() exe '); console.log( dnno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 삭제할 번호의 객체를 찾는다 for
@@ -127,3 +127,89 @@ function departmentDelete(dnno){console.log( 'departmentDelete() exe '); console
 }   // func end
 
 
+// === [1] 데이터 모델링 샘플
+// 1. 사원 목록
+const staffList = [ {sno : 1 , pno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' , dname : '개발팀' , srank : '선임 개발자' },
+                    {sno : 2 , pno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' , dname : '디자인팀' , srank : '수석 디자이너' },
+                    {sno : 3 , pno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' , dname : '기획팀' , srank : '팀장' },
+                    {sno : 4 , pno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' , dname : '개발팀' , srank : '대리' }
+];
+console.log(staffList);
+let currentSno = 4;
+// 1. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
+function staffAdd(){
+    //(1) 입력 마크업객체 가져오기
+    const snameInput = document.querySelector('#snameInput'); console.log(snameInput);  
+    const srankInput = document.querySelector('#srankInput'); console.log(srankInput);  
+    const sdnameInput = document.querySelector('#sdnameInput'); console.log(sdnameInput);  
+    const simgInput = document.querySelector('#simgInput'); console.log(simgInput);     
+    //(2) 입력 마크업객체에서 입력값 가져오기
+    const sname = snameInput.value;     console.log(sname);
+    const srank = srankInput.value;     console.log(srank);
+    const sdname = sdnameInput.value;     console.log(sdname);
+    // 첨부파일은 vlaue 대신에 files[0] : 선택된 첨부파일의 첫번째 파일객체 가져오기
+    const simg = simgInput.files[0];    console.log(simg);    
+    // *유효성 검사
+        // * 입력한 값이 없으면 등록 실패
+        if( sname =='' || srank== ''|| sdname ==''){
+            alert('비어있는 항목이 있습니다. [실패]');
+            return; // 반환값 없는 함수 종료
+        }// if end
+// (3) 여러 데이터 객체로 구성하기.
+    const obj = {
+        sno : ++currentSno, // 사원코드는 1증가 후 구성
+        pno : Number( pno ),
+        simg : simg ? URL.createObjectURL( simg ): 'https://placehold.co/100x100' ,
+        sname : sname ,
+        sdname : sdname ,
+        srank : srank 
+    };                      console.log(obj);
+    // (4) 구성한 객체를 배열에 저장
+    staffList.push( obj );      console.log(staffList);
+    // (*) 기타 등등
+    snameInput.value='';
+    srankInput.value='';
+    sdnameInput.value='';
+    alert('사원 등록 성공');
+
+    staffPrint() // 다시 사원출력 새로고침, 렌더링
+
+}// func end
+
+// 2. 사원 출력함수
+
+staffPrint()
+function staffPrint(){ console.log('>>staffPrint() exe')
+    //(1) 어디에 , <tbody>
+    const tbody = document.querySelector('#main > #staffOutput > table > tbody ');
+    //(2) 무엇을 
+    let html ='';
+        for( let i=0; i<=staffList.length-1; i++){
+            const staff=staffList[i];
+            // 현재 사원에 저장된 부서 코드 번호로 부서 객체 구하기
+            const department = getDepartment(staff.pno);
+            html +=`<tr>
+                        <td> <img src="${staff.simg}" /> </td> 
+                        <td> ${getDepartment(staff.pno).dname} </td>
+                        <td> ${staff.sname} </td>
+                        <td> ${staff.srank} </td>
+                        <td> 
+                            <button onclick="staffEdit( ${staff.sno})" class="btnEdit"> 수정 </button> 
+                            <button onclick="staffDelete( ${staff.sno})" class="btnDelete"> 삭제 </button> 
+                        </td>
+                    </tr>`
+        } // for end
+        // (3) 출력
+        tbody.innerHTML = html;
+} // func end 
+
+function getDepartment(pno){ // 
+    console.log('>> getDepartment exe '); console.log(pno)
+    // 1. 매개변수 (pno) 와 동일한 부서번호객체 찾기
+    for( let i=0; i<=departmentList.length-1; i++){
+        if( departmentList[i].pno == pno){
+            return departmentList[i];
+        } // if end
+    } // for end
+    return null;
+} // func end

@@ -94,12 +94,12 @@ function productAdd (){ console.log( '>> productAdd exe');
     let day = new Date().getDate();      // 현재 일 반환 함수 
         day = day < 9 ? `0${day}` : day ; // 만약에 일 이 한자리수 이면 앞에 '0' 붙인다.
     let pdate = `${year}-${month}-${day}`;                         console.log(pdate);
-    // (*) 유호성검사
+    // (*) 유효성검사
         // * 입력한 값이 없으면 등록 실패
         if( cno == '' || pname == '' || pprice == ''){
             alert('비어있는 항목이 있습니다. [실패] ');
             return; // 반환값 없는 함수종료 : 아래코드는 실행되지 않는다.
-        }
+        } // if end
     // (3) 여러 데이터 객체로 구성 하기.
     const obj = {
         pno : ++currentPno, // 제품코드는 1증가 후 구성

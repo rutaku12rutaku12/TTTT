@@ -81,7 +81,7 @@ function login(){console.log('--> login exe');
     const pw = loginPw.value;                           console.log(pw);
     // 3. 기존배열(회원목록)내 입력받은 값과 일치한 정보 찾기(비교) , <for>
     // ====================== sessionStorage 에서 memberList 가져오기 =========== //
-    let memberList = sessionStorage.getItem('memberList'); // 'memberList' 이름의 속성갑 가져오기
+    let memberList = sessionStorage.getItem('memberList'); // 'memberList' 이름의 속성값 가져오기
     if( memberList == null ) { // 만약에 'memberList' 이름의 속성이 존재하지 않으면
         memberList = [];  // 새로운 배열 생성
     }else{

@@ -33,3 +33,63 @@
         -일치하는 정보가 없으면, alert로 "대기 정보가 없습니다."를 알려줍니다.
 */
 
+//========== 대기등록 함수
+function addWaiting(){ console.log('--> addWaiting exe');
+    // 1. 입력마크업 객체 가져오기
+    const watingName=document.querySelector('.watingName'); console.log(watingName);
+    const watingPhone=document.querySelector('.watingPhone'); console.log(watingPhone);
+    const watingCount=document.querySelector('.watingCount'); console.log(watingCount);
+    // 2. 입력마크업 객체내 입력값 가져오기
+    const name = watingName.value;                  console.log(name);
+    const phone = watingPhone.value;                  console.log(phone);
+    const count = watingCount.value;                  console.log(count);
+    // 3. 객체화
+    let no = 1; // 대기번호 초기값
+        // ====== localStorage 에서 waitingList 가져오기
+        // (1) localStorage 에서 waitingList 가져오기
+        let watingList = localStorage.getItem('watingList'); 
+        // (2) 존재하지 않으면 새로 생성, 존재하면 타입변환
+        if( watingList == null){
+            watingList = [];
+        }else{
+            watingList = JSON.parse( watingList);
+            no = watingList[ watingList.length-1].no +1;
+        }
+    const obj = { no: no, name: name , phone: phone, count: count }; console.log(obj)
+
+    // 4. 배열 저장
+    watingList.push( obj );         console.log(watingList);
+    alert('대기 등록 완료') // 알림 
+    // ====== localStorage 에서 waitingList 가져오기
+    // (1) 배열타입을 JSON문자열 타입으로 변환
+    let jsonData = JSON.stringify(watingList);
+    // (2) localStorage 에 watingList 속성명으로 배열저장하기.
+    localStorage.setItem( 'watingList' , jsonData); // 'watingList'라는 이름으로 jsonData변수값 저장
+}// func end
+
+//========== 대기확인 함수
+
+function checkStatus(){console.log('-->checkStatus exe');
+    // 1. 입력마크업 객체 가져오기
+    const checkPhone = document.querySelector('.checkPhone');  console.log(checkPhone);
+    // 2. 입력마크업 객체내 입력값 가져오기
+    const phone = checkPhone.value;                            console.log(phone);
+    // 3. 기존배열(대기목록)내 입력받은 값과 일치한 정보 찾기(비교), <for>
+    // ====================== localStorage 에서 watingList 가져오기 =========== //
+    let watingList = localStorage.getItem('watingList'); // 'watingList' 이름의 속성값 가져오기
+    if( watingList == null){ // 만약에 'watingList' 이름의 속성이 존재하지 않으면
+        watingList = []; // 새로운 배열 생성
+    }else{
+        watingList = JSON.parse( watingList);
+    }
+    for(let i=0; i<=watingList.length-1; i++){
+        const wating = watingList[i]
+        if(wating.phone == phone){
+            alert(`고객님의 대기번호는 ${wating.no-1}번 입니다.`);
+            return; // 강제 함수(반복문)종료
+
+        }
+    }//for end
+    // 4. 못찾았다.
+    {alert("대기 정보가 없습니다.")}
+}//func end
