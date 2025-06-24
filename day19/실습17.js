@@ -93,3 +93,4 @@ function checkStatus(){console.log('-->checkStatus exe');
     // 4. 못찾았다.
     {alert("대기 정보가 없습니다.")}
 }//func end
+
