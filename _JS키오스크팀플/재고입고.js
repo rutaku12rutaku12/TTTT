@@ -1,11 +1,11 @@
 
 
-const productArray = [
-    { no : 1 , id : 1, cname : "입고" , number : 3 , etc : "asad" , 변동날짜 : "" },
-    { no : 2 , id : 2, cname : "출고" , number : 7 , etc : "asda" , 변동날짜 : "" },
-    { no : 3 , id : 3, cname : "입고" , number : 2 , etc : "dsad" , 변동날짜 : "" }
-]
-let no = 3;
+// const productArray = [
+//     { no : 1 , id : 1, cname : "입고" , number : 3 , etc : "asad" , 변동날짜 : "" },
+//     { no : 2 , id : 2, cname : "출고" , number : 7 , etc : "asda" , 변동날짜 : "" },
+//     { no : 3 , id : 3, cname : "입고" , number : 2 , etc : "dsad" , 변동날짜 : "" }
+// ]
+// let no = 3;
 // 재고 입고 (Inventory Inflow / Stock In)
 // 기능: 특정 제품의 재고를 증가시키기 위한 입고 내역 기록.
 // 입력 필드: 재고ID(자동), 제품 ID, 변동 유형 ('입고/출고') , 변동 수량, 입출사유 ,  변동날짜(오늘날짜 자동).
@@ -15,7 +15,7 @@ function stockIn(){
     let idInput = document.querySelector("#idInput").value;
     console.log( idInput );
     let found = false;
-    for (let i = 0; i < productList.length; i++) {
+    for (let i = 0; i <= productList.length; i++) {
         if (productList[i].pcode == idInput) {
             found = true;
             break;
@@ -42,8 +42,11 @@ function stockIn(){
         alert("빈 항목이 있습니다.")
         return;
     }
+     let productArray=getLocalProduct(); // ===========================================================local 수정자리
+        let pcode=productArray.length == 0 ? 1 : productArray[productArray.length-1].no+1
+
     const obj = {
-        no : ++no,
+        no : no,
         id : idInput,
         cname : select,
         number : number,
@@ -54,6 +57,7 @@ function stockIn(){
     productArray.push( obj );
     alert( "재고 입고 성공" );
     console.log( productArray );
+    setLocalProduct(productArray);
     ViewAllInventoryLogs();
 }
 
@@ -62,6 +66,7 @@ function stockIn(){
 function ViewAllInventoryLogs(){ //console.log('----productcontent---')
     const tbody=document.querySelector('.ttbody'); //console.log(tbody);
     html='';
+    let productArray = getLocalProduct;
     for(i=0; i<=productArray.length-1; i++){
         let productA=productArray[i];
         html+=  `<tr>
@@ -82,11 +87,13 @@ function ViewAllInventoryLogs(){ //console.log('----productcontent---')
 // 입출사유 수정 함수
 
 function modifyReason( no ){ console.log( '>>modifyReason exe'); console.log( no ) ;
+    let productArray = getLocalProduct;
     for( let i=0; i<=productArray.length-1; i++){
         if( productArray[i].no == no ){
             const reason = prompt('수정 할 입출사유: '); // 수정할 값 입력
             productArray[i].etc = reason;                // 입력값으로 수정
             alert('[성공] 입출사유 수정'); 
+            setLocalProduct(productArray);
             ViewAllInventoryLogs();// <--새로고침
             return;
         } // if end
