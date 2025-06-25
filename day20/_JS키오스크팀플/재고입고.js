@@ -15,8 +15,9 @@ function stockIn(){
     let idInput = document.querySelector("#idInput").value;
     console.log( idInput );
     let found = false;
-    for (let i = 0; i <= productList.length; i++) {
-        if (productList[i].pcode == idInput) {
+    let productArray = getLocalProduct()
+    for (let i = 0; i <= productArray.length-1; i++) {
+        if (productArray[i].no == idInput) {
             found = true;
             break;
         }
@@ -43,7 +44,7 @@ function stockIn(){
         return;
     }
      let productArray=getLocalProduct(); // ===========================================================local 수정자리
-        let pcode=productArray.length == 0 ? 1 : productArray[productArray.length-1].no+1
+        let no=productArray.length == 0 ? 1 : productArray[productArray.length-1].no+1
 
     const obj = {
         no : no,
