@@ -75,3 +75,18 @@
     [ 브라우저 깃 로그아웃 ]
     [ 개인 카카오톡 / 이메일 로그아웃 ]
     [ 개인 파일/폴더 삭제 ]
+
+    [ 자리 변경후 ]
+        
+    1. 왼쪽 메뉴 -> [ 소스 제어 ] 클릭
+    2. [리포지토리 복제] 클릭
+    3. [gitHub 에서 복제] 클릭 -> 로그인[허용]
+    4. 웹에서 로그인 인증
+    5. 가져올 리포지토리명 선택
+    ------------------------------------------------------
+    6.보기 > 새 터미널
+        7. 터미널 상단메뉴 옆 [v] -> [git-bash] 
+            [git user.name 확인] git config --global user.name
+            [git user.name 설정] git config --global user.name git닉네임(rutaku12rutaku12)
+            [git user.email 확인] git config --global user.email
+            [git user.email 설정] git config --global user.email git이메일(chookyuho@gmail.com)
