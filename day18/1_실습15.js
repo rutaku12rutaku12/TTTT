@@ -55,13 +55,13 @@
 
 
 // 데이터 모델링 (부서 관리)
-const departmentList= [ { dnno:1 , dno : 1 , dname : '개발팀'} , { dnno:2 , dno : 2 , dname : '디자인팀'} , { dnno:3 , dno : 3 , dname : '기획팀'} 
+const departmentList= [ {dno : 1 , dname : '개발팀'} , { dno : 2 , dname : '디자인팀'} , { dno : 3 , dname : '기획팀'} 
 ];
 
 let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
 
-let cureentdnno= 3;
+let cureentdno= 3;
 // 1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
     // (1). 입력 마크업객체 가져오기
@@ -71,8 +71,8 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
 
     // (3). 원하는 속성구성으로 객체만들기 
         currentDno++;
-        cureentdnno++;
-    const obj = { dnno : cureentdnno , dno : currentDno , dname : dname };          console.log(obj);
+ 
+    const obj = { dno : currentDno , dname : dname };          console.log(obj);
     // (4). 구성한 객체를 변수에 저장
     departmentList.push(obj); console.log(departmentList);
 
@@ -91,7 +91,8 @@ function departmentPrint(){console.log('departmentPrint() exe')
             const department = departmentList[i];
             html += `<tr>
                         <td> ${department.dname} </td>
-                        <td> <button onclick="departmentEdit(${department.dnno})" class="btnEdit"> 수정 </button> <button onclick="departmentDelete(${department.dnno})" class="btnDelete"> 삭제 </button> </td>
+                        <td> <button onclick="departmentEdit(${department.dno})" class="btnEdit"> 수정 </button> 
+                        <button onclick="departmentDelete(${department.dno})" class="btnDelete"> 삭제 </button> </td>
                     </tr>` // 백틱
         }// for end
     //(3)출력
@@ -100,9 +101,9 @@ function departmentPrint(){console.log('departmentPrint() exe')
 
 // 3. 부서 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다.  < 매개변수 : 부서이름코드 > 
 // 실행조건 : [수정버튼] onclick 했을때
-function departmentEdit(dnno){console.log( 'departmentEdit() exe '); console.log( dnno );
+function departmentEdit(dno){console.log( 'departmentEdit() exe '); console.log( dno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 수정할 번호의 객체를 찾는다 for
-        if(departmentList[i].dnno==dnno){
+        if(departmentList[i].dno==dno){
             const dname = prompt('수정할 부서명: ');
             departmentList[i].dname = dname;
             alert('[성공] 부서명 수정')
@@ -115,9 +116,9 @@ function departmentEdit(dnno){console.log( 'departmentEdit() exe '); console.log
 
 // 4. 부사 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice   < 매개변수 : 부서이름코드 >
 // 실행조건 : [삭제버튼] onclick 했을때
-function departmentDelete(dnno){console.log( 'departmentDelete() exe '); console.log( dnno );
+function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.log( dno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 삭제할 번호의 객체를 찾는다 for
-        if(departmentList[i].dnno==dnno){
+        if(departmentList[i].dno==dno){
             departmentList.splice(i , 1)
             alert('[성공] 부서명 삭제')
             departmentPrint();
@@ -129,13 +130,14 @@ function departmentDelete(dnno){console.log( 'departmentDelete() exe '); console
 
 // === [1] 데이터 모델링 샘플
 // 1. 사원 목록
-const staffList = [ {sno : 1 , pno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' , dname : '개발팀' , srank : '선임 개발자' },
-                    {sno : 2 , pno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' , dname : '디자인팀' , srank : '수석 디자이너' },
-                    {sno : 3 , pno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' , dname : '기획팀' , srank : '팀장' },
-                    {sno : 4 , pno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' , dname : '개발팀' , srank : '대리' }
+const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' ,  srank : '선임 개발자' },
+                    {sno : 2 , dno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' ,  srank : '수석 디자이너' },
+                    {sno : 3 , dno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' ,  srank : '팀장' },
+                    {sno : 4 , dno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' ,  srank : '대리' }
 ];
 console.log(staffList);
 let currentSno = 4;
+let dno = staffList.length == 0 ? 1 : staffList[staffList.length-1].dno+1
 // 1. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
 function staffAdd(){
     //(1) 입력 마크업객체 가져오기
@@ -158,7 +160,7 @@ function staffAdd(){
 // (3) 여러 데이터 객체로 구성하기.
     const obj = {
         sno : ++currentSno, // 사원코드는 1증가 후 구성
-        pno : Number( pno ),
+        dno : Number( dno ),
         simg : simg ? URL.createObjectURL( simg ): 'https://placehold.co/100x100' ,
         sname : sname ,
         sdname : sdname ,
@@ -187,11 +189,11 @@ function staffPrint(){ console.log('>>staffPrint() exe')
         for( let i=0; i<=staffList.length-1; i++){
             const staff=staffList[i];
             // 현재 사원에 저장된 부서 코드 번호로 부서 객체 구하기
-            const department = getDepartment(staff.pno);
+            const department = getDepartment(staff.dno);
             html +=`<tr>
                         <td> <img src="${staff.simg}" /> </td> 
-                        <td> ${getDepartment(staff.pno).dname} </td>
                         <td> ${staff.sname} </td>
+                        <td> ${getDepartment(staff.dno).dname} </td>
                         <td> ${staff.srank} </td>
                         <td> 
                             <button onclick="staffEdit( ${staff.sno})" class="btnEdit"> 수정 </button> 
@@ -203,13 +205,13 @@ function staffPrint(){ console.log('>>staffPrint() exe')
         tbody.innerHTML = html;
 } // func end 
 
-function getDepartment(pno){ // 
-    console.log('>> getDepartment exe '); console.log(pno)
-    // 1. 매개변수 (pno) 와 동일한 부서번호객체 찾기
+function getDepartment(dno){ // 
+    console.log('>> getDepartment exe '); console.log(dno)
+    // 1. 매개변수 (dno) 와 동일한 부서번호객체 찾기
     for( let i=0; i<=departmentList.length-1; i++){
-        if( departmentList[i].pno == pno){
-            return departmentList[i];
+        if(  departmentList[i].dno == dno){
+             return departmentList[i];
         } // if end
     } // for end
-    return null;
+    return null
 } // func end
