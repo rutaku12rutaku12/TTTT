@@ -62,7 +62,7 @@ let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
 
 let cureentdno= 3;
-// 1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
+// 1-1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
     // (1). 입력 마크업객체 가져오기
     const dnameInput = document.querySelector('#dnameInput'); console.log(dnameInput);
@@ -80,7 +80,7 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     departmentPrint()
 }// func end  
 
-// 2. 부서 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
+// 1-2. 부서 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
 departmentPrint()
 function departmentPrint(){console.log('departmentPrint() exe')
     //(1)어디에
@@ -99,7 +99,7 @@ function departmentPrint(){console.log('departmentPrint() exe')
         tbody.innerHTML = html;
 }// func end // 출력함수 끝
 
-// 3. 부서 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다.  < 매개변수 : 부서이름코드 > 
+// 1-3. 부서 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다.  < 매개변수 : 부서이름코드 > 
 // 실행조건 : [수정버튼] onclick 했을때
 function departmentEdit(dno){console.log( 'departmentEdit() exe '); console.log( dno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 수정할 번호의 객체를 찾는다 for
@@ -114,7 +114,7 @@ function departmentEdit(dno){console.log( 'departmentEdit() exe '); console.log(
 }   // func end
 
 
-// 4. 부사 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice   < 매개변수 : 부서이름코드 >
+// 1-4. 부사 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice   < 매개변수 : 부서이름코드 >
 // 실행조건 : [삭제버튼] onclick 했을때
 function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.log( dno );
     for( let i=0; i<= departmentList.length-1; i++){// (1) 삭제할 번호의 객체를 찾는다 for
@@ -129,7 +129,7 @@ function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.
 
 
 // === [1] 데이터 모델링 샘플
-// 1. 사원 목록
+// 2-1. 사원 목록
 const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' ,  srank : '선임 개발자' },
                     {sno : 2 , dno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' ,  srank : '수석 디자이너' },
                     {sno : 3 , dno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' ,  srank : '팀장' },
@@ -178,7 +178,7 @@ function staffAdd(){
 
 }// func end
 
-// 2. 사원 출력함수
+// 2-2. 사원 출력함수
 
 staffPrint()
 function staffPrint(){ console.log('>>staffPrint() exe')
@@ -215,3 +215,11 @@ function getDepartment(dno){ //
     } // for end
     return null
 } // func end
+
+
+// 2-3 사원 수정 함수
+
+// 2-4 사원 삭제 함수
+
+
+// 3-1 . 휴가 신청함수
