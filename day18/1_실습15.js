@@ -75,10 +75,13 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     const obj = { dno : currentDno , dname : dname };          console.log(obj);
     // (4). 구성한 객체를 변수에 저장
     departmentList.push(obj); console.log(departmentList);
-
+    
     // (5). 출력함수 호출 
-    departmentPrint()
+    departmentPrint();
+    departmentSelectPrint();
 }// func end  
+
+
 
 // 1-2. 부서 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
 departmentPrint()
@@ -128,6 +131,7 @@ function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.
 }   // func end
 
 
+
 // === [1] 데이터 모델링 샘플
 // 2-1. 사원 목록
 const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' ,  srank : '선임 개발자' },
@@ -138,7 +142,7 @@ const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , s
 console.log(staffList);
 let currentSno = 4;
 let dno = staffList.length == 0 ? 1 : staffList[staffList.length-1].dno+1
-// 1. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
+// 2-1. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
 function staffAdd(){
     //(1) 입력 마크업객체 가져오기
     const snameInput = document.querySelector('#snameInput'); console.log(snameInput);  
@@ -178,7 +182,18 @@ function staffAdd(){
 
 }// func end
 
-// 2-2. 사원 출력함수
+// 2-2 부서 선택 함수
+function departmentSelectPrint(){
+    const sdnameInput = document.querySelector('#sdnameInput');
+    let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
+    for(let i=0; i<departmentList.length; i++){
+        const department = departmentList[i];
+        html += `<option value="${department.dno}">${department.dname}</option>`;
+    }
+    sdnameInput.innerHTML = html;
+}
+
+// 2-3. 사원 출력함수
 
 staffPrint()
 function staffPrint(){ console.log('>>staffPrint() exe')
