@@ -61,7 +61,7 @@ const departmentList= [ {dno : 1 , dname : '개발팀'} , { dno : 2 , dname : '�
 let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
 
-let cureentdno= 3;
+let currentdno= 3;
 // 1-1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
     // (1). 입력 마크업객체 가져오기
