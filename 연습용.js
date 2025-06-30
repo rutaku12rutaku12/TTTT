@@ -153,3 +153,5 @@ const departmentList=[ {dno : 1 , dname : '개발팀'} , {dno : 2 , dname: '디�
 let currentDno=departmentList[departmentList.length-1].dno;
 
 let curr
+
+
