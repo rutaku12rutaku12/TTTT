@@ -62,6 +62,7 @@ let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
 
 let currentdno= 3;
+
 // 1-1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
     // (1). 입력 마크업객체 가져오기
@@ -137,7 +138,7 @@ function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.
 const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' ,  srank : '선임 개발자' },
                     {sno : 2 , dno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' ,  srank : '수석 디자이너' },
                     {sno : 3 , dno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' ,  srank : '팀장' },
-                    {sno : 4 , dno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' ,  srank : '대리' }
+                    //{sno : 4 , dno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' ,  srank : '대리' }
 ];
 console.log(staffList);
 let currentSno = 4;
@@ -164,7 +165,7 @@ function staffAdd(){
 // (3) 여러 데이터 객체로 구성하기.
     const obj = {
         sno : ++currentSno, // 사원코드는 1증가 후 구성
-        dno : Number( dno ),
+        dno : Number( sdname ),
         simg : simg ? URL.createObjectURL( simg ): 'https://placehold.co/100x100' ,
         sname : sname ,
         sdname : sdname ,
@@ -233,8 +234,51 @@ function getDepartment(dno){ //
 
 
 // 2-3 사원 수정 함수
+function staffEdit(sno){ console.log('>> staffEdit exe'); console.log(sno);
+    for(let i=0; i<staffList.length;i++){
+        let staff=staffList[i];
+        if(staff.sno==sno){
+            const sname=prompt('수정할 사원명');
+            const srank=prompt('수정할 계급명');
+            staffList[i].sname=sname;
+            staffList[i].srank=srank;
+            alert('수정완료');
+            staffPrint();
+            return;
+        }
+    }
+}
 
 // 2-4 사원 삭제 함수
-
+function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
+    for(let i=0; i<staffList.length;i++){
+        let staff=staffList[i];
+        if(staff.sno==sno){
+            staffList.splice(i,1)
+            alert('삭제완료');
+            staffPrint();
+            return;
+        }
+    }
+    alert('사원번호 불일치')
+}
 
 // 3-1 . 휴가 신청함수
+function vacationAdd(){
+    
+}
+
+
+
+
+
+// 2-2 부서 선택 함수
+function departmentSelectPrint(){
+    const sdnameInput = document.querySelector('#sdnameInput');
+    let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
+    for(let i=0; i<departmentList.length; i++){
+        const department = departmentList[i];
+        html += `<option value="${department.dno}">${department.dname}</option>`;
+    }
+    sdnameInput.innerHTML = html;
+}
