@@ -158,3 +158,18 @@
     *
 
     2~8번 반복~~~
+    
+[ git page ]
+    - github 저장소에 코드를 호스팅(서버) 하기 , *다른(남들)PC 접속 가능
+    - HTML/CSS/JS 단순한 페이지 혹은 프론트엔드
+    1.사용처 : 
+        1) 프론트엔드 포트폴리오
+        2) 간단한 회사 소개 페이지 (*백엔드 없는)
+    2. 활성화
+        1) gitpage 만들 저장소 웹 페이지 접속 : 예]https://github.com/rutaku12rutaku12/TTTT
+        2) 상단메뉴 [Settings] 클릭
+        3) 사이드메뉴 [Pages] 클릭 -> 'Github Pages'
+        4) [Branch] -> [none]목록 클릭 -> '배포할 브런치 선택' 후 -> [save]
+        5) 1분~3분 대기후 F5새로고침
+        6) 저장소의 호스팅 웹페이지 주소 발급 : https://rutaku12rutaku12.github.io/TTTT/ 
+        7) 루트(최상위)경로 주소 : 저장소에 index.html 파일 필요.

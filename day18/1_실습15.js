@@ -263,9 +263,17 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
     alert('사원번호 불일치')
 }
 
+// 3-0 . 휴가 신청 데이터모델링
+
+const vacationStaffList=[ {}]
+
+
+
 // 3-1 . 휴가 신청함수
 function vacationAdd(){
-    
+    const vcationStaffInput = document.querySelector('#vacationStaffInput');
+    let html = `<option value="" disabled selected> 휴가 신청 사원을 선택하세요. </option>`;
+    for(let i=0; i<vacation)
 }
 
 
