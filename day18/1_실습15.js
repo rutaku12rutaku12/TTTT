@@ -265,7 +265,10 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
 
 // 3-0 . 휴가 신청 데이터모델링
 
-const vacationStaffList=[ {}]
+const vacationStaffList=[ 
+    {사원명: '김민준' , 시작일: '2025-08-04' , 종료일: '2025-08-04', 사유: '병원진료' } 
+];
+
 
 
 
