@@ -80,6 +80,7 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     // (5). 출력함수 호출 
     departmentPrint();
     departmentSelectPrint();
+    
 }// func end  
 
 
@@ -134,7 +135,7 @@ function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.
 
 
 // === [1] 데이터 모델링 샘플
-// 2-1. 사원 목록
+// 사원 목록
 const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , sname : '김민준' ,  srank : '선임 개발자' },
                     {sno : 2 , dno: 2 , simg: 'https://placehold.co/100x100' , sname : '이서연' ,  srank : '수석 디자이너' },
                     {sno : 3 , dno: 3 , simg: 'https://placehold.co/100x100' , sname : '박도윤' ,  srank : '팀장' },
@@ -143,7 +144,7 @@ const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , s
 console.log(staffList);
 let currentSno = 4;
 let dno = staffList.length == 0 ? 1 : staffList[staffList.length-1].dno+1
-// 2-1. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
+// 2-0. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
 function staffAdd(){
     //(1) 입력 마크업객체 가져오기
     const snameInput = document.querySelector('#snameInput'); console.log(snameInput);  
@@ -179,11 +180,12 @@ function staffAdd(){
     sdnameInput.value='';
     alert('사원 등록 성공');
 
-    staffPrint() // 다시 사원출력 새로고침, 렌더링
+    staffPrint(); // 다시 사원출력 새로고침, 렌더링
+    vacationSelelctAdd();
 
 }// func end
 
-// 2-2 부서 선택 함수
+// 2-1 부서 선택 함수
 function departmentSelectPrint(){
     const sdnameInput = document.querySelector('#sdnameInput');
     let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
@@ -194,7 +196,7 @@ function departmentSelectPrint(){
     sdnameInput.innerHTML = html;
 }
 
-// 2-3. 사원 출력함수
+// 2-2. 사원 출력함수
 
 staffPrint()
 function staffPrint(){ console.log('>>staffPrint() exe')
@@ -269,27 +271,28 @@ const vacationStaffList=[
     {사원명: '김민준' , 시작일: '2025-08-04' , 종료일: '2025-08-04', 사유: '병원진료' } 
 ];
 
-
-
-
-// 3-1 . 휴가 신청함수
-function vacationAdd(){
-    const vcationStaffInput = document.querySelector('#vacationStaffInput');
+// 3-1 . 휴가 신청 사원 선택 함수
+function vacationSelelctAdd(){
+    const vacationStaffInput = document.querySelector('#vacationStaffInput');
     let html = `<option value="" disabled selected> 휴가 신청 사원을 선택하세요. </option>`;
-    for(let i=0; i<vacation)
-}
-
-
-
-
-
-// 2-2 부서 선택 함수
-function departmentSelectPrint(){
-    const sdnameInput = document.querySelector('#sdnameInput');
-    let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
-    for(let i=0; i<departmentList.length; i++){
-        const department = departmentList[i];
-        html += `<option value="${department.dno}">${department.dname}</option>`;
+    for(let i=0; i<staffList.length; i++){
+        const staff= staffList[i];
+        html +=`<option value="${staff.sno}">${staff.sname}</option>`;
     }
-    sdnameInput.innerHTML = html;
+        vacationStaffInput.innerHTML = html;
+}
+// 2-1 부서 선택 함수
+// function departmentSelectPrint(){
+//     const sdnameInput = document.querySelector('#sdnameInput');
+//     let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
+//     for(let i=0; i<departmentList.length; i++){
+//         const department = departmentList[i];
+//         html += `<option value="${department.dno}">${department.dname}</option>`;
+//     }
+//     sdnameInput.innerHTML = html;
+// }
+
+// 3-2 . 휴가 신청 함수
+function vacationAdd() { console.log(' vacationAdd() exe');
+
 }
