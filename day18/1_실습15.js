@@ -268,7 +268,7 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
 // 3-0 . 휴가 신청 데이터모델링
 
 const vacationStaffList=[ 
-    {사원명: '김민준' , 시작일: '2025-08-04' , 종료일: '2025-08-04', 사유: '병원진료' } 
+    {sno : 1 , sname: '김민준' , startDay: '2025-08-04' , endDay: '2025-08-04', reason: '병원진료' } 
 ];
 
 // 3-1 . 휴가 신청 사원 선택 함수
@@ -281,18 +281,63 @@ function vacationSelelctAdd(){
     }
         vacationStaffInput.innerHTML = html;
 }
-// 2-1 부서 선택 함수
-// function departmentSelectPrint(){
-//     const sdnameInput = document.querySelector('#sdnameInput');
-//     let html = `<option value="" disabled selected> 부서를 선택하세요. </option>`;
-//     for(let i=0; i<departmentList.length; i++){
-//         const department = departmentList[i];
-//         html += `<option value="${department.dno}">${department.dname}</option>`;
-//     }
-//     sdnameInput.innerHTML = html;
-// }
 
 // 3-2 . 휴가 신청 함수
-function vacationAdd() { console.log(' vacationAdd() exe');
 
-}
+function vacationAdd() { console.log(' vacationAdd() exe');
+    // 1 입력 마크업객체 가져오기
+    const vacationStaffInput = document.querySelector('#vacationStaffInput'); console.log(vacationStaffInput);
+    const startDayInput = document.querySelector('#startDayInput'); console.log(startDayInput);
+    const endDayInput = document.querySelector('#endDayInput'); console.log(endDayInput);
+    const reasonInput = document.querySelector('#reasonInput'); console.log(reasonInput);
+    // 2 입력 마크업객체에서 입력값 가져오기
+    const vacationStaff = vacationStaffInput.value; console.log(vacationStaff);
+    const startDay = startDayInput.value; console.log(startDay);
+    const endDay = endDayInput.value; console.log(endDay);
+    const reason = reasonInput.value; console.log(reason);
+    //유효성검사
+        if( reason == ''){ 
+            alert(' 사유를 적어주세요. [실패] ')
+            return;
+        }//if end
+    // 3. 여러 데이터 객체로 구성하기
+    const obj={
+        vacationStaff : vacationStaff ,
+        startDay : startDay ,
+        endDay : endDay ,
+        reason : reason 
+    };                      console.log(obj);
+    // 4. 구성한 객체를 배열에 저장
+    vacationStaffList.push(obj); console.log(vacationStaffList);
+    // 인풋 리셋
+    vacationStaffInput.value='';
+    startDayInput.value='';
+    endDayInput.value='';
+    reasonInput.value='';
+    alert('휴가 신청 성공')
+    
+    vacationPrint(); // 휴가 출력 새로고침, 렌더링
+
+}// func end
+
+// 3-3 . 휴가 
+
+function vacationPrint(){ console.log('>>vacationPrint={() exe')
+    // 1 어디에 , #vacationPrintInput
+    const vacationStaffInput = document.querySelector('#vacationPrintInput');
+    // 2 무엇을
+    let html = '';
+        for( let i=0; i<=vacationStaffList.length-1; i++){
+            const vacationStaff=vacationStaffList[i];
+            // 현재 사원에 저장된 사원 코드번호로 사원 객체 구하기
+            
+            html +=`<div> 
+                        <h4>${vacationStaff.sname}<button>신청취소</button></h4>
+                        ${vacationStaff.startDay} ~ ${vacationStaff.endDay}<br/>
+                        사유:${vacationStaff.reason}<br/>
+                    </div>`
+        } // for end
+        // 3 출력
+        vacationStaffInput.innerHTML = html;
+        
+}// func end
