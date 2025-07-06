@@ -320,7 +320,7 @@ function vacationAdd() { console.log(' vacationAdd() exe');
 
 }// func end
 
-// 3-3 . 휴가 
+// 3-3 . 휴가 출력 함수
 
 function vacationPrint(){ console.log('>>vacationPrint={() exe')
     // 1 어디에 , #vacationPrintInput
@@ -332,7 +332,7 @@ function vacationPrint(){ console.log('>>vacationPrint={() exe')
             // 현재 사원에 저장된 사원 코드번호로 사원 객체 구하기
             
             html +=`<div> 
-                        <h4>${vacationStaff.sname}<button>신청취소</button></h4>
+                        <h4>${vacationStaff.sname}<button onclick="vacationCancel(${vacationStaffList.sno})" class="btnCancel" >신청취소</button></h4>
                         ${vacationStaff.startDay} ~ ${vacationStaff.endDay}<br/>
                         사유:${vacationStaff.reason}<br/>
                     </div>`
@@ -341,3 +341,17 @@ function vacationPrint(){ console.log('>>vacationPrint={() exe')
         vacationStaffInput.innerHTML = html;
         
 }// func end
+
+// 3-4 . 휴가 신청 취소 함수
+function vacationCancel(sno){ console.log(' vacationCancel(sno) exe'); console.log(sno);
+    for(let i=0; i<vacationStaffList.length;i++){
+        let vacationStaff=vacationStaffList[i];
+        if(vacationStaff.sno==sno){
+            vacationStaffList.splice(i,1)
+            alert('신청 취소 완료');
+            vacationPrint();
+            return;
+        }
+    }
+    
+}
