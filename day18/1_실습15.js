@@ -55,13 +55,14 @@
 
 
 // 데이터 모델링 (부서 관리)
-const departmentList= [ {dno : 1 , dname : '개발팀'} , { dno : 2 , dname : '디자인팀'} , { dno : 3 , dname : '기획팀'} 
+const departmentList= [ 
+    { dno : 1 , dname : '개발팀'} , 
+    { dno : 2 , dname : '디자인팀'} , 
+    { dno : 3 , dname : '기획팀'} 
 ];
 
 let currentDno=departmentList[departmentList.length-1].dno;
 // 기능(함수단위) 구현
-
-let currentdno= 3;
 
 // 1-1.부서 추가함수 정의 , 실행 : 추가버튼 onclick 했을때,
 function departmentAdd(){console.log( 'departmentAdd() exe');
@@ -69,21 +70,17 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     const dnameInput = document.querySelector('#dnameInput'); console.log(dnameInput);
     // (2). 입력 마크업객체 에서 입력값 가져오기
     const dname = dnameInput.value;                     console.log(dname);
-
+    if(dname == ''){    // 유효성 검사 ( 빈 부서명 방지 )
+        alert("[오류] 부서명을 입력해주세요.")
+        return;}
     // (3). 원하는 속성구성으로 객체만들기 
-        currentDno++;
- 
-    const obj = { dno : currentDno , dname : dname };          console.log(obj);
+    const obj = { dno : ++currentDno , dname : dname };          console.log(obj);
     // (4). 구성한 객체를 변수에 저장
-    departmentList.push(obj); console.log(departmentList);
-    
+    departmentList.push(obj);                               console.log(departmentList);
     // (5). 출력함수 호출 
     departmentPrint();
     departmentSelectPrint();
-    
 }// func end  
-
-
 
 // 1-2. 부서 출력함수 호출 : 페이지가 열리거나 추가/수정/삭제 했을때
 departmentPrint()
@@ -110,6 +107,9 @@ function departmentEdit(dno){console.log( 'departmentEdit() exe '); console.log(
     for( let i=0; i<= departmentList.length-1; i++){// (1) 수정할 번호의 객체를 찾는다 for
         if(departmentList[i].dno==dno){
             const dname = prompt('수정할 부서명: ');
+            if (dname == ''){ // 유효성 검사 ( 빈 부서명 방지 )
+                alert("[오류] 부서명을 입력해주세요.")
+                return;}
             departmentList[i].dname = dname;
             alert('[성공] 부서명 수정')
             departmentPrint();
@@ -142,9 +142,12 @@ const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , s
                     //{sno : 4 , dno: 4 , simg: 'https://placehold.co/100x100' , sname : '유재석' ,  srank : '대리' }
 ];
 console.log(staffList);
-let currentSno = 4;
+
+let currentSno = 3; // 코드를 자동 대입하기 위한 코드번호 , 현재 샘플의 마지막번호
 let dno = staffList.length == 0 ? 1 : staffList[staffList.length-1].dno+1
+
 // 2-0. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
+vacationSelelctAdd();
 function staffAdd(){
     //(1) 입력 마크업객체 가져오기
     const snameInput = document.querySelector('#snameInput'); console.log(snameInput);  
@@ -166,7 +169,7 @@ function staffAdd(){
 // (3) 여러 데이터 객체로 구성하기.
     const obj = {
         sno : ++currentSno, // 사원코드는 1증가 후 구성
-        dno : Number( sdname ),
+        dno : Number( dno ),
         simg : simg ? URL.createObjectURL( simg ): 'https://placehold.co/100x100' ,
         sname : sname ,
         sdname : sdname ,
@@ -179,10 +182,7 @@ function staffAdd(){
     srankInput.value='';
     sdnameInput.value='';
     alert('사원 등록 성공');
-
     staffPrint(); // 다시 사원출력 새로고침, 렌더링
-    vacationSelelctAdd();
-
 }// func end
 
 // 2-1 부서 선택 함수
@@ -223,7 +223,8 @@ function staffPrint(){ console.log('>>staffPrint() exe')
         tbody.innerHTML = html;
 } // func end 
 
-function getDepartment(dno){ // 
+// dno번호로 dno객체 반환 함수
+function getDepartment(dno){  
     console.log('>> getDepartment exe '); console.log(dno)
     // 1. 매개변수 (dno) 와 동일한 부서번호객체 찾기
     for( let i=0; i<=departmentList.length-1; i++){
@@ -241,7 +242,13 @@ function staffEdit(sno){ console.log('>> staffEdit exe'); console.log(sno);
         let staff=staffList[i];
         if(staff.sno==sno){
             const sname=prompt('수정할 사원명');
+            if(sname==''){ // 유효성 검사 ( 빈 곳 방지 )
+                alert("변경할 사원명을 입력해주세요.")
+                return;}
             const srank=prompt('수정할 계급명');
+            if(srank==''){ // 유효성 검사 ( 빈 곳 방지 )
+                alert("변경할 계급명을 입력해주세요.")
+                return;}
             staffList[i].sname=sname;
             staffList[i].srank=srank;
             alert('수정완료');
@@ -268,8 +275,10 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
 // 3-0 . 휴가 신청 데이터모델링
 
 const vacationStaffList=[ 
-    {sno : 1 , sname: '김민준' , startDay: '2025-08-04' , endDay: '2025-08-04', reason: '병원진료' } 
+    { vno : 1 , sno : 1 , sname: '김민준' , startDay: '2025-08-04' , endDay: '2025-08-04', reason: '병원진료' } 
 ];
+
+let CurrentVno=1; // 코드를 자동 대입하기 위한 현재 코드번호, 샘플 마지막 값으로 초기화
 
 // 3-1 . 휴가 신청 사원 선택 함수
 function vacationSelelctAdd(){
@@ -283,6 +292,7 @@ function vacationSelelctAdd(){
 }
 
 // 3-2 . 휴가 신청 함수
+let sno = vacationStaffList.length == 0 ? 1 : vacationStaffList[vacationStaffList.length-1].sno+1
 
 function vacationAdd() { console.log(' vacationAdd() exe');
     // 1 입력 마크업객체 가져오기
@@ -301,7 +311,10 @@ function vacationAdd() { console.log(' vacationAdd() exe');
             return;
         }//if end
     // 3. 여러 데이터 객체로 구성하기
+
     const obj={
+        vno : ++CurrentVno,
+        sno : sno,
         vacationStaff : vacationStaff ,
         startDay : startDay ,
         endDay : endDay ,
@@ -332,7 +345,7 @@ function vacationPrint(){ console.log('>>vacationPrint={() exe')
             // 현재 사원에 저장된 사원 코드번호로 사원 객체 구하기
             
             html +=`<div> 
-                        <h4>${vacationStaff.sname}<button onclick="vacationCancel(${vacationStaffList.sno})" class="btnCancel" >신청취소</button></h4>
+                        <h4>${getStaff(sno).sname}<button onclick="vacationCancel(${getStaff(sno).sno})" class="btnCancel" >신청취소</button></h4>
                         ${vacationStaff.startDay} ~ ${vacationStaff.endDay}<br/>
                         사유:${vacationStaff.reason}<br/>
                     </div>`
@@ -342,16 +355,28 @@ function vacationPrint(){ console.log('>>vacationPrint={() exe')
         
 }// func end
 
+// sno로 sno객체 반환 함수
+function getStaff(sno){ 
+    console.log('>> getStaff exe '); console.log(sno)
+    // 1. 매개변수 (sno) 와 동일한 부서번호객체 찾기
+    for( let i=0; i<=staffList.length-1; i++){
+        if(  staffList[i].sno == sno){
+             return staffList[i];
+        } // if end
+    } // for end
+    return null
+} // func end
+
 // 3-4 . 휴가 신청 취소 함수
-function vacationCancel(sno){ console.log(' vacationCancel(sno) exe'); console.log(sno);
-    for(let i=0; i<vacationStaffList.length;i++){
+function vacationCancel(vno){ console.log(' vacationCancel(vno) exe'); console.log(vno);
+    for(let i=0; i<=vacationStaffList.length;i++){
         let vacationStaff=vacationStaffList[i];
-        if(vacationStaff.sno==sno){
+        if(vacationStaff.vno==vno){
             vacationStaffList.splice(i,1)
             alert('신청 취소 완료');
             vacationPrint();
             return;
-        }
-    }
+        } // if end
+    } // for end
     
-}
+} // func end

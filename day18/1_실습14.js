@@ -44,7 +44,10 @@
 
 // ======================== [1] 데이터 모델링 샘플 =================== //
 // 1. 카테고리 목록
-const categoryList = [ { cno : 1 , cname : '음료류' } , { cno : 2 , cname : '과자류' } ];
+const categoryList = [
+    { cno : 1 , cname : '음료류' } , 
+    { cno : 2 , cname : '과자류' } 
+];
 let currentCno = 2;  // * 코드를 자동대입 하기 위한 현재 코드번호 , 샘플의 마지막 코드번호 로 초기화
 // 2. 제품 목록 , 제품이미지가 없을경우 : https://placehold.co/100x100 경로 샘플
 const productList = [
@@ -61,10 +64,9 @@ console.log(productList);
 categoryPint();
 function categoryPint(){ console.log( ' >> categoryPint exe');
     // (1). 어디에 , <select id="categoryInput">
-    const categoryInput = document.querySelector('#categoryInput');                      console.log(categoryInput);
+    const categoryInput = document.querySelector('#categoryInput');       console.log(categoryInput);
     // (2). 무엇을 , 카테고리목록(배열)내 객체정보를 하나씩 HTML 형식으로 
     let html = '<option value="" disabled selected > 카테고리 선택하세요. </option>';
-     // *
      for ( let index = 0 ; index<= categoryList.length-1 ; index++){ // index번째 카테고리(1개) 객체 꺼내기       
         const category = categoryList[index];                                           console.log(category);
         html += `<option value="${category.cno}"> ${category.cname}</option>`
@@ -112,7 +114,7 @@ function productAdd (){ console.log( '>> productAdd exe');
     };                                                              console.log(obj);
     // (4) 구성한 객체를 배열에 저장
     productList.push( obj );                                        console.log(productList);
-    // (*) 기타등등
+    // (*) 기타등등 // 등록 완료 후 입력값 초기화 
     categoryInput.value='';
     pnameInput.value='';
     ppriceInput.value='';
@@ -121,7 +123,19 @@ function productAdd (){ console.log( '>> productAdd exe');
     productPrint() // [다시 제품 출력함으로써 새로고침 ] / 렌더링
 
 } // func end 
-    
+
+/* 
+const categoryList = [ // 데이터 샘플
+    { cno : 1 , cname : '음료류' } , 
+    { cno : 2 , cname : '과자류' } 
+]; */
+
+/* const productList = [ // 모델링 샘플
+    { pno : 1 , cno : 1 , pname : '코카콜라'  , pprice : 1000 , pimg : 'https://placehold.co/100x100' , pdate : '2025-06-17' },
+    { pno : 2 , cno : 2 , pname : '새우깡'    , pprice : 1200 , pimg : 'https://placehold.co/100x100' , pdate : '2025-06-18' },
+    { pno : 3 , cno : 1 , pname : '칠성사이다' , pprice : 900 , pimg : 'https://placehold.co/100x100' , pdate : '2025-06-19' }
+];*/ 
+
 // 3. 제품목록 출력함수 , 실행조건 : (1) 페이지(HTML/JS) 가 열렸을때 , (2) 등록/삭제/수정처리 했을때
 productPrint()
 function productPrint(){ console.log('>>productPrint() exe')
@@ -183,6 +197,12 @@ function productEdit( pno ) { console.log( '>>productEdit exe'); console.log( pn
     }// for end
 
 } // func end // 수정함수 끝
+
+/* 
+const categoryList = [ // 데이터 샘플
+    { cno : 1 , cname : '음료류' } , 
+    { cno : 2 , cname : '과자류' } 
+]; */
 
 // 6. 카테고리번호(cno) 에 해당 하는 카테고리객체 1개 반환 함수 
 function getCategory( cno ){ //
