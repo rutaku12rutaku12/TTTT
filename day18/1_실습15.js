@@ -77,6 +77,7 @@ function departmentAdd(){console.log( 'departmentAdd() exe');
     const obj = { dno : ++currentDno , dname : dname };          console.log(obj);
     // (4). 구성한 객체를 변수에 저장
     departmentList.push(obj);                               console.log(departmentList);
+    dnameInput.value='';
     // (5). 출력함수 호출 
     departmentPrint();
     departmentSelectPrint();
@@ -113,6 +114,7 @@ function departmentEdit(dno){console.log( 'departmentEdit() exe '); console.log(
             departmentList[i].dname = dname;
             alert('[성공] 부서명 수정')
             departmentPrint();
+            departmentSelectPrint();
             return;
         } // if end
     } // for end
@@ -127,6 +129,7 @@ function departmentDelete(dno){console.log( 'departmentDelete() exe '); console.
             departmentList.splice(i , 1)
             alert('[성공] 부서명 삭제')
             departmentPrint();
+            departmentSelectPrint();
             return;
         } // if end
     } // for end
@@ -144,10 +147,10 @@ const staffList = [ {sno : 1 , dno: 1 , simg: 'https://placehold.co/100x100' , s
 console.log(staffList);
 
 let currentSno = 3; // 코드를 자동 대입하기 위한 코드번호 , 현재 샘플의 마지막번호
-let dno = staffList.length == 0 ? 1 : staffList[staffList.length-1].dno+1
+let dno = 3;
 
 // 2-0. 사원 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
-vacationSelelctAdd();
+departmentSelectPrint()
 function staffAdd(){
     //(1) 입력 마크업객체 가져오기
     const snameInput = document.querySelector('#snameInput'); console.log(snameInput);  
@@ -169,7 +172,7 @@ function staffAdd(){
 // (3) 여러 데이터 객체로 구성하기.
     const obj = {
         sno : ++currentSno, // 사원코드는 1증가 후 구성
-        dno : Number( dno ),
+        dno : Number( sdnameInput.value ),
         simg : simg ? URL.createObjectURL( simg ): 'https://placehold.co/100x100' ,
         sname : sname ,
         sdname : sdname ,
@@ -183,6 +186,7 @@ function staffAdd(){
     sdnameInput.value='';
     alert('사원 등록 성공');
     staffPrint(); // 다시 사원출력 새로고침, 렌더링
+    vacationSelelctAdd();
 }// func end
 
 // 2-1 부서 선택 함수
@@ -253,6 +257,8 @@ function staffEdit(sno){ console.log('>> staffEdit exe'); console.log(sno);
             staffList[i].srank=srank;
             alert('수정완료');
             staffPrint();
+            vacationSelelctAdd();
+            vacationPrint();
             return;
         }
     }
@@ -266,6 +272,8 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
             staffList.splice(i,1)
             alert('삭제완료');
             staffPrint();
+            vacationSelelctAdd();
+            vacationPrint();
             return;
         }
     }
@@ -275,24 +283,26 @@ function staffDelete(sno){ console.log('>> staffDelete exe'); console.log(sno);
 // 3-0 . 휴가 신청 데이터모델링
 
 const vacationStaffList=[ 
-    { vno : 1 , sno : 1 , sname: '김민준' , startDay: '2025-08-04' , endDay: '2025-08-04', reason: '병원진료' } 
+    { vno : 1 , sno : 1 , sname: '김민준' , startDay: '2025-08-04' , endDay: '2025-08-04', reason: '병원진료' }, 
+    { vno : 2 , sno : 2 , sname: '이서연' , startDay: '2025-07-21' , endDay: '2025-07-25', reason: '여름 휴가' } 
 ];
 
-let CurrentVno=1; // 코드를 자동 대입하기 위한 현재 코드번호, 샘플 마지막 값으로 초기화
+let CurrentVno=2; // 코드를 자동 대입하기 위한 현재 코드번호, 샘플 마지막 값으로 초기화
 
 // 3-1 . 휴가 신청 사원 선택 함수
+vacationSelelctAdd();
 function vacationSelelctAdd(){
     const vacationStaffInput = document.querySelector('#vacationStaffInput');
     let html = `<option value="" disabled selected> 휴가 신청 사원을 선택하세요. </option>`;
     for(let i=0; i<staffList.length; i++){
         const staff= staffList[i];
-        html +=`<option value="${staff.sno}">${staff.sname}</option>`;
+        html +=`<option value="${ staff.sno}">${ staff.sname}</option>`;
     }
         vacationStaffInput.innerHTML = html;
 }
 
 // 3-2 . 휴가 신청 함수
-let sno = vacationStaffList.length == 0 ? 1 : vacationStaffList[vacationStaffList.length-1].sno+1
+let sno = 2; 
 
 function vacationAdd() { console.log(' vacationAdd() exe');
     // 1 입력 마크업객체 가져오기
@@ -314,7 +324,7 @@ function vacationAdd() { console.log(' vacationAdd() exe');
 
     const obj={
         vno : ++CurrentVno,
-        sno : sno,
+        sno : Number( vacationStaffInput.value ),
         vacationStaff : vacationStaff ,
         startDay : startDay ,
         endDay : endDay ,
@@ -323,7 +333,7 @@ function vacationAdd() { console.log(' vacationAdd() exe');
     // 4. 구성한 객체를 배열에 저장
     vacationStaffList.push(obj); console.log(vacationStaffList);
     // 인풋 리셋
-    vacationStaffInput.value='';
+    
     startDayInput.value='';
     endDayInput.value='';
     reasonInput.value='';
@@ -345,7 +355,7 @@ function vacationPrint(){ console.log('>>vacationPrint={() exe')
             // 현재 사원에 저장된 사원 코드번호로 사원 객체 구하기
             
             html +=`<div> 
-                        <h4>${getStaff(sno).sname}<button onclick="vacationCancel(${getStaff(sno).sno})" class="btnCancel" >신청취소</button></h4>
+                        <h4>${getStaff(vacationStaff.sno).sname}<button onclick="vacationCancel(${vacationStaff.vno})" class="btnCancel" >신청취소</button></h4>
                         ${vacationStaff.startDay} ~ ${vacationStaff.endDay}<br/>
                         사유:${vacationStaff.reason}<br/>
                     </div>`
