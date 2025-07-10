@@ -18,7 +18,7 @@ function stockIn(){
     let idInput = document.querySelector("#idInput").value;
     console.log( idInput );
     let found = false;
-    let productArray = getLocalProduct()
+    let productArray = getLocalArray()
     for (let i = 0; i <= productArray.length-1; i++) {
         if (productArray[i].no == idInput) {
             found = true;
@@ -46,7 +46,7 @@ function stockIn(){
         alert("빈 항목이 있습니다.")
         return;
     }
-     let productArray=getLocalProduct(); // ===========================================================local 수정자리
+     productArray=getLocalArray(); // ===========================================================local 수정자리
         let no=productArray.length == 0 ? 1 : productArray[productArray.length-1].no+1
 
     const obj = {
@@ -61,7 +61,7 @@ function stockIn(){
     productArray.push( obj );
     alert( "재고 입고 성공" );
     console.log( productArray );
-    setLocalProduct(productArray);
+    setLocalArray(productArray);
     ViewAllInventoryLogs();
 }
 
@@ -70,7 +70,7 @@ function stockIn(){
 function ViewAllInventoryLogs(){ //console.log('----productcontent---')
     const tbody=document.querySelector('.ttbody'); //console.log(tbody);
     html='';
-    let productArray = getLocalProduct;
+    let productArray = getLocalArray();
     for(i=0; i<=productArray.length-1; i++){
         let productA=productArray[i];
         html+=  `<tr>
@@ -91,13 +91,13 @@ function ViewAllInventoryLogs(){ //console.log('----productcontent---')
 // 입출사유 수정 함수
 
 function modifyReason( no ){ console.log( '>>modifyReason exe'); console.log( no ) ;
-    let productArray = getLocalProduct;
+    let productArray = getLocalArray();
     for( let i=0; i<=productArray.length-1; i++){
         if( productArray[i].no == no ){
             const reason = prompt('수정 할 입출사유: '); // 수정할 값 입력
             productArray[i].etc = reason;                // 입력값으로 수정
             alert('[성공] 입출사유 수정'); 
-            setLocalProduct(productArray);
+            setLocalArray(productArray);
             ViewAllInventoryLogs();// <--새로고침
             return;
         } // if end

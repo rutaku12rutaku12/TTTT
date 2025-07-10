@@ -56,3 +56,16 @@ function getLocalProduct(){
 function setLocalProduct(productList){
     localStorage.setItem("productList",JSON.stringify(productList));
 }
+
+function getLocalArray(){
+    let productArray=localStorage.getItem('productArray');
+    if(productArray==null){
+        productArray=[];
+    }else{
+        productArray=JSON.parse(productArray);
+    }
+    return productArray;
+}
+function setLocalArray(productArray){
+    localStorage.setItem("productArray",JSON.stringify(productArray));
+}
