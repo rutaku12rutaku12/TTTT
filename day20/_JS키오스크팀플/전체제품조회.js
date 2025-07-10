@@ -76,7 +76,7 @@ function productAdd(){ console.log( '>> productAdd exe');
     
 } // func end
 
-
+// 전제 제품 조회 함수
 function viewAllProduct(){
     console.log( "viewAllProduct exe" );
     const tbody = document.querySelector(".tbody");
@@ -98,6 +98,7 @@ function viewAllProduct(){
     tbody.innerHTML = html;
     console.log( html );
 }
+// 제품 삭제 함수
 viewAllProduct();
 function DeleteProduct(pcode){ console.log('---exe----')
     let productList=getLocalProduct(); // ===========================================================local 수정자리
