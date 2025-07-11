@@ -72,14 +72,14 @@ function ViewAllInventoryLogs(){ //console.log('----productcontent---')
     html='';
     let productArray = getLocalArray();
     for(i=0; i<=productArray.length-1; i++){
-        let productA=productArray[i];
+        let productArray=productArray[i];
         html+=  `<tr>
-                    <td>${productA.id}</td>
-                    <td>${productA.cname}</td>
-                    <td>${productA.number}</td>
-                    <td>${productA.etc.toLocaleString()}</td>
-                    <td>${productA.변동날짜}</td>
-                    <td><button onclick="modifyReason(${productA.no})" class="btnEdit">입출사유변경</button></td>
+                    <td>${productArray.id}</td>
+                    <td>${productArray.cname}</td>
+                    <td>${productArray.number}</td>
+                    <td>${productArray.etc.toLocaleString()}</td>
+                    <td>${productArray.변동날짜}</td>
+                    <td><button onclick="modifyReason(${productArray.no})" class="btnEdit">입출사유변경</button></td>
                  </tr>`
     }                                                                       
    

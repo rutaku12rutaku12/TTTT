@@ -13,6 +13,9 @@
     <title>키오스크팀플</title>
 </head>
 <body>
+
+<!--  제품 등록구간 -->  
+
     <div id="productInput">
         제품명 :<input id="pnameInput" type="text">
         가격 : <input id="ppriceInput" type="number"><br/><br/>
@@ -21,6 +24,8 @@
         <button onclick="productAdd()" class="btnAdd">제품 등록</button>
         
     </div>
+
+<!-- 제품 출력구간 -->  
 
     <div>
         <table border = "1px">
@@ -52,6 +57,8 @@
 재고 로그 목록 테이블: 재고 로그 정보를 표시할 <table> 태그와 <thead>, <tbody>
 버튼: '입출등록' ,  '입출사유변경' 버튼 포함 -->
 
+<!-- 재고 입출고 등록구간 -->
+
     <div>
         제품 ID : <input id="idInput" type="text">
         변동 유형 :
@@ -65,6 +72,9 @@
         <button onclick="stockIn()">입출등록</button>
         
     </div>
+
+<!-- 재고 입출고 출력구간 -->  
+
     <table border="1px">
         <thead>
             <tr>
