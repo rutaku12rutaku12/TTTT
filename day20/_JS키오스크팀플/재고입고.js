@@ -1,9 +1,9 @@
 
 
 // const productArray = [
-//     { no : 1 , id : 1, cname : "입고" , number : 3 , etc : "asad" , 변동날짜 : "" },
-//     { no : 2 , id : 2, cname : "출고" , number : 7 , etc : "asda" , 변동날짜 : "" },
-//     { no : 3 , id : 3, cname : "입고" , number : 2 , etc : "dsad" , 변동날짜 : "" }
+//     { no : 1 , pcode : 1, cname : "입고" , number : 3 , etc : "asad" , 변동날짜 : "" },
+//     { no : 2 , pcode : 2, cname : "출고" , number : 7 , etc : "asda" , 변동날짜 : "" },
+//     { no : 3 , pcode : 3, cname : "입고" , number : 2 , etc : "dsad" , 변동날짜 : "" }
 // ]
 // let no = 3;
 
@@ -15,12 +15,13 @@
 // 재고입고 함수
 function stockIn(){
     console.log( "stockIn exe" )
-    let idInput = document.querySelector("#idInput").value;
-    console.log( idInput );
+    let pcode = document.querySelector("#idInput").value;
+    console.log( pcode );
     let found = false;
+    // pcode = Number(pcode); 일단 지워둠.
     let productArray = getLocalArray()
     for (let i = 0; i <= productArray.length-1; i++) {
-        if (productArray[i].no == idInput) {
+        if (productArray[i].pcode == pcode) {
             found = true;
             break;
         }
@@ -42,7 +43,7 @@ function stockIn(){
         day = day < 9 ? `0${day}` : day;    // 만약에 일 이 한자리수 이면 앞에 '0' 붙인다.
     let date = `${year}-${month}-${day}`;                          
     console.log( date );
-    if( idInput == "" || select == "" || number == "" ||  textarea == "" ){
+    if( pcode == "" || select == "" || number == "" ||  textarea == "" ){
         alert("빈 항목이 있습니다.")
         return;
     }
@@ -51,9 +52,9 @@ function stockIn(){
 
     const obj = {
         no : no,
-        id : idInput,
+        pcode : pcode,
         cname : select,
-        number : number,
+        number : Number(number),
         etc : textarea,
         변동날짜 : date
     }
